@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website - 工具與五金展示</title>
+    <meta name="description" content="A premium dark mode demo website.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <div class="search-container ai-search">
+            <svg class="ai-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#ai-grad)"
+                stroke-width="2">
+                <defs>
+                    <linearGradient id="ai-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#4285F4" />
+                        <stop offset="50%" stop-color="#9B72CB" />
+                        <stop offset="100%" stop-color="#D96570" />
+                    </linearGradient>
+                </defs>
+                <path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"></path>
+            </svg>
+            <input type="text" class="search-bar ai-input" id="ai-search-input" placeholder="✨ 描述您的需求，讓 AI 智慧為您尋找..."
+                autocomplete="off">
+
+            <!-- AI Search Dropdown (Hidden by default) -->
+            <div class="search-dropdown" id="search-dropdown">
+                <!-- Default State: Trending -->
+                <div class="search-state" id="search-default">
+                    <div class="search-section">
+                        <h4>近期搜尋</h4>
+                        <div class="tag-cloud">
+                            <span class="search-tag">活動板手</span>
+                            <span class="search-tag">數位電錶</span>
+                            <span class="search-tag">不鏽鋼螺絲</span>
+                        </div>
+                    </div>
+                    <div class="search-section">
+                        <h4>熱門品類</h4>
+                        <ul class="trending-list">
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg> 電動工具類 &gt; 起子機</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg> 水料 &gt; PVC配管</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg> 工安防護 &gt; 護目鏡</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Loading State: AI Parsing -->
+                <div class="search-state hidden" id="search-loading">
+                    <div class="ai-loading-container">
+                        <div class="ai-pulse-ring"></div>
+                        <span>AI 語意解析與庫存匹配中...</span>
+                    </div>
+                </div>
+
+                <!-- Results State: Suggested Items -->
+                <div class="search-state hidden" id="search-results">
+                    <div class="search-section">
+                        <h4>推薦分類</h4>
+                        <ul class="trending-list">
+                            <li>手工具類 &gt; 扳手與套筒</li>
+                            <li>電動工具類 &gt; 震動電鑽</li>
+                        </ul>
+                    </div>
+                    <div class="search-section">
+                        <h4>精選商品</h4>
+                        <ul class="product-result-list">
+                            <li>
+                                <img src="https://loremflickr.com/40/40/wrench" alt="Wrench">
+                                <div class="prod-info">
+                                    <span class="prod-name">德製頂級萬向活動扳手</span>
+                                    <span class="prod-sku">SKU: WREN-0982-A</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://loremflickr.com/40/40/drill" alt="Drill">
+                                <div class="prod-info">
+                                    <span class="prod-name">無刷衝擊電鑽 18V</span>
+                                    <span class="prod-sku">SKU: DRL-18V-PRO</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-section">
+                        <h4>技術資源</h4>
+                        <ul class="trending-list">
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg> 電動工具安全操作手冊 (PDF)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="lang">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+                ENG/US
+            </div>
+            <button class="login-btn">LOGIN</button>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li class="nav-item has-mega-menu">
+                <span class="nav-link">產品目錄 <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg></span>
+                <div class="mega-menu">
+                    <div class="mega-container">
+                        <!-- Left Sidebar: 大類別 -->
+                        <div class="mega-sidebar">
+                            <ul class="mega-category-list">
+                                <li class="mega-category-item active" data-target="cat-oa">OA家具/辦公家具</li>
+                                <li class="mega-category-item" data-target="cat-handtools">手工具類</li>
+                                <li class="mega-category-item" data-target="cat-powertools">電動工具類</li>
+                                <li class="mega-category-item" data-target="cat-fasteners">緊固材料</li>
+                                <li class="mega-category-item" data-target="cat-building">建材修繕材料</li>
+                                <li class="mega-category-item" data-target="cat-water">水料</li>
+                                <li class="mega-category-item" data-target="cat-electric">電料</li>
+                                <li class="mega-category-item" data-target="cat-house">家居五金</li>
+                                <li class="mega-category-item" data-target="cat-metal">金屬材料</li>
+                                <li class="mega-category-item" data-target="cat-garden">園藝工具</li>
+                                <li class="mega-category-item" data-target="cat-safety">勞安用品&無塵室系列</li>
+                                <li class="mega-category-item" data-target="cat-clean">清潔用品</li>
+                                <li class="mega-category-item" data-target="cat-life">生活用品</li>
+                                <li class="mega-category-item" data-target="cat-stationery">文具用品</li>
+                                <li class="mega-category-item" data-target="cat-protect">防護用品&耗材</li>
+                                <li class="mega-category-item" data-target="cat-machine">機械及零配件</li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Content Area: 中類別與小類別 -->
+                        <div class="mega-content-area">
+                            <!-- Panel 1: 手工具類 -->
+                            <div class="mega-panel active" id="cat-handtools">
+                                <h3 class="panel-main-title">手工具類 <svg width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg></h3>
+                                <div class="panel-grid">
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">扳手與套筒 <svg width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/wrench" alt=""> <a
+                                                    href="#">活動板手</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/socket" alt=""> <a
+                                                    href="#">深孔套筒</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/wrench" alt=""> <a
+                                                    href="#">薄型梅扳手</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/tool" alt=""> <a
+                                                    href="#">萬向套筒扳手</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">鉗與刀具 <svg width="14" height="14" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/pliers" alt=""> <a
+                                                    href="#">萬能鉗</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/pliers" alt=""> <a
+                                                    href="#">管子鉗</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/cutter" alt=""> <a
+                                                    href="#">PE.PVC管切刀</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">測量與輔助 <svg width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/ruler" alt=""> <a
+                                                    href="#">有刻度鐵工角尺</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/tape" alt=""> <a href="#">捲尺</a>
+                                            </li>
+                                            <li><img src="https://loremflickr.com/40/40/level" alt=""> <a
+                                                    href="#">水平尺</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Panel 2: 電動工具類 -->
+                            <div class="mega-panel" id="cat-powertools">
+                                <h3 class="panel-main-title">電動工具類 <svg width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg></h3>
+                                <div class="panel-grid">
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">鑽孔與緊固 <svg width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/drill" alt=""> <a
+                                                    href="#">電動起子機</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/drill" alt=""> <a
+                                                    href="#">震動電鑽</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">切割與研磨 <svg width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/grinder" alt=""> <a
+                                                    href="#">砂輪機</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/saw" alt=""> <a href="#">圓鋸機</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Panel 3: 電料 -->
+                            <div class="mega-panel" id="cat-electric">
+                                <h3 class="panel-main-title">電料 <svg width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg></h3>
+                                <div class="panel-grid">
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">檢測儀器 <svg width="14" height="14" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/multimeter" alt=""> <a
+                                                    href="#">三用電錶</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/tester" alt=""> <a
+                                                    href="#">FLUKE檢電筆</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/probe" alt=""> <a
+                                                    href="#">電表筆</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">線材與保護 <svg width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/wire" alt=""> <a
+                                                    href="#">電線配管/螺紋管</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/cable" alt=""> <a
+                                                    href="#">電線保護套端組</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fallback empty panel for others just to show logic -->
+                            <div class="mega-panel" id="cat-oa">
+                                <h3 class="panel-main-title">OA家具/辦公家具 <svg width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg></h3>
+                                <div class="panel-grid">
+                                    <div class="panel-group">
+                                        <h4 class="panel-sub-title">辦公設備 <svg width="14" height="14" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg></h4>
+                                        <ul class="panel-links">
+                                            <li><img src="https://loremflickr.com/40/40/desk" alt=""> <a
+                                                    href="#">辦公桌</a></li>
+                                            <li><img src="https://loremflickr.com/40/40/chair" alt=""> <a
+                                                    href="#">人體工學椅</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Generic Panel for Unpopulated Categories -->
+                            <div class="mega-panel" id="cat-generic">
+                                <h3 class="panel-main-title generic-title">分類內容建置中... <svg width="16" height="16"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg></h3>
+                                <div class="panel-grid">
+                                    <div class="panel-group expanded">
+                                        <h4 class="panel-sub-title accordion-toggle" style="cursor:default">敬請期待</h4>
+                                        <ul class="panel-links accordion-content" style="display:flex">
+                                            <li><a href="#">此分類的產品內容尚在整理中。</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link">解決方案 <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg></span>
+            </li>
+            <li class="nav-item"><span class="nav-link">技術支援 <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg></span></li>
+            <li class="nav-item"><span class="nav-link">聯繫我們</span></li>
+        </ul>
+    </nav>
+
+    <section class="hero" style="background-image: url('assets/hero_bg.png');">
+        <div class="hero-content">
+            <h1>專業級科技建築五金與儀器</h1>
+            <p>涵蓋手工具、電料、儀器與各式加工機械零配件的完整解決方案。</p>
+            <button class="cta-btn">了解更多</button>
+        </div>
+    </section>
+
+    <section class="featured-categories">
+        <div class="section-header">
+            <h2>精選類別</h2>
+            <div class="carousel-controls">
+                <button class="ctrl-btn left-btn" id="cat-prev"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg></button>
+                <button class="ctrl-btn right-btn" id="cat-next"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></button>
+            </div>
+        </div>
+        <div class="carousel-container" id="cat-carousel">
+            <div class="card"><img
+                    src="https://lh3.googleusercontent.com/d/1gg6_zL1Objsrw3cbwMVC13w7dDTxeeDC"
+                    alt="01 手工具"><button class="card-btn">手工具</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/electronics/all" alt="06 電料"><button
+                    class="card-btn">電料</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/machinery/all" alt="15E 加工機械零配件"><button
+                    class="card-btn">加工機械零配件</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/plumbing/all" alt="05 水料"><button
+                    class="card-btn">水料</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/construction/all" alt="14 防震用品&耗材"><button
+                    class="card-btn">防震用品&耗材</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/crane/all" alt="15H 起重/搬運設備"><button
+                    class="card-btn">起重/搬運設備</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/instrument/all" alt="15F 儀器"><button
+                    class="card-btn">儀器與控制元件</button></div>
+        </div>
+    </section>
+
+    <section class="middle-banner" style="background-image: url('assets/hero_bg.png');">
+        <div class="value-box">
+            <h2>高品質工藝 ‧ 值得信賴</h2>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="section-header">
+            <h2>熱門商品</h2>
+            <div class="carousel-controls">
+                <button class="ctrl-btn left-btn" id="prod-prev"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg></button>
+                <button class="ctrl-btn right-btn" id="prod-next"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></button>
+            </div>
+        </div>
+        <div class="product-grid" id="prod-grid">
+            <div class="card"><img src="https://loremflickr.com/400/400/ruler,tool/all" alt="Product"><button
+                    class="card-btn">有刻度鐵工角尺</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/multimeter/all" alt="Product"><button
+                    class="card-btn">三用電錶</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/laser,tool/all" alt="Product"><button
+                    class="card-btn">雷射測距儀</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/cone,traffic/all" alt="Product"><button
+                    class="card-btn">交通錐</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/strap,lifting/all" alt="Product"><button
+                    class="card-btn">尼龍吊帶</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/compressor,air/all" alt="Product"><button
+                    class="card-btn">空冷式氣槍組</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/cutter,tool/all" alt="Product"><button
+                    class="card-btn">水管剪刀</button></div>
+            <div class="card"><img src="https://loremflickr.com/400/400/gloves,safety/all" alt="Product"><button
+                    class="card-btn">3M防刮手套</button></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <div class="link-col">
+                <h3>產品目錄</h3>
+                <ul>
+                    <li><a href="#">01 手工具</a></li>
+                    <li><a href="#">06 電料</a></li>
+                    <li><a href="#">15E 加工機械零配件</a></li>
+                    <li><a href="#">10 夢幻家電</a></li>
+                    <li><a href="#">05 水料</a></li>
+                    <li><a href="#">14 防震用品&耗材</a></li>
+                    <li><a href="#">15H 起重/搬運設備</a></li>
+                    <li><a href="#">15F 儀器與控制元件</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h3>支援資源</h3>
+                <ul>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">常見問題</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h3>聯絡我們</h3>
+                <ul>
+                    <li><a href="#">客戶服務</a></li>
+                    <li><a href="#">技術支援</a></li>
+                    <li><a href="#">採購諮詢</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="company-info-box">
+            <h2>公司資訊</h2>
+            <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.9rem;">
+                我們致力於提供最頂尖的五金工具、儀器設備以及耗材，為您的工程專案帶來最高效率與安全保障。
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
