@@ -121,3 +121,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Navigation Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('nav-modal');
+    if (modal) {
+        const triggers = document.querySelectorAll('.trigger-modal');
+        const closeBtn = document.getElementById('modal-close');
+        const confirmBtn = document.getElementById('modal-confirm');
+
+        triggers.forEach(t => {
+            t.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('show');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+
+        confirmBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            window.open('subcategory.html', '_blank');
+        });
+
+        // Close modal on clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    }
+});
