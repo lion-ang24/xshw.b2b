@@ -89,6 +89,11 @@ body {
     gap: 30px;
 }
 
+.lang-dropdown-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
 .lang {
     display: flex;
     align-items: center;
@@ -97,10 +102,47 @@ body {
     cursor: pointer;
     color: var(--text-secondary);
     transition: color 0.3s;
+    padding: 10px 0;
 }
 
 .lang:hover {
     color: var(--text-primary);
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 130px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.lang-dropdown-wrapper:hover .lang-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lang-option {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lang-option:hover {
+    background-color: var(--bg-dark);
+    color: var(--accent-yellow);
 }
 
 .login-btn {
@@ -351,6 +393,7 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 80px;
     position: relative;
@@ -361,11 +404,101 @@ body {
     inset: 0;
     background: linear-gradient(to right, rgba(15,17,21,0.9) 0%, rgba(15,17,21,0.4) 100%);
 }
-.hero-content {
+.hero-left, .hero-right {
     position: relative;
     z-index: 1;
+}
+.hero-content {
     max-width: 500px;
 }
+
+/* Brand Carousel in Hero */
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 55%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    width: 20px;
+    border-radius: 4px;
+    background: var(--accent-yellow);
+}
+
+.brand-carousel {
+    width: 100%;
+    max-width: 650px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-track {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.brand-slide {
+    flex: 0 0 calc(33.333% - 10px);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+}
+
+.brand-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.1;
+}
+
+.brand-tagline {
+    font-size: 0.55rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Brand specific colors */
+.dewalt-logo { color: #febd17; text-shadow: 0 0 10px rgba(254, 189, 23, 0.4); }
+.milwaukee-logo { color: #db001c; text-shadow: 0 0 10px rgba(219, 0, 28, 0.4); text-transform: none; }
+.makita-logo { color: #00808a; text-shadow: 0 0 10px rgba(0, 128, 138, 0.4); text-transform: lowercase; font-size: 2rem;}
+.bosch-logo { color: #ed0007; text-shadow: 0 0 10px rgba(237, 0, 7, 0.4); }
+.hikoki-logo { color: #006738; text-shadow: 0 0 10px rgba(0, 103, 56, 0.4); }
+.metabo-logo { color: #005b40; text-shadow: 0 0 10px rgba(0, 91, 64, 0.4); text-transform: lowercase; font-size: 1.6rem;}
 
 .hero-content h1 {
     font-size: 3rem;

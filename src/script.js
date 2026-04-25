@@ -122,35 +122,76 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Navigation Modal Logic
+// Hero Brand Carousel Logic
 document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('nav-modal');
-    if (modal) {
-        const triggers = document.querySelectorAll('.trigger-modal');
-        const closeBtn = document.getElementById('modal-close');
-        const confirmBtn = document.getElementById('modal-confirm');
+    const track = document.getElementById('brand-track');
+    const indicators = document.querySelectorAll('#brand-indicators .indicator');
+    
+    if (track && track.children.length > 3) {
+        let currentIndex = 0;
+        const totalItems = track.children.length;
+        let isAnimating = false;
+        let autoSlideInterval;
 
-        triggers.forEach(t => {
-            t.addEventListener('click', (e) => {
-                e.preventDefault();
-                modal.classList.add('show');
-            });
-        });
+        const slideCarousel = (steps = 1) => {
+            if (isAnimating || steps === 0) return;
+            isAnimating = true;
 
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('show');
-        });
+            const firstChild = track.children[0];
+            const itemWidth = firstChild.getBoundingClientRect().width;
+            const gap = 15; // match CSS gap
+            const moveDistance = (itemWidth + gap) * steps;
 
-        confirmBtn.addEventListener('click', () => {
-            modal.classList.remove('show');
-            window.open('subcategory.html', '_blank');
-        });
-
-        // Close modal on clicking outside
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('show');
+            if (indicators.length > 0) {
+                indicators[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + steps) % totalItems;
+                indicators[currentIndex].classList.add('active');
             }
+
+            track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+            track.style.transform = `translateX(-${moveDistance}px)`;
+
+            setTimeout(() => {
+                track.style.transition = 'none';
+                for (let i = 0; i < steps; i++) {
+                    track.appendChild(track.children[0]);
+                }
+                track.style.transform = 'translateX(0)';
+                isAnimating = false;
+            }, 600);
+        };
+
+        const startAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => slideCarousel(1), 5000);
+        };
+
+        startAutoSlide();
+
+        indicators.forEach((indicator, index) => {
+            indicator.style.cursor = 'pointer';
+            indicator.addEventListener('click', () => {
+                if (isAnimating || index === currentIndex) return;
+                let steps = (index - currentIndex + totalItems) % totalItems;
+                slideCarousel(steps);
+                startAutoSlide();
+            });
         });
     }
 });
+
+// Language Switcher Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const langOptions = document.querySelectorAll('.lang-option');
+    const currentLangText = document.getElementById('current-lang');
+
+    langOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            const selectedText = e.target.textContent;
+            if (currentLangText) {
+                currentLangText.textContent = selectedText;
+            }
+        });
+    });
+});
+

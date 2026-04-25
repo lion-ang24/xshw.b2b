@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORCE D12 Brushless Impact Drill - 產品展示</title>
     <meta name="description" content="A premium dark mode demo website.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+    <link rel="stylesheet" href="styles.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- HEADER AND NAV -->
     <header class="header">
-        <div class="logo">LOGO</div>
+        <div class="logo"><img src="assets/hc_logo.png" alt="LOGO" style="height: 40px; display: block;"></div>
         <div class="search-container ai-search">
             <svg class="ai-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#ai-grad)"
                 stroke-width="2">
@@ -54,9 +57,9 @@
     <!-- Product Detail Content -->
     <div class="product-detail-page">
         <div class="breadcrumb">
-            <a href="index.html">Home</a> <span>/</span> 
-            <a href="subcategory.html">產品目錄</a> <span>/</span> 
-            <a href="subcategory.html">電動起子機</a> <span>/</span> 
+            <a href="index.html">Home</a> <span>/</span>
+            <a href="subcategory.html">產品目錄</a> <span>/</span>
+            <a href="subcategory.html">電動起子機</a> <span>/</span>
             <span style="color: var(--text-primary);">FORCE D12 Brushless Impact Drill</span>
         </div>
 
@@ -110,12 +113,20 @@
                     <button class="btn-primary-action">ADD TO CART</button>
                     <button class="btn-secondary-action">Add to Quote/Request Bulk Pricing</button>
                     <button class="btn-brand-action">
-                        Buy with 
+                        Buy with
                         <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
-                            <path d="M14.5 7.5c0-.5-.1-1-.2-1.5H7.5v2.8h4c-.2 1.3-1 2.4-2.1 3.1v2.5h3.4c2-1.8 3.1-4.5 3.1-7.4z" fill="#4285F4"/>
-                            <path d="M7.5 14.5c2 0 3.6-.7 4.8-1.8l-3.4-2.5c-.7.4-1.5.7-2.4.7-1.8 0-3.3-1.2-3.8-2.8H.3v2.6c1.3 2.6 4.1 4.3 7.2 4.3z" fill="#34A853"/>
-                            <path d="M3.7 8.1c-.2-.6-.2-1.2-.2-1.8s.1-1.2.2-1.8V2H.3C-.2 3.1-.5 4.3-.5 5.5s.3 2.4.8 3.5l3.4-2.6z" fill="#FBBC04"/>
-                            <path d="M7.5 2.8c1.1 0 2.1.4 2.8 1.1l2.1-2.1C11.1.7 9.5 0 7.5 0 4.4 0 1.6 1.7.3 4.3l3.4 2.6c.5-1.6 2-2.8 3.8-2.8z" fill="#EA4335"/>
+                            <path
+                                d="M14.5 7.5c0-.5-.1-1-.2-1.5H7.5v2.8h4c-.2 1.3-1 2.4-2.1 3.1v2.5h3.4c2-1.8 3.1-4.5 3.1-7.4z"
+                                fill="#4285F4" />
+                            <path
+                                d="M7.5 14.5c2 0 3.6-.7 4.8-1.8l-3.4-2.5c-.7.4-1.5.7-2.4.7-1.8 0-3.3-1.2-3.8-2.8H.3v2.6c1.3 2.6 4.1 4.3 7.2 4.3z"
+                                fill="#34A853" />
+                            <path
+                                d="M3.7 8.1c-.2-.6-.2-1.2-.2-1.8s.1-1.2.2-1.8V2H.3C-.2 3.1-.5 4.3-.5 5.5s.3 2.4.8 3.5l3.4-2.6z"
+                                fill="#FBBC04" />
+                            <path
+                                d="M7.5 2.8c1.1 0 2.1.4 2.8 1.1l2.1-2.1C11.1.7 9.5 0 7.5 0 4.4 0 1.6 1.7.3 4.3l3.4 2.6c.5-1.6 2-2.8 3.8-2.8z"
+                                fill="#EA4335" />
                         </svg>
                     </button>
                 </div>
@@ -159,13 +170,13 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=7"></script>
     <script>
         // Quantity logic for demo
         document.getElementById('qty-minus').addEventListener('click', () => {
             const input = document.getElementById('qty-input');
             let val = parseInt(input.value);
-            if(val > 1) input.value = val - 1;
+            if (val > 1) input.value = val - 1;
         });
         document.getElementById('qty-plus').addEventListener('click', () => {
             const input = document.getElementById('qty-input');
@@ -183,4 +194,5 @@
         });
     </script>
 </body>
+
 </html>
