@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORCE D12 Brushless Impact Drill - 產品展示</title>
+    <meta name="description" content="A premium dark mode demo website.">
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+    <link rel="stylesheet" href="styles.css?v=7">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER AND NAV -->
+    <header class="header">
+        <div class="logo"><img src="assets/hc_logo.png" alt="LOGO" style="height: 40px; display: block;"></div>
+        <div class="search-container ai-search">
+            <!-- 
+            <svg class="ai-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#ai-grad)"
+                stroke-width="2">
+                <defs>
+                    <linearGradient id="ai-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#4285F4" />
+                        <stop offset="50%" stop-color="#9B72CB" />
+                        <stop offset="100%" stop-color="#D96570" />
+                    </linearGradient>
+                </defs>
+                <path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"></path>
+            </svg>
+            <input type="text" class="search-bar ai-input" id="ai-search-input" placeholder="✨ 描述您的需求，讓 AI 智慧為您尋找..."
+                autocomplete="off">
+            -->
+        </div>
+        <div class="header-right">
+            <div class="lang">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                ENG/US
+            </div>
+            <button class="login-btn">LOGIN</button>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link" style="color:inherit; text-decoration:none;">回首頁</a>
+            </li>
+            <li class="nav-item">
+                <a href="subcategory.html" class="nav-link" style="color:inherit; text-decoration:none;">產品目錄</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Product Detail Content -->
+    <div class="product-detail-page">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>/</span>
+            <a href="subcategory.html">產品目錄</a> <span>/</span>
+            <a href="subcategory.html">電動起子機</a> <span>/</span>
+            <span style="color: var(--text-primary);">FORCE D12 Brushless Impact Drill</span>
+        </div>
+
+        <div class="product-detail-container">
+            <!-- Left Column: Image -->
+            <div class="product-image-large">
+                <img src="assets/drill_1.png" alt="FORCE D12 Brushless Impact Drill">
+                <div class="zoom-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right Column: Details -->
+            <div class="product-info-right">
+                <div class="brand-label">FORCE</div>
+                <h1 class="product-h1">FORCE D12 BRUSHLESS IMPACT DRILL</h1>
+                <div class="product-price">$245.00</div>
+
+                <div class="option-group">
+                    <span class="option-label">Battery Capacity:</span>
+                    <div class="option-buttons">
+                        <button class="option-btn">2.0Ah Compact</button>
+                        <button class="option-btn selected">4.0Ah High Capacity</button>
+                        <button class="option-btn">5.0Ah Extended</button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <span class="option-label">Configuration:</span>
+                    <div class="option-buttons">
+                        <button class="option-btn">Bare Tool</button>
+                        <button class="option-btn selected">Kit with Charger</button>
+                    </div>
+                </div>
+
+                <div class="quantity-group">
+                    <span class="option-label">Quantity:</span>
+                    <div class="qty-selector">
+                        <button class="qty-btn" id="qty-minus">-</button>
+                        <input type="text" class="qty-input" value="1" id="qty-input">
+                        <button class="qty-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary-action">ADD TO CART</button>
+                    <button class="btn-secondary-action">Add to Quote/Request Bulk Pricing</button>
+                    <button class="btn-brand-action">
+                        Buy with
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path
+                                d="M14.5 7.5c0-.5-.1-1-.2-1.5H7.5v2.8h4c-.2 1.3-1 2.4-2.1 3.1v2.5h3.4c2-1.8 3.1-4.5 3.1-7.4z"
+                                fill="#4285F4" />
+                            <path
+                                d="M7.5 14.5c2 0 3.6-.7 4.8-1.8l-3.4-2.5c-.7.4-1.5.7-2.4.7-1.8 0-3.3-1.2-3.8-2.8H.3v2.6c1.3 2.6 4.1 4.3 7.2 4.3z"
+                                fill="#34A853" />
+                            <path
+                                d="M3.7 8.1c-.2-.6-.2-1.2-.2-1.8s.1-1.2.2-1.8V2H.3C-.2 3.1-.5 4.3-.5 5.5s.3 2.4.8 3.5l3.4-2.6z"
+                                fill="#FBBC04" />
+                            <path
+                                d="M7.5 2.8c1.1 0 2.1.4 2.8 1.1l2.1-2.1C11.1.7 9.5 0 7.5 0 4.4 0 1.6 1.7.3 4.3l3.4 2.6c.5-1.6 2-2.8 3.8-2.8z"
+                                fill="#EA4335" />
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="payment-options-link">More payment options</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-links">
+            <div class="link-col">
+                <h3>產品目錄</h3>
+                <ul>
+                    <li><a href="#">01 手工具</a></li>
+                    <li><a href="#">06 電料</a></li>
+                    <li><a href="#">15E 加工機械零配件</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h3>支援資源</h3>
+                <ul>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">常見問題</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h3>聯絡我們</h3>
+                <ul>
+                    <li><a href="#">客戶服務</a></li>
+                    <li><a href="#">技術支援</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="company-info-box">
+            <h2>公司資訊</h2>
+            <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.9rem;">
+                我們致力於提供最頂尖的五金工具、儀器設備以及耗材，為您的工程專案帶來最高效率與安全保障。
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=7"></script>
+    <script>
+        // Quantity logic for demo
+        document.getElementById('qty-minus').addEventListener('click', () => {
+            const input = document.getElementById('qty-input');
+            let val = parseInt(input.value);
+            if (val > 1) input.value = val - 1;
+        });
+        document.getElementById('qty-plus').addEventListener('click', () => {
+            const input = document.getElementById('qty-input');
+            let val = parseInt(input.value);
+            input.value = val + 1;
+        });
+
+        // Option selection logic
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const group = e.target.closest('.option-buttons');
+                group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+                e.target.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+
+</html>
