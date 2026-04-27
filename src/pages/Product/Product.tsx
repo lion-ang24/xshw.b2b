@@ -7,12 +7,22 @@ const Product: React.FC = () => {
   const { productId } = useParams();
   const { t } = useTranslation();
   const [product, setProduct] = useState<any>(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
     if (productId) {
       fetchProductDetails(productId).then(data => setProduct(data));
     }
   }, [productId]);
+
+  // Handle escape key to close lightbox
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsLightboxOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   if (!product) return <div style={{ padding: '60px', textAlign: 'center' }}>Loading...</div>;
 
@@ -29,7 +39,7 @@ const Product: React.FC = () => {
         {/* Left Column: Image */}
         <div className="product-image-large">
           <img src="/assets/drill_1.png" alt={product.name} />
-          <div className="zoom-icon">
+          <div className="zoom-icon" onClick={() => setIsLightboxOpen(true)} style={{ cursor: 'pointer' }}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -88,6 +98,18 @@ const Product: React.FC = () => {
           <a href="#" className="payment-options-link">{t('more_payment_options')}</a>
         </div>
       </div>
+
+      {/* Lightbox Overlay */}
+      {isLightboxOpen && (
+        <div className="lightbox-overlay" onClick={() => setIsLightboxOpen(false)}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)} aria-label="Close">
+              &times;
+            </button>
+            <img src="/assets/drill_1.png" alt={product.name} className="lightbox-image" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
