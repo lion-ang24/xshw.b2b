@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
-import { catalogData } from '../../utils/catalogData';
+import { catalogData } from '../../data/catalogData';
 
 const Subcategory: React.FC = () => {
   const { categoryId, subcategoryId } = useParams();

@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext, useContext } from 'react';
-import zhTW from '../locales/zh-TW.json';
-import enUS from '../locales/en-US.json';
+import zhTW from '../data/locales/zh-TW.json';
+import enUS from '../data/locales/en-US.json';
 
 type Language = 'zh-TW' | 'en-US';
 type Translations = Record<string, string>;
