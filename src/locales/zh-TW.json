@@ -46,5 +46,10 @@
   "cat_life": "生活用品",
   "cat_stationery": "文具用品",
   "cat_protect": "防護用品&耗材",
-  "cat_machine": "機械及零配件"
+  "cat_machine": "機械及零配件",
+  "battery_capacity": "電池容量:",
+  "configuration": "配置:",
+  "quantity": "數量:",
+  "buy_with": "使用以下方式購買",
+  "more_payment_options": "更多付款方式"
 }

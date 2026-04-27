@@ -46,5 +46,10 @@
   "cat_life": "Daily Essentials",
   "cat_stationery": "Stationery",
   "cat_protect": "Protection & Consumables",
-  "cat_machine": "Machinery & Parts"
+  "cat_machine": "Machinery & Parts",
+  "battery_capacity": "Battery Capacity:",
+  "configuration": "Configuration:",
+  "quantity": "Quantity:",
+  "buy_with": "Buy with",
+  "more_payment_options": "More payment options"
 }
