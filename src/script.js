@@ -180,16 +180,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Language Switcher Logic
+// Language Switcher & i18n Logic
 document.addEventListener('DOMContentLoaded', () => {
     const langOptions = document.querySelectorAll('.lang-option');
     const currentLangText = document.getElementById('current-lang');
+    
+    // Load saved language or default to zh-TW
+    let currentLang = localStorage.getItem('app_lang') || 'zh-TW';
+    
+    const loadTranslations = async (lang) => {
+        try {
+            // In a local file:// environment, fetch might fail due to CORS. 
+            // A fallback or server is recommended. Assuming it's served via local server.
+            const response = await fetch(`locales/${lang}.json`);
+            if (!response.ok) throw new Error('Network response was not ok');
+            const translations = await response.json();
+            
+            // Update DOM elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[key]) {
+                    el.textContent = translations[key];
+                }
+            });
+            
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[key]) {
+                    el.placeholder = translations[key];
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Update current lang text in dropdown
+            const activeOption = document.querySelector(`.lang-option[data-lang="${lang}"]`);
+            if (activeOption && currentLangText) {
+                currentLangText.textContent = activeOption.textContent;
+            }
+            
+        } catch (error) {
+            console.error('Failed to load translations:', error);
+        }
+    };
+
+    // Initial load
+    loadTranslations(currentLang);
 
     langOptions.forEach(option => {
         option.addEventListener('click', (e) => {
-            const selectedText = e.target.textContent;
-            if (currentLangText) {
-                currentLangText.textContent = selectedText;
+            const selectedLang = e.target.getAttribute('data-lang');
+            if (selectedLang && selectedLang !== currentLang) {
+                currentLang = selectedLang;
+                localStorage.setItem('app_lang', currentLang);
+                loadTranslations(currentLang);
             }
         });
     });

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Website - 工具與五金展示</title>
-    <meta name="description" content="A premium dark mode demo website.">
+    <title>歡迎來到翔盛五金 - 工具與五金型錄</title>
+    <meta name="description" content="歡迎來到翔盛五金 - 您的五金與工具採購平台。">
     <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
     <link rel="stylesheet" href="styles.css?v=7">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 
 <body>
     <header class="header">
-        <div class="logo"><img src="assets/hc_logo.png" alt="LOGO" style="height: 40px; display: block;"></div>
+        <div class="logo"><a href="index.html" style="display: block;"><img src="assets/hc_logo.png" alt="LOGO" style="height: 40px; display: block;"></a></div>
         <div class="search-container ai-search">
             <svg class="ai-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#ai-grad)"
                 stroke-width="2">
@@ -26,7 +26,7 @@
                 </defs>
                 <path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"></path>
             </svg>
-            <input type="text" class="search-bar ai-input" id="ai-search-input" placeholder="✨ 描述您的需求，讓 AI 智慧為您尋找..."
+            <input type="text" class="search-bar ai-input" id="ai-search-input" data-i18n-placeholder="search_placeholder" placeholder="✨ 描述您的需求，讓 AI 智慧為您尋找..."
                 autocomplete="off">
 
             <!-- AI Search Dropdown (Hidden by default) -->
@@ -130,14 +130,14 @@
                     <div class="lang-option" data-lang="en-US">ENG/US</div>
                 </div>
             </div>
-            <button class="login-btn">LOGIN</button>
+            <button class="login-btn" data-i18n="login">LOGIN</button>
         </div>
     </header>
 
     <nav class="nav">
         <ul class="nav-links">
             <li class="nav-item has-mega-menu">
-                <span class="nav-link">產品目錄 <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                <span class="nav-link"><span data-i18n="nav_catalog">產品目錄</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg></span>
@@ -332,25 +332,25 @@
                 </div>
             </li>
             <li class="nav-item">
-                <span class="nav-link">解決方案 <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                <span class="nav-link"><span data-i18n="nav_solutions">解決方案</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg></span>
             </li>
-            <li class="nav-item"><span class="nav-link">技術支援 <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+            <li class="nav-item"><span class="nav-link"><span data-i18n="nav_support">技術支援</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg></span></li>
-            <li class="nav-item"><span class="nav-link">聯繫我們</span></li>
+            <li class="nav-item"><span class="nav-link" data-i18n="nav_contact">聯繫我們</span></li>
         </ul>
     </nav>
 
     <section class="hero" style="background-image: url('assets/hero_bg.png');">
         <div class="hero-left">
             <div class="hero-content">
-                <h1>專業級科技建築五金與儀器</h1>
-                <p>涵蓋手工具、電料、儀器與各式加工機械零配件的完整解決方案。</p>
-                <button class="cta-btn">了解更多</button>
+                <h1 data-i18n="hero_title">專業級科技建築五金與儀器</h1>
+                <p data-i18n="hero_desc">涵蓋手工具、電料、儀器與各式加工機械零配件的完整解決方案。</p>
+                <button class="cta-btn" data-i18n="hero_btn">了解更多</button>
             </div>
         </div>
         <div class="hero-right">
@@ -395,7 +395,7 @@
 
     <section class="featured-categories">
         <div class="section-header">
-            <h2>精選類別</h2>
+            <h2 data-i18n="featured_categories">精選類別</h2>
             <div class="carousel-controls">
                 <button class="ctrl-btn left-btn" id="cat-prev"><svg width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2">
@@ -427,13 +427,13 @@
 
     <section class="middle-banner" style="background-image: url('assets/hero_bg.png');">
         <div class="value-box">
-            <h2>高品質工藝 ‧ 值得信賴</h2>
+            <h2 data-i18n="middle_banner">高品質工藝 ‧ 值得信賴</h2>
         </div>
     </section>
 
     <section class="featured-products">
         <div class="section-header">
-            <h2>熱門商品</h2>
+            <h2 data-i18n="featured_products">熱門商品</h2>
             <div class="carousel-controls">
                 <button class="ctrl-btn left-btn" id="prod-prev"><svg width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2">
@@ -468,7 +468,7 @@
     <footer class="footer">
         <div class="footer-links">
             <div class="link-col">
-                <h3>產品目錄</h3>
+                <h3 data-i18n="footer_catalog">產品目錄</h3>
                 <ul>
                     <li><a href="#">01 手工具</a></li>
                     <li><a href="#">06 電料</a></li>
@@ -481,7 +481,7 @@
                 </ul>
             </div>
             <div class="link-col">
-                <h3>支援資源</h3>
+                <h3 data-i18n="footer_support">支援資源</h3>
                 <ul>
                     <li><a href="#">關於我們</a></li>
                     <li><a href="#">最新消息</a></li>
@@ -489,7 +489,7 @@
                 </ul>
             </div>
             <div class="link-col">
-                <h3>聯絡我們</h3>
+                <h3 data-i18n="footer_contact">聯絡我們</h3>
                 <ul>
                     <li><a href="#">客戶服務</a></li>
                     <li><a href="#">技術支援</a></li>
@@ -498,9 +498,9 @@
             </div>
         </div>
         <div class="company-info-box">
-            <h2>公司資訊</h2>
+            <h2 data-i18n="footer_company">公司資訊</h2>
             <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.9rem;">
-                我們致力於提供最頂尖的五金工具、儀器設備以及耗材，為您的工程專案帶來最高效率與安全保障。
+                <span data-i18n="footer_company_desc">我們致力於提供最頂尖的五金工具、儀器設備以及耗材，為您的工程專案帶來最高效率與安全保障。</span>
             </p>
         </div>
     </footer>

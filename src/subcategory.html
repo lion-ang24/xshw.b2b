@@ -13,7 +13,7 @@
 
 <body>
     <header class="header">
-        <div class="logo"><img src="assets/hc_logo.png" alt="LOGO" style="height: 40px; display: block;"></div>
+        <div class="logo"><a href="index.html" style="display: block;"><img src="assets/hc_logo.png" alt="LOGO" style="height: 40px; display: block;"></a></div>
         <div class="search-container ai-search">
             <svg class="ai-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#ai-grad)"
                 stroke-width="2">
@@ -26,7 +26,7 @@
                 </defs>
                 <path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"></path>
             </svg>
-            <input type="text" class="search-bar ai-input" id="ai-search-input" placeholder="✨ 描述您的需求，讓 AI 智慧為您尋找..."
+            <input type="text" class="search-bar ai-input" id="ai-search-input" data-i18n-placeholder="search_placeholder" placeholder="✨ 描述您的需求，讓 AI 智慧為您尋找..."
                 autocomplete="off">
 
             <!-- AI Search Dropdown (Hidden by default) -->
@@ -130,7 +130,7 @@
                     <div class="lang-option" data-lang="en-US">ENG/US</div>
                 </div>
             </div>
-            <button class="login-btn">LOGIN</button>
+            <button class="login-btn" data-i18n="login">LOGIN</button>
         </div>
     </header>
 
@@ -138,10 +138,10 @@
         <!-- Same nav content -->
         <ul class="nav-links">
             <li class="nav-item">
-                <a href="index.html" class="nav-link" style="color:inherit; text-decoration:none;">回首頁</a>
+                <a href="index.html" class="nav-link" style="color:inherit; text-decoration:none;" data-i18n="nav_home">回首頁</a>
             </li>
             <li class="nav-item">
-                <span class="nav-link">產品目錄</span>
+                <span class="nav-link" data-i18n="nav_catalog">產品目錄</span>
             </li>
         </ul>
     </nav>
@@ -151,7 +151,7 @@
         <!-- Sidebar -->
         <aside class="category-sidebar">
             <div class="category-sidebar-header">
-                <h2>Categories</h2>
+                <h2 data-i18n="sidebar_categories">Categories</h2>
                 <a href="index.html" class="back-link">&lt; Back</a>
             </div>
             <h3 class="sidebar-main-title">電動工具類</h3>
@@ -238,7 +238,7 @@
     <footer class="footer">
         <div class="footer-links">
             <div class="link-col">
-                <h3>產品目錄</h3>
+                <h3 data-i18n="footer_catalog">產品目錄</h3>
                 <ul>
                     <li><a href="#">01 手工具</a></li>
                     <li><a href="#">06 電料</a></li>
@@ -246,14 +246,14 @@
                 </ul>
             </div>
             <div class="link-col">
-                <h3>支援資源</h3>
+                <h3 data-i18n="footer_support">支援資源</h3>
                 <ul>
                     <li><a href="#">關於我們</a></li>
                     <li><a href="#">常見問題</a></li>
                 </ul>
             </div>
             <div class="link-col">
-                <h3>聯絡我們</h3>
+                <h3 data-i18n="footer_contact">聯絡我們</h3>
                 <ul>
                     <li><a href="#">客戶服務</a></li>
                     <li><a href="#">技術支援</a></li>
@@ -261,9 +261,9 @@
             </div>
         </div>
         <div class="company-info-box">
-            <h2>公司資訊</h2>
+            <h2 data-i18n="footer_company">公司資訊</h2>
             <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.9rem;">
-                我們致力於提供最頂尖的五金工具、儀器設備以及耗材，為您的工程專案帶來最高效率與安全保障。
+                <span data-i18n="footer_company_desc">我們致力於提供最頂尖的五金工具、儀器設備以及耗材，為您的工程專案帶來最高效率與安全保障。</span>
             </p>
         </div>
     </footer>
