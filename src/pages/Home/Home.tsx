@@ -4,8 +4,32 @@ import { useTranslation } from '../../hooks/useTranslation';
 const Home: React.FC = () => {
   const { t } = useTranslation();
   const trackRef = useRef<HTMLDivElement>(null);
+  const catCarouselRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [catCanScrollLeft, setCatCanScrollLeft] = useState(false);
+  const [catCanScrollRight, setCatCanScrollRight] = useState(true);
   const totalBrands = 6;
+
+  const updateCatScrollState = () => {
+    const el = catCarouselRef.current;
+    if (!el) return;
+    setCatCanScrollLeft(el.scrollLeft > 4);
+    setCatCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
+  };
+
+  const scrollCatCarousel = (dir: 'left' | 'right') => {
+    const el = catCarouselRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir === 'right' ? 280 : -280, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    const el = catCarouselRef.current;
+    if (!el) return;
+    updateCatScrollState();
+    el.addEventListener('scroll', updateCatScrollState);
+    return () => el.removeEventListener('scroll', updateCatScrollState);
+  }, []);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -23,9 +47,9 @@ const Home: React.FC = () => {
         isAnimating = false;
         return;
       }
-      
+
       const itemWidth = firstChild.getBoundingClientRect().width;
-      const gap = 15; // match CSS gap
+      const gap = 15;
       const moveDistance = (itemWidth + gap) * steps;
 
       setCurrentIndex((prev) => (prev + steps) % totalBrands);
@@ -56,16 +80,6 @@ const Home: React.FC = () => {
       clearInterval(autoSlideInterval);
     };
   }, []);
-
-  const handleIndicatorClick = (index: number) => {
-    if (index === currentIndex) return;
-    const steps = (index - currentIndex + totalBrands) % totalBrands;
-    // We would need to pass this to the effect or handle it differently, 
-    // but for simplicity we rely on the auto-slider for the infinite loop,
-    // or just let the effect handle it. To perfectly sync, we could expose slideCarousel.
-    // Given the complexity of mixing React state with DOM manipulation for infinite carousels,
-    // the auto-slide is preserved via useEffect above.
-  };
 
   return (
     <>
@@ -106,12 +120,12 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
+
           <div className="carousel-indicators" id="brand-indicators">
             {Array.from({ length: totalBrands }).map((_, idx) => (
-              <span 
-                key={idx} 
+              <span
+                key={idx}
                 className={`indicator ${idx === currentIndex ? 'active' : ''}`}
-                onClick={() => handleIndicatorClick(idx)}
               ></span>
             ))}
           </div>
@@ -122,35 +136,57 @@ const Home: React.FC = () => {
         <div className="section-header">
           <h2>{t('featured_categories')}</h2>
         </div>
-        <div className="carousel-container" id="cat-carousel">
-          <div className="card">
-            <img src="https://lh3.googleusercontent.com/d/1gg6_zL1Objsrw3cbwMVC13w7dDTxeeDC" alt="手工具" />
-            <button className="card-btn">手工具</button>
+        <div className="cat-carousel-wrapper">
+          <button
+            className={`cat-arrow cat-arrow--left ${catCanScrollLeft ? 'visible' : ''}`}
+            onClick={() => scrollCatCarousel('left')}
+            aria-label="向左滑動"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="22" height="22">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+
+          <div className="carousel-container" ref={catCarouselRef}>
+            <div className="card">
+              <img src="https://lh3.googleusercontent.com/d/1gg6_zL1Objsrw3cbwMVC13w7dDTxeeDC" alt="手工具" />
+              <button className="card-btn">手工具</button>
+            </div>
+            <div className="card">
+              <img src="https://loremflickr.com/400/400/electronics/all" alt="電料" />
+              <button className="card-btn">電料</button>
+            </div>
+            <div className="card">
+              <img src="https://loremflickr.com/400/400/machinery/all" alt="加工機械零配件" />
+              <button className="card-btn">加工機械零配件</button>
+            </div>
+            <div className="card">
+              <img src="https://loremflickr.com/400/400/plumbing/all" alt="水料" />
+              <button className="card-btn">水料</button>
+            </div>
+            <div className="card">
+              <img src="https://loremflickr.com/400/400/construction/all" alt="防震用品&耗材" />
+              <button className="card-btn">防震用品&耗材</button>
+            </div>
+            <div className="card">
+              <img src="https://loremflickr.com/400/400/crane/all" alt="起重/搬運設備" />
+              <button className="card-btn">起重/搬運設備</button>
+            </div>
+            <div className="card">
+              <img src="https://loremflickr.com/400/400/instrument/all" alt="儀器與控制元件" />
+              <button className="card-btn">儀器與控制元件</button>
+            </div>
           </div>
-          <div className="card">
-            <img src="https://loremflickr.com/400/400/electronics/all" alt="電料" />
-            <button className="card-btn">電料</button>
-          </div>
-          <div className="card">
-            <img src="https://loremflickr.com/400/400/machinery/all" alt="加工機械零配件" />
-            <button className="card-btn">加工機械零配件</button>
-          </div>
-          <div className="card">
-            <img src="https://loremflickr.com/400/400/plumbing/all" alt="水料" />
-            <button className="card-btn">水料</button>
-          </div>
-          <div className="card">
-            <img src="https://loremflickr.com/400/400/construction/all" alt="防震用品&耗材" />
-            <button className="card-btn">防震用品&耗材</button>
-          </div>
-          <div className="card">
-            <img src="https://loremflickr.com/400/400/crane/all" alt="起重/搬運設備" />
-            <button className="card-btn">起重/搬運設備</button>
-          </div>
-          <div className="card">
-            <img src="https://loremflickr.com/400/400/instrument/all" alt="儀器與控制元件" />
-            <button className="card-btn">儀器與控制元件</button>
-          </div>
+
+          <button
+            className={`cat-arrow cat-arrow--right ${catCanScrollRight ? 'visible' : ''}`}
+            onClick={() => scrollCatCarousel('right')}
+            aria-label="向右滑動"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="22" height="22">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
         </div>
       </section>
 
