@@ -1,9 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
+import { useAnnouncements } from '../../hooks/useAnnouncements';
 
 const Header: React.FC = () => {
   const { language, setLanguage, t } = useTranslation();
+  const { getRecentAnnouncements } = useAnnouncements();
+  const recentAnnouncements = getRecentAnnouncements(7);
+
+  const getTagClass = (status: string) => {
+    switch (status) {
+      case '新活動': return 'announcement-tag--new';
+      case '更新': return 'announcement-tag--update';
+      default: return 'announcement-tag--notice';
+    }
+  };
+
+  const getTagLabel = (status: string) => {
+    switch (status) {
+      case '新活動': return t('announcement_tag_new') || status;
+      case '更新': return t('announcement_tag_update') || status;
+      default: return t('announcement_tag_notice') || status;
+    }
+  };
+
+  const closeMegaMenu = () => {
+    // If it's CSS hover-based, removing focus from the active element can help close it on touch devices
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  };
 
   return (
     <>
@@ -47,29 +73,26 @@ const Header: React.FC = () => {
                 <div className="announcement-panel">
                   <div className="announcement-panel-header">
                     <h3 className="announcement-panel-title">{t('nav_announcement')}</h3>
-                    <Link to="/announcements" className="announcement-view-all">{t('announcement_view_all')}</Link>
+                    <Link to="/announcements" className="announcement-view-all" onClick={closeMegaMenu}>
+                      {t('announcement_view_all')}
+                    </Link>
                   </div>
                   <ul className="announcement-list">
-                    <li className="announcement-item">
-                      <span className="announcement-tag announcement-tag--new">{t('announcement_tag_new')}</span>
-                      <span className="announcement-date">2026/05/01</span>
-                      <Link to="/announcements/1" className="announcement-title">2026 年五月份促銷活動正式開跑，多項商品限時特惠</Link>
-                    </li>
-                    <li className="announcement-item">
-                      <span className="announcement-tag announcement-tag--notice">{t('announcement_tag_notice')}</span>
-                      <span className="announcement-date">2026/04/25</span>
-                      <Link to="/announcements/2" className="announcement-title">系統維護公告：4/28（日）凌晨 00:00–04:00 暫停服務</Link>
-                    </li>
-                    <li className="announcement-item">
-                      <span className="announcement-tag announcement-tag--update">{t('announcement_tag_update')}</span>
-                      <span className="announcement-date">2026/04/15</span>
-                      <Link to="/announcements/3" className="announcement-title">運送政策更新：偏遠地區運費調整說明</Link>
-                    </li>
-                    <li className="announcement-item">
-                      <span className="announcement-tag announcement-tag--notice">{t('announcement_tag_notice')}</span>
-                      <span className="announcement-date">2026/04/01</span>
-                      <Link to="/announcements/4" className="announcement-title">勞動節連假出貨安排說明（5/1–5/4）</Link>
-                    </li>
+                    {recentAnnouncements.map((announcement) => (
+                      <li key={announcement.id} className="announcement-item">
+                        <span className={`announcement-tag ${getTagClass(announcement.status)}`}>
+                          {getTagLabel(announcement.status)}
+                        </span>
+                        <span className="announcement-date">{announcement.date}</span>
+                        <Link 
+                          to={`/announcements/${announcement.id}`} 
+                          className="announcement-title"
+                          onClick={closeMegaMenu}
+                        >
+                          {announcement.title}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

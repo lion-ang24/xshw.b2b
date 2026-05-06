@@ -6,6 +6,8 @@ import Home from './pages/Home/Home';
 import Subcategory from './pages/Subcategory/Subcategory';
 import Product from './pages/Product/Product';
 import PlaceholderPage from './components/PlaceholderPage';
+import AnnouncementList from './pages/Announcements/AnnouncementList';
+import AnnouncementDetail from './pages/Announcements/AnnouncementDetail';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
             <Route path="/category/:categoryId" element={<Subcategory />} />
             <Route path="/category/:categoryId/:subcategoryId" element={<Subcategory />} />
             <Route path="/product/:productId" element={<Product />} />
+            
+            <Route path="/announcements" element={<AnnouncementList />} />
+            <Route path="/announcements/:id" element={<AnnouncementDetail />} />
             
             <Route path="/solutions" element={<PlaceholderPage titleKey="nav_solutions" />} />
             <Route path="/tech-support" element={<PlaceholderPage titleKey="nav_support" />} />
