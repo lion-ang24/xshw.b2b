@@ -9,6 +9,13 @@ const Product: React.FC = () => {
   const [product, setProduct] = useState<any>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
+  const specOptions = [
+    { name: '2.0Ah Compact', detail: '2.0Ah Compact Bare Tool / Kit with Charger' },
+    { name: '4.0Ah High Capacity', detail: '4.0Ah High Capacity Bare Tool / Kit with Charger' },
+    { name: '5.0Ah Extended', detail: '5.0Ah Extended Bare Tool / Kit with Charger' },
+  ];
+  const [selectedSpecIndex, setSelectedSpecIndex] = useState(0);
+
   useEffect(() => {
     if (productId) {
       fetchProductDetails(productId).then(data => setProduct(data));
@@ -56,46 +63,53 @@ const Product: React.FC = () => {
           <div className="product-price">${product.price.toFixed(2)}</div>
 
           <div className="option-group">
-            <span className="option-label">{t('battery_capacity')}</span>
+            <span className="option-label">{t('spec_name')}</span>
             <div className="option-buttons">
-              <button className="option-btn">2.0Ah Compact</button>
-              <button className="option-btn selected">4.0Ah High Capacity</button>
-              <button className="option-btn">5.0Ah Extended</button>
+              {specOptions.map((opt, index) => (
+                <button
+                  key={index}
+                  className={`option-btn ${selectedSpecIndex === index ? 'selected' : ''}`}
+                  onClick={() => setSelectedSpecIndex(index)}
+                >
+                  {opt.name}
+                </button>
+              ))}
             </div>
           </div>
 
-          <div className="option-group">
-            <span className="option-label">{t('configuration')}</span>
-            <div className="option-buttons">
-              <button className="option-btn">Bare Tool</button>
-              <button className="option-btn selected">Kit with Charger</button>
+          <div className="option-group" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+            <span className="option-label" style={{ marginBottom: '8px' }}>{t('spec_details')}</span>
+            <div style={{ width: '100%' }}>
+              <div
+                style={{
+                  width: '100%',
+                  minHeight: '60px',
+                  padding: '10px',
+                  borderRadius: '4px',
+                  border: '1px solid #444',
+                  backgroundColor: '#1e1e1e',
+                  color: '#eeeeee',
+                  fontFamily: 'inherit',
+                  boxSizing: 'border-box',
+                  whiteSpace: 'pre-wrap'
+                }}
+              >
+                {specOptions[selectedSpecIndex].detail}
+              </div>
+              <div style={{ textAlign: 'right', fontSize: '12px', color: '#666', marginTop: '4px' }}>
+                {specOptions[selectedSpecIndex].detail.length} / 500
+              </div>
             </div>
           </div>
 
-          <div className="quantity-group">
-            <span className="option-label">{t('quantity')}</span>
-            <div className="qty-selector">
-              <button className="qty-btn" id="qty-minus">-</button>
-              <input type="text" className="qty-input" defaultValue="1" id="qty-input" />
-              <button className="qty-btn" id="qty-plus">+</button>
-            </div>
-          </div>
-
-          <div className="action-buttons">
-            <button className="btn-primary-action">{t('btn_add_to_cart')}</button>
-            <button className="btn-secondary-action">{t('btn_request_quote')}</button>
-            <button className="btn-brand-action">
-              {t('buy_with')}
-              <svg width="40" height="16" viewBox="0 0 40 16" fill="none" style={{ marginLeft: '5px' }}>
-                <path d="M14.5 7.5c0-.5-.1-1-.2-1.5H7.5v2.8h4c-.2 1.3-1 2.4-2.1 3.1v2.5h3.4c2-1.8 3.1-4.5 3.1-7.4z" fill="#4285F4" />
-                <path d="M7.5 14.5c2 0 3.6-.7 4.8-1.8l-3.4-2.5c-.7.4-1.5.7-2.4.7-1.8 0-3.3-1.2-3.8-2.8H.3v2.6c1.3 2.6 4.1 4.3 7.2 4.3z" fill="#34A853" />
-                <path d="M3.7 8.1c-.2-.6-.2-1.2-.2-1.8s.1-1.2.2-1.8V2H.3C-.2 3.1-.5 4.3-.5 5.5s.3 2.4.8 3.5l3.4-2.6z" fill="#FBBC04" />
-                <path d="M7.5 2.8c1.1 0 2.1.4 2.8 1.1l2.1-2.1C11.1.7 9.5 0 7.5 0 4.4 0 1.6 1.7.3 4.3l3.4 2.6c.5-1.6 2-2.8 3.8-2.8z" fill="#EA4335" />
-              </svg>
-            </button>
-          </div>
-
-          <a href="#" className="payment-options-link">{t('more_payment_options')}</a>
+          {/* 
+            根據需求隱藏以下按鈕與欄位：
+            - 數量選擇
+            - 加入購物車
+            - 加入報價單/詢價單
+            - 使用以下方式購買
+            - 更多付款方式
+          */}
         </div>
       </div>
 

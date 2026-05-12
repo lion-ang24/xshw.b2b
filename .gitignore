@@ -99,3 +99,5 @@ $RECYCLE.BIN/
 /.nyc_output
 
 # End of file
+.spectra/
+openspec/.vector-search.db*

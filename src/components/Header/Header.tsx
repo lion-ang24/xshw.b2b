@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               <div className="lang-option" onClick={() => setLanguage('en-US')}>ENG/US</div>
             </div>
           </div>
-          <button className="login-btn">{t('login')}</button>
+          {/* <button className="login-btn">{t('login')}</button> */}
         </div>
       </header>
 

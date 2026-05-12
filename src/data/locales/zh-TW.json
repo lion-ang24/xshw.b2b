@@ -68,5 +68,7 @@
   "configuration": "配置:",
   "quantity": "數量:",
   "buy_with": "使用以下方式購買",
-  "more_payment_options": "更多付款方式"
+  "more_payment_options": "更多付款方式",
+  "spec_name": "規格名稱",
+  "spec_details": "規格明細"
 }

@@ -68,5 +68,7 @@
   "configuration": "Configuration:",
   "quantity": "Quantity:",
   "buy_with": "Buy with",
-  "more_payment_options": "More payment options"
+  "more_payment_options": "More payment options",
+  "spec_name": "Specification Name",
+  "spec_details": "Specification Details"
 }
