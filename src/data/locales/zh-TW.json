@@ -70,5 +70,10 @@
   "buy_with": "使用以下方式購買",
   "more_payment_options": "更多付款方式",
   "spec_name": "規格名稱",
-  "spec_details": "規格明細"
+  "spec_details": "規格明細",
+  "add_to_queue": "加入清單",
+  "direct_order": "成立需求單",
+  "add_to_queue_success": "已加入清單",
+  "add_to_queue_duplicate": "該商品已加入清單",
+  "mail_order": "Mail 採購"
 }

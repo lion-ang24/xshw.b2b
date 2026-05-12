@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
 import { fetchProductDetails } from '../../api/productApi';
+import { useCart } from '../../context/CartContext';
+import { ORDER_EMAIL } from '../../config/orderConfig';
 
 const Product: React.FC = () => {
   const { productId } = useParams();
   const { t } = useTranslation();
+  const { addItem, items } = useCart();
   const [product, setProduct] = useState<any>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -15,6 +18,8 @@ const Product: React.FC = () => {
     { name: '5.0Ah Extended', detail: '5.0Ah Extended Bare Tool / Kit with Charger' },
   ];
   const [selectedSpecIndex, setSelectedSpecIndex] = useState(0);
+  const [hasSelectedSpec, setHasSelectedSpec] = useState(false);
+  const [queueToast, setQueueToast] = useState<'added' | 'duplicate' | null>(null);
 
   useEffect(() => {
     if (productId) {
@@ -69,7 +74,7 @@ const Product: React.FC = () => {
                 <button
                   key={index}
                   className={`option-btn ${selectedSpecIndex === index ? 'selected' : ''}`}
-                  onClick={() => setSelectedSpecIndex(index)}
+                  onClick={() => { setSelectedSpecIndex(index); setHasSelectedSpec(true); }}
                 >
                   {opt.name}
                 </button>
@@ -101,6 +106,79 @@ const Product: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Action Buttons — 規格選定後顯示 */}
+          {hasSelectedSpec && (
+            <div className="spec-action-buttons">
+              <button
+                className="spec-action-btn spec-action-btn--secondary"
+                onClick={() => {
+                  const itemId = `${productId}-${specOptions[selectedSpecIndex].name}`;
+                  const alreadyInCart = items.some(i => i.id === itemId);
+                  addItem({
+                    id: itemId,
+                    productId: productId ?? '',
+                    productName: product?.name ?? '',
+                    spec: specOptions[selectedSpecIndex].name,
+                    qty: 1,
+                  });
+                  setQueueToast(alreadyInCart ? 'duplicate' : 'added');
+                  setTimeout(() => setQueueToast(null), 2500);
+                }}
+              >
+                {t('add_to_queue')}
+              </button>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdWx8YvWJxxF-pDihwXEddwueI8zfDbkepvTKwd2IuTB61dVA/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="spec-action-btn spec-action-btn--primary"
+              >
+                {t('direct_order')}
+              </a>
+              <button
+                className="spec-action-btn spec-action-btn--mail"
+                onClick={() => {
+                  const today = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
+                  const spec = specOptions[selectedSpecIndex].name;
+                  const subject = `【Mail 採購】${product?.name ?? ''} - ${spec}`;
+                  const body =
+`您好，
+
+以下為本次 Mail 採購需求，請確認後回覆。
+
+──────────────────────
+Date: ${today}
+商品：${product?.name ?? ''}
+規格：${spec}
+數量：
+──────────────────────
+備註：
+
+`;
+                  window.location.href = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                {t('mail_order')}
+              </button>
+            </div>
+          )}
+
+          {/* Queue Toast Notification */}
+          {queueToast === 'added' && (
+            <div className="spec-queue-toast">
+              ✓ {t('add_to_queue_success') || '已加入清單'}
+            </div>
+          )}
+          {queueToast === 'duplicate' && (
+            <div className="spec-queue-toast spec-queue-toast--duplicate">
+              ⚠ {t('add_to_queue_duplicate') || '該商品已加入清單'}
+            </div>
+          )}
 
           {/* 
             根據需求隱藏以下按鈕與欄位：

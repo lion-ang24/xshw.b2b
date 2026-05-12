@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import { I18nProvider } from './hooks/useTranslation';
+import { CartProvider } from './context/CartContext';
 
 import Home from './pages/Home/Home';
 import Subcategory from './pages/Subcategory/Subcategory';
@@ -12,6 +13,7 @@ import AnnouncementDetail from './pages/Announcements/AnnouncementDetail';
 function App() {
   return (
     <I18nProvider>
+      <CartProvider>
       <Router>
         <Layout>
           <Routes>
@@ -35,6 +37,7 @@ function App() {
           </Routes>
         </Layout>
       </Router>
+      </CartProvider>
     </I18nProvider>
   );
 }
