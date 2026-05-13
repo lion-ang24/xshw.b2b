@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
+import { catalogData } from '../../data/catalogData';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const trackRef = useRef<HTMLDivElement>(null);
   const catCarouselRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,6 +24,10 @@ const Home: React.FC = () => {
     const el = catCarouselRef.current;
     if (!el) return;
     el.scrollBy({ left: dir === 'right' ? 280 : -280, behavior: 'smooth' });
+  };
+
+  const handleCategoryClick = (id: string) => {
+    navigate(`/category/${id}`);
   };
 
   useEffect(() => {
@@ -150,31 +157,31 @@ const Home: React.FC = () => {
           <div className="carousel-container" ref={catCarouselRef}>
             <div className="card">
               <img src="https://lh3.googleusercontent.com/d/1gg6_zL1Objsrw3cbwMVC13w7dDTxeeDC" alt="手工具" referrerPolicy="no-referrer" />
-              <button className="card-btn">手工具</button>
+              <button className="card-btn" onClick={() => handleCategoryClick('handtools')}>手工具</button>
             </div>
             <div className="card">
               <img src="https://loremflickr.com/400/400/electronics/all" alt="電料" />
-              <button className="card-btn">電料</button>
+              <button className="card-btn" onClick={() => handleCategoryClick('electric')}>電料</button>
             </div>
             <div className="card">
               <img src="https://loremflickr.com/400/400/machinery/all" alt="加工機械零配件" />
-              <button className="card-btn">加工機械零配件</button>
+              <button className="card-btn" onClick={() => handleCategoryClick('machine')}>加工機械零配件</button>
             </div>
             <div className="card">
               <img src="https://loremflickr.com/400/400/plumbing/all" alt="水料" />
-              <button className="card-btn">水料</button>
+              <button className="card-btn" onClick={() => handleCategoryClick('water')}>水料</button>
             </div>
             <div className="card">
               <img src="https://loremflickr.com/400/400/construction/all" alt="防震用品&耗材" />
-              <button className="card-btn">防震用品&耗材</button>
+              <button className="card-btn" onClick={() => handleCategoryClick('protect')}>防震用品&耗材</button>
             </div>
             <div className="card">
               <img src="https://loremflickr.com/400/400/crane/all" alt="起重/搬運設備" />
-              <button className="card-btn">起重/搬運設備</button>
+              <button className="card-btn" onClick={() => handleCategoryClick('machine')}>起重/搬運設備</button>
             </div>
             <div className="card">
               <img src="https://loremflickr.com/400/400/instrument/all" alt="儀器與控制元件" />
-              <button className="card-btn">儀器與控制元件</button>
+              <button className="card-btn" onClick={() => handleCategoryClick('machine')}>儀器與控制元件</button>
             </div>
           </div>
 
