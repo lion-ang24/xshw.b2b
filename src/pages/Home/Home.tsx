@@ -149,7 +149,7 @@ const Home: React.FC = () => {
 
           <div className="carousel-container" ref={catCarouselRef}>
             <div className="card">
-              <img src="https://lh3.googleusercontent.com/d/1gg6_zL1Objsrw3cbwMVC13w7dDTxeeDC" alt="手工具" />
+              <img src="https://lh3.googleusercontent.com/d/1gg6_zL1Objsrw3cbwMVC13w7dDTxeeDC" alt="手工具" referrerPolicy="no-referrer" />
               <button className="card-btn">手工具</button>
             </div>
             <div className="card">

@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "name": "PVC Floor Mat - 1.5mm x 4ft",
+      "category": "10 - 勞安用品&無塵室系列",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "",
+          "specName": "1.5mm x 4ft",
+          "specDetail": "",
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": "搖頭棘輪梅開板手",
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "Alstrong",
+      "imageUrl": "https://lh3.googleusercontent.com/d/1Azhq_EiDO1Eog7gPyz6n1vlLANmsQS4y",
+      "specs": [
+        {
+          "sku": "AZX-FRCW-0012",
+          "specName": "12mm",
+          "specDetail": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。",
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0013",
+          "specName": "13mm",
+          "specDetail": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。",
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0014",
+          "specName": "14mm",
+          "specDetail": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。",
+          "price": ""
+        }
+      ]
+    }
+  ]
+}

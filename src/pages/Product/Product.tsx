@@ -4,6 +4,10 @@ import { useTranslation } from '../../hooks/useTranslation';
 import { fetchProductDetails } from '../../api/productApi';
 import { useCart } from '../../context/CartContext';
 import { ORDER_EMAIL } from '../../config/orderConfig';
+import zhTW from '../../data/locales/zh-TW.json';
+import { catalogData } from '../../data/catalogData';
+
+const getChineseName = (key: string) => (zhTW as Record<string, string>)[key] || key;
 
 const Product: React.FC = () => {
   const { productId } = useParams();
@@ -12,18 +16,19 @@ const Product: React.FC = () => {
   const [product, setProduct] = useState<any>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  const specOptions = [
-    { name: '2.0Ah Compact', detail: '2.0Ah Compact Bare Tool / Kit with Charger' },
-    { name: '4.0Ah High Capacity', detail: '4.0Ah High Capacity Bare Tool / Kit with Charger' },
-    { name: '5.0Ah Extended', detail: '5.0Ah Extended Bare Tool / Kit with Charger' },
-  ];
   const [selectedSpecIndex, setSelectedSpecIndex] = useState(0);
   const [hasSelectedSpec, setHasSelectedSpec] = useState(false);
   const [queueToast, setQueueToast] = useState<'added' | 'duplicate' | null>(null);
 
   useEffect(() => {
     if (productId) {
-      fetchProductDetails(productId).then(data => setProduct(data));
+      fetchProductDetails(productId).then(data => {
+        setProduct(data);
+        if (data && data.specs && data.specs.length > 0) {
+          setSelectedSpecIndex(0);
+          setHasSelectedSpec(true); // Automatically select first spec
+        }
+      });
     }
   }, [productId]);
 
@@ -38,74 +43,97 @@ const Product: React.FC = () => {
 
   if (!product) return <div style={{ padding: '60px', textAlign: 'center' }}>Loading...</div>;
 
+  const specs = product.specs || [];
+  const currentSpec = specs[selectedSpecIndex] || {};
+  const priceDisplay = currentSpec.price ? `$${currentSpec.price}` : '';
+  const hasImage = product.imageUrl && product.imageUrl.trim() !== '';
+
+  // Reverse mapping for breadcrumb (optional)
+  const categoryStr = product.category || '';
+  const matchedCat = catalogData.find(c => categoryStr.includes(getChineseName(c.nameKey)));
+  const categoryName = matchedCat ? t(matchedCat.nameKey) : categoryStr;
+
   return (
     <div className="product-detail-page">
       <div className="breadcrumb" style={{ padding: '20px' }}>
         <Link to="/">{t('nav_home')}</Link> <span>/</span>
         <Link to="/category">{t('nav_catalog')}</Link> <span>/</span>
-        <Link to="/category/powertools/screwdriver">{t('subcat_screwdriver')}</Link> <span>/</span>
+        {matchedCat && <><Link to={`/category/${matchedCat.id}`}>{categoryName}</Link> <span>/</span></>}
         <span style={{ color: 'var(--text-primary)' }}>{product.name}</span>
       </div>
 
       <div className="product-detail-container">
         {/* Left Column: Image */}
         <div className="product-image-large">
-          <img src="/assets/drill_1.png" alt={product.name} />
-          <div className="zoom-icon" onClick={() => setIsLightboxOpen(true)} style={{ cursor: 'pointer' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              <line x1="11" y1="8" x2="11" y2="14"></line>
-              <line x1="8" y1="11" x2="14" y2="11"></line>
-            </svg>
-          </div>
+          {hasImage ? (
+            <>
+              <img src={product.imageUrl} alt={product.name} referrerPolicy="no-referrer" />
+              <div className="zoom-icon" onClick={() => setIsLightboxOpen(true)} style={{ cursor: 'pointer' }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </div>
+            </>
+          ) : (
+            <div style={{ width: '100%', height: '400px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', borderRadius: '8px' }}>
+              圖片待更新
+            </div>
+          )}
         </div>
 
         {/* Right Column: Details */}
         <div className="product-info-right">
-          <div className="brand-label">{product.brand}</div>
+          {product.brand && <div className="brand-label">{product.brand}</div>}
           <h1 className="product-h1">{product.name}</h1>
-          <div className="product-price">${product.price.toFixed(2)}</div>
+          {priceDisplay && <div className="product-price">{priceDisplay}</div>}
+          {currentSpec.sku && <div className="sku-label" style={{ marginBottom: '15px', color: 'var(--text-secondary)' }}>SKU: {currentSpec.sku}</div>}
 
-          <div className="option-group">
-            <span className="option-label">{t('spec_name')}</span>
-            <div className="option-buttons">
-              {specOptions.map((opt, index) => (
-                <button
-                  key={index}
-                  className={`option-btn ${selectedSpecIndex === index ? 'selected' : ''}`}
-                  onClick={() => { setSelectedSpecIndex(index); setHasSelectedSpec(true); }}
-                >
-                  {opt.name}
-                </button>
-              ))}
-            </div>
-          </div>
+          {specs.length > 0 && (
+            <>
+              <div className="option-group">
+                <span className="option-label">{t('spec_name')}</span>
+                <div className="option-buttons">
+                  {specs.map((opt: any, index: number) => (
+                    <button
+                      key={index}
+                      className={`option-btn ${selectedSpecIndex === index ? 'selected' : ''}`}
+                      onClick={() => { setSelectedSpecIndex(index); setHasSelectedSpec(true); }}
+                    >
+                      {opt.specName || `規格 ${index + 1}`}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          <div className="option-group" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-            <span className="option-label" style={{ marginBottom: '8px' }}>{t('spec_details')}</span>
-            <div style={{ width: '100%' }}>
-              <div
-                style={{
-                  width: '100%',
-                  minHeight: '60px',
-                  padding: '10px',
-                  borderRadius: '4px',
-                  border: '1px solid #444',
-                  backgroundColor: '#1e1e1e',
-                  color: '#eeeeee',
-                  fontFamily: 'inherit',
-                  boxSizing: 'border-box',
-                  whiteSpace: 'pre-wrap'
-                }}
-              >
-                {specOptions[selectedSpecIndex].detail}
+              <div className="option-group" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+                <span className="option-label" style={{ marginBottom: '8px' }}>{t('spec_details')}</span>
+                <div style={{ width: '100%' }}>
+                  <div
+                    style={{
+                      width: '100%',
+                      minHeight: '60px',
+                      padding: '10px',
+                      borderRadius: '4px',
+                      border: '1px solid #444',
+                      backgroundColor: '#1e1e1e',
+                      color: '#eeeeee',
+                      fontFamily: 'inherit',
+                      boxSizing: 'border-box',
+                      whiteSpace: 'pre-wrap'
+                    }}
+                  >
+                    {currentSpec.specDetail}
+                  </div>
+                  <div style={{ textAlign: 'right', fontSize: '12px', color: '#666', marginTop: '4px' }}>
+                    {(currentSpec.specDetail || '').length} / 500
+                  </div>
+                </div>
               </div>
-              <div style={{ textAlign: 'right', fontSize: '12px', color: '#666', marginTop: '4px' }}>
-                {specOptions[selectedSpecIndex].detail.length} / 500
-              </div>
-            </div>
-          </div>
+            </>
+          )}
 
           {/* Action Buttons — 規格選定後顯示 */}
           {hasSelectedSpec && (
@@ -113,13 +141,14 @@ const Product: React.FC = () => {
               <button
                 className="spec-action-btn spec-action-btn--secondary"
                 onClick={() => {
-                  const itemId = `${productId}-${specOptions[selectedSpecIndex].name}`;
+                  const specNameStr = currentSpec.specName || '';
+                  const itemId = `${productId}-${specNameStr}`;
                   const alreadyInCart = items.some(i => i.id === itemId);
                   addItem({
                     id: itemId,
                     productId: productId ?? '',
                     productName: product?.name ?? '',
-                    spec: specOptions[selectedSpecIndex].name,
+                    spec: specNameStr,
                     qty: 1,
                   });
                   setQueueToast(alreadyInCart ? 'duplicate' : 'added');
@@ -140,7 +169,7 @@ const Product: React.FC = () => {
                 className="spec-action-btn spec-action-btn--mail"
                 onClick={() => {
                   const today = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
-                  const spec = specOptions[selectedSpecIndex].name;
+                  const spec = currentSpec.specName || '';
                   const subject = `【Mail 採購】${product?.name ?? ''} - ${spec}`;
                   const body =
 `您好，
@@ -179,26 +208,17 @@ Date: ${today}
               ⚠ {t('add_to_queue_duplicate') || '該商品已加入清單'}
             </div>
           )}
-
-          {/* 
-            根據需求隱藏以下按鈕與欄位：
-            - 數量選擇
-            - 加入購物車
-            - 加入報價單/詢價單
-            - 使用以下方式購買
-            - 更多付款方式
-          */}
         </div>
       </div>
 
       {/* Lightbox Overlay */}
-      {isLightboxOpen && (
+      {isLightboxOpen && hasImage && (
         <div className="lightbox-overlay" onClick={() => setIsLightboxOpen(false)}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)} aria-label="Close">
               &times;
             </button>
-            <img src="/assets/drill_1.png" alt={product.name} className="lightbox-image" />
+            <img src={product.imageUrl} alt={product.name} className="lightbox-image" referrerPolicy="no-referrer" />
           </div>
         </div>
       )}

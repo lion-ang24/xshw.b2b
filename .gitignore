@@ -94,6 +94,9 @@ $RECYCLE.BIN/
 # Stores VS Code history
 .history/
 
+# Data
+*.xlsx
+
 # Testing
 /coverage
 /.nyc_output
