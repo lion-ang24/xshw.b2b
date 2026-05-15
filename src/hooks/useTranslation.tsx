@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import zhTW from '../data/locales/zh-TW.json';
 import enUS from '../data/locales/en-US.json';
 
