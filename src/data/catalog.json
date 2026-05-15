@@ -1,7 +1,10 @@
 {
   "products": [
     {
-      "name": "PVC Floor Mat - 1.5mm x 4ft",
+      "name": {
+        "en-US": "PVC Floor Mat",
+        "zh-TW": "PVC Floor Mat"
+      },
       "category": "10 - 勞安用品&無塵室系列",
       "subcategory": "",
       "brand": "",
@@ -9,14 +12,23 @@
       "specs": [
         {
           "sku": "",
-          "specName": "1.5mm x 4ft",
-          "specDetail": "",
+          "specName": {
+            "en-US": "1.5mm x 4ft",
+            "zh-TW": "1.5mm x 4ft"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
           "price": ""
         }
       ]
     },
     {
-      "name": "搖頭棘輪梅開板手",
+      "name": {
+        "en-US": "RGWS-242 12-IN1 Reversible Ratchent Wrench",
+        "zh-TW": "搖頭棘輪梅開板手"
+      },
       "category": "01 - 手工具類",
       "subcategory": "",
       "brand": "Alstrong",
@@ -24,20 +36,1334 @@
       "specs": [
         {
           "sku": "AZX-FRCW-0012",
-          "specName": "12mm",
-          "specDetail": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。"
+          },
           "price": ""
         },
         {
           "sku": "AZX-FRCW-0013",
-          "specName": "13mm",
-          "specDetail": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。"
+          },
           "price": ""
         },
         {
           "sku": "AZX-FRCW-0014",
-          "specName": "14mm",
-          "specDetail": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。"
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized A-Type Flat Mount Low-Profile Back-to-Back Strut Channel",
+        "zh-TW": "A向平貼低腳雙併型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-AFL-B2B-GSC0600",
+          "specName": {
+            "en-US": "600mm",
+            "zh-TW": "600mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized A-Type Base Mount Low-Profile Back-to-Back Strut Channel",
+        "zh-TW": "A向底板低腳雙併型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-ABL-B2B-GSC0420",
+          "specName": {
+            "en-US": "420mm",
+            "zh-TW": "420mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ABL-B2B-GSC1300",
+          "specName": {
+            "en-US": "1300mm",
+            "zh-TW": "1300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized B-Type Base Mount Low-Profile Back-to-Back Strut Channel",
+        "zh-TW": "B向底板低腳雙併型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-BBL-B2B-GSC0700",
+          "specName": {
+            "en-US": "700mm",
+            "zh-TW": "700mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-BBL-B2B-GSC1300",
+          "specName": {
+            "en-US": "1300mm",
+            "zh-TW": "1300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized High-Profile Slotted Strut Channel",
+        "zh-TW": "高腳沖孔型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GHS-SC0100",
+          "specName": {
+            "en-US": "100mm",
+            "zh-TW": "100mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GHS-SC0200",
+          "specName": {
+            "en-US": "200mm",
+            "zh-TW": "200mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GHS-SC0300",
+          "specName": {
+            "en-US": "300mm",
+            "zh-TW": "300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GHS-SC0400",
+          "specName": {
+            "en-US": "400mm",
+            "zh-TW": "400mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GHS-SC0500",
+          "specName": {
+            "en-US": "500mm",
+            "zh-TW": "500mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Low-Profile Slotted Strut Channel",
+        "zh-TW": "低腳沖孔型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GLS-SC0400",
+          "specName": {
+            "en-US": "400mm",
+            "zh-TW": "400mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GLS-SC0500",
+          "specName": {
+            "en-US": "500mm",
+            "zh-TW": "500mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Rasied Floor Support Channel (w/ U-bolts and Nuts)",
+        "zh-TW": "高架地板型鋼(U型螺絲含螺帽)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-RFS-GSC-0700",
+          "specName": {
+            "en-US": "700mm",
+            "zh-TW": "700mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RFS-GSC-1300",
+          "specName": {
+            "en-US": "1300mm",
+            "zh-TW": "1300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RFS-GSC-1900",
+          "specName": {
+            "en-US": "1900mm",
+            "zh-TW": "1900mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RFS-GSC-0720",
+          "specName": {
+            "en-US": "720mm",
+            "zh-TW": "720mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RFS-GSC-1320",
+          "specName": {
+            "en-US": "1320mm",
+            "zh-TW": "1320mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized High-Profile Strut Channel",
+        "zh-TW": "高腳型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GH-SC3000",
+          "specName": {
+            "en-US": "3000mm",
+            "zh-TW": "3000mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Low-Profile Back-to-Back Strut Channel",
+        "zh-TW": "低腳雙併型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GL-B2B-SC3000",
+          "specName": {
+            "en-US": "3000mm",
+            "zh-TW": "3000mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GL-B2B-SC0200",
+          "specName": {
+            "en-US": "200mm",
+            "zh-TW": "200mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GL-B2B-SC0300",
+          "specName": {
+            "en-US": "300mm",
+            "zh-TW": "300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GL-B2B-SC0400",
+          "specName": {
+            "en-US": "400mm",
+            "zh-TW": "400mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GL-B2B-SC0500",
+          "specName": {
+            "en-US": "500mm",
+            "zh-TW": "500mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GL-B2B-SC0600",
+          "specName": {
+            "en-US": "600mm",
+            "zh-TW": "600mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC3000",
+          "specName": {
+            "en-US": "3000mm",
+            "zh-TW": "3000mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0300",
+          "specName": {
+            "en-US": "300mm",
+            "zh-TW": "300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0400",
+          "specName": {
+            "en-US": "400mm",
+            "zh-TW": "400mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0600",
+          "specName": {
+            "en-US": "600mm",
+            "zh-TW": "600mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Tee Flat Plate Fitting",
+        "zh-TW": "T字片 - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GTFP-04H",
+          "specName": {
+            "en-US": "4-Hole",
+            "zh-TW": "4孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GTFP-05HE",
+          "specName": {
+            "en-US": "5-Hole (Extended)",
+            "zh-TW": "5孔 (加長)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized U-Shape Fitting",
+        "zh-TW": "歐姆型連結片 - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GUSF",
+          "specName": {
+            "en-US": "Galvanized U-Shape Fitting",
+            "zh-TW": "歐姆型連結片"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized U-Shape Wrap-around Fitting",
+        "zh-TW": "U型包覆式"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GUWF-012H",
+          "specName": {
+            "en-US": "12-hole",
+            "zh-TW": "12孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized 90 Degree Fitting",
+        "zh-TW": "立體L片 - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-G90D-02H",
+          "specName": {
+            "en-US": "2-Holes",
+            "zh-TW": "2孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-G90D-03H",
+          "specName": {
+            "en-US": "4-Holes",
+            "zh-TW": "4孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Diagonal Bracing Plate",
+        "zh-TW": "45度ㄟ字片(斜撐) - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GDBP",
+          "specName": {
+            "en-US": "Galvanized Diagonal Bracing Plate",
+            "zh-TW": "45度ㄟ字片(斜撐)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized 4-Holes Post Base Plate",
+        "zh-TW": "四孔腳座 - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GPBP-04H",
+          "specName": {
+            "en-US": "4-Holes",
+            "zh-TW": "四孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized 4-Holes Flat Fitting Plate",
+        "zh-TW": "平面四孔 - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GFFP-04H",
+          "specName": {
+            "en-US": "4-Holes",
+            "zh-TW": "四孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Wedge Bolt & Nut Set",
+        "zh-TW": "楔氣型螺絲螺帽組(元寶)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GWBNS",
+          "specName": {
+            "en-US": "Galvanized Wedge Bolt & Nut Set",
+            "zh-TW": "楔氣型螺絲螺帽組(元寶)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Plastic P-Clamp Cushion",
+        "zh-TW": "P型護套組"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PCC-15A",
+          "specName": {
+            "en-US": "15A",
+            "zh-TW": "15A"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PCC-25A",
+          "specName": {
+            "en-US": "25A",
+            "zh-TW": "25A"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PCC-50A",
+          "specName": {
+            "en-US": "50A",
+            "zh-TW": "50A"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Plastic High-Profile Strut Channel End Cap (External)",
+        "zh-TW": "型鋼護套-外塞"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GHSC-ECE4141",
+          "specName": {
+            "en-US": "41mm x 41mm",
+            "zh-TW": "41mm x 41mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GLSC-ECE4125",
+          "specName": {
+            "en-US": "41mm x 25mm",
+            "zh-TW": "41mm x 25mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Plastic Low-Profile Strut Channel End Cap (Internal)",
+        "zh-TW": "型鋼護套-硬內"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GHSC-ECI4141",
+          "specName": {
+            "en-US": "41mm x 41mm",
+            "zh-TW": "41mm x 41mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GLSC-ECI4125",
+          "specName": {
+            "en-US": "41mm x 25mm",
+            "zh-TW": "41mm x 25mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Conduit Clamp",
+        "zh-TW": "電工管夾組"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GCC-0012",
+          "specName": {
+            "en-US": "1/2\"",
+            "zh-TW": "1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GCC-0034",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Channel Nut w/o Spring",
+        "zh-TW": "方塊螺母"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GCN-WOS-0038",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized 90 Degree U-Shape Channel Clamp",
+        "zh-TW": "牛角(含螺絲螺母)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-G90D-UCC",
+          "specName": {
+            "en-US": "Galvanized 90 Degree U-Shape Channel Clamp",
+            "zh-TW": "牛角(含螺絲螺母)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Cable Tray Fixing Clip",
+        "zh-TW": "線槽固定片"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GCTC-0038",
+          "specName": {
+            "en-US": "Galvanized Cable Tray Fixing Clip",
+            "zh-TW": "線槽固定片"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Hex Bolt & Washer Set",
+        "zh-TW": "螺絲組(含華司)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GHBW-3834S",
+          "specName": {
+            "en-US": "3/8\" x 3/4\"",
+            "zh-TW": "3/8\" x 3/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GHBW-3801S",
+          "specName": {
+            "en-US": "3/8\" x 1\"",
+            "zh-TW": "3/8\" x 1\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Tee Flat Plate Fitting",
+        "zh-TW": "白鐵T字片 - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-TFP-04H",
+          "specName": {
+            "en-US": "4-Hole",
+            "zh-TW": "4孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-TFP-05HE",
+          "specName": {
+            "en-US": "5-Hole (Extended)",
+            "zh-TW": "5孔 (加長)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel U-Shape Fitting",
+        "zh-TW": "白鐵歐姆型連結片"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-USF",
+          "specName": {
+            "en-US": "Stainless Steel U-Shape Fitting",
+            "zh-TW": "白鐵歐姆型連結片"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Low-Profile Back-to-Back Strut Channel (2 Slots Ends)",
+        "zh-TW": "低腳雙併型鋼(雙邊沖2孔)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SSL-B2B-SC1300",
+          "specName": {
+            "en-US": "1300mm",
+            "zh-TW": "1300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC3000",
+          "specName": {
+            "en-US": "3000mm",
+            "zh-TW": "3000mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Diagonal Bracing Plate",
+        "zh-TW": "白鐵45度ㄟ字片(斜撐) - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-DBP",
+          "specName": {
+            "en-US": "Stainless Steel Diagonal Bracing Plate",
+            "zh-TW": "白鐵45度ㄟ字片(斜撐)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Special Corner Fitting",
+        "zh-TW": "特製角隅片 - 型鋼配件"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SCF-E0120",
+          "specName": {
+            "en-US": "(External) 120mm",
+            "zh-TW": "(包外式向) 120mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCF-I0120",
+          "specName": {
+            "en-US": "(Internal) 120mm",
+            "zh-TW": "(包文武向) 120mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel 2-Hole Flat Plate Fitting",
+        "zh-TW": "雙孔平接板(貫穿)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-FTP-02",
+          "specName": {
+            "en-US": "2-Hole",
+            "zh-TW": "2孔"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Hex Bolt Set (w/ Nut & Washer)",
+        "zh-TW": "白鐵螺絲組(含螺帽華司)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-HBS-3803",
+          "specName": {
+            "en-US": "3/8\" x 3\"",
+            "zh-TW": "3/8\" x 3\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-HBS-3801",
+          "specName": {
+            "en-US": "3/8\" x 1\"",
+            "zh-TW": "3/8\" x 1\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-HBS-3834",
+          "specName": {
+            "en-US": "3/8\" x 3/4\"",
+            "zh-TW": "3/8\" x 3/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Two Tube Clip",
+        "zh-TW": "W型歐姆夾組"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-TTC-0014",
+          "specName": {
+            "en-US": "1/4\"",
+            "zh-TW": "1/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-TTC-0038",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-TTC-0012",
+          "specName": {
+            "en-US": "1/2\"",
+            "zh-TW": "1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "PVC Transparent Plastic Film Sheet",
+        "zh-TW": "PVC透明桌布"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PVC-TPF-150420",
+          "specName": {
+            "en-US": "1.5mm x 4ft x 20Y",
+            "zh-TW": "1.5mm x 4ft x 20Y"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Heavy-Duty Plastic Platform Cart",
+        "zh-TW": "塑鋼四輪車 513輪(附煞)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-HPC-0203",
+          "specName": {
+            "en-US": "2ft x 3ft",
+            "zh-TW": "2尺*3尺"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Single Gas Cylinder Cart",
+        "zh-TW": "單管鋼瓶推車"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SGC-SW08",
+          "specName": {
+            "en-US": "w/ 8\" solid wheels",
+            "zh-TW": "8\"硬輪"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Double Gas Cylinder Cart",
+        "zh-TW": "雙管鋼瓶推車"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-DGC-SW10",
+          "specName": {
+            "en-US": "w/ 10\" solid wheels & shades",
+            "zh-TW": "10\"硬輪 (附遮陽板)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DGC-PW10",
+          "specName": {
+            "en-US": "w/ 10\" pnuematic wheels & shades",
+            "zh-TW": "10\"風輪 (附遮陽板)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
           "price": ""
         }
       ]

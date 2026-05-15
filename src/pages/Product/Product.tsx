@@ -11,7 +11,14 @@ const getChineseName = (key: string) => (zhTW as Record<string, string>)[key] ||
 
 const Product: React.FC = () => {
   const { productId } = useParams();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+
+  const getI18nText = (field: any, lang: string) => {
+    if (!field) return '';
+    if (typeof field === 'string') return field;
+    if (field[lang] !== undefined) return field[lang];
+    return field['zh-TW'] || '';
+  };
   const { addItem, items } = useCart();
   const [product, setProduct] = useState<any>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -59,7 +66,7 @@ const Product: React.FC = () => {
         <Link to="/">{t('nav_home')}</Link> <span>/</span>
         <Link to="/category">{t('nav_catalog')}</Link> <span>/</span>
         {matchedCat && <><Link to={`/category/${matchedCat.id}`}>{categoryName}</Link> <span>/</span></>}
-        <span style={{ color: 'var(--text-primary)' }}>{product.name}</span>
+        <span style={{ color: 'var(--text-primary)' }}>{getI18nText(product.name, language)}</span>
       </div>
 
       <div className="product-detail-container">
@@ -67,7 +74,7 @@ const Product: React.FC = () => {
         <div className="product-image-large">
           {hasImage ? (
             <>
-              <img src={product.imageUrl} alt={product.name} referrerPolicy="no-referrer" />
+              <img src={product.imageUrl} alt={getI18nText(product.name, language)} referrerPolicy="no-referrer" />
               <div className="zoom-icon" onClick={() => setIsLightboxOpen(true)} style={{ cursor: 'pointer' }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"></circle>
@@ -87,7 +94,7 @@ const Product: React.FC = () => {
         {/* Right Column: Details */}
         <div className="product-info-right">
           {product.brand && <div className="brand-label">{product.brand}</div>}
-          <h1 className="product-h1">{product.name}</h1>
+          <h1 className="product-h1">{getI18nText(product.name, language)}</h1>
           {priceDisplay && <div className="product-price">{priceDisplay}</div>}
           {currentSpec.sku && <div className="sku-label" style={{ marginBottom: '15px', color: 'var(--text-secondary)' }}>SKU: {currentSpec.sku}</div>}
 
@@ -102,7 +109,7 @@ const Product: React.FC = () => {
                       className={`option-btn ${selectedSpecIndex === index ? 'selected' : ''}`}
                       onClick={() => { setSelectedSpecIndex(index); setHasSelectedSpec(true); }}
                     >
-                      {opt.specName || `規格 ${index + 1}`}
+                      {getI18nText(opt.specName, language) || `規格 ${index + 1}`}
                     </button>
                   ))}
                 </div>
@@ -125,10 +132,10 @@ const Product: React.FC = () => {
                       whiteSpace: 'pre-wrap'
                     }}
                   >
-                    {currentSpec.specDetail}
+                    {getI18nText(currentSpec.specDetail, language)}
                   </div>
                   <div style={{ textAlign: 'right', fontSize: '12px', color: '#666', marginTop: '4px' }}>
-                    {(currentSpec.specDetail || '').length} / 500
+                    {(getI18nText(currentSpec.specDetail, language) || '').length} / 500
                   </div>
                 </div>
               </div>
@@ -141,13 +148,13 @@ const Product: React.FC = () => {
               <button
                 className="spec-action-btn spec-action-btn--secondary"
                 onClick={() => {
-                  const specNameStr = currentSpec.specName || '';
+                  const specNameStr = getI18nText(currentSpec.specName, language);
                   const itemId = `${productId}-${specNameStr}`;
                   const alreadyInCart = items.some(i => i.id === itemId);
                   addItem({
                     id: itemId,
                     productId: productId ?? '',
-                    productName: product?.name ?? '',
+                    productName: getI18nText(product?.name, language),
                     spec: specNameStr,
                     qty: 1,
                   });
@@ -169,8 +176,9 @@ const Product: React.FC = () => {
                 className="spec-action-btn spec-action-btn--mail"
                 onClick={() => {
                   const today = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
-                  const spec = currentSpec.specName || '';
-                  const subject = `【Mail 採購】${product?.name ?? ''} - ${spec}`;
+                  const spec = getI18nText(currentSpec.specName, language);
+                  const pName = getI18nText(product?.name, language);
+                  const subject = `【Mail 採購】${pName} - ${spec}`;
                   const body =
 `您好，
 
@@ -178,7 +186,7 @@ const Product: React.FC = () => {
 
 ──────────────────────
 Date: ${today}
-商品：${product?.name ?? ''}
+商品：${pName}
 規格：${spec}
 數量：
 ──────────────────────
@@ -218,7 +226,7 @@ Date: ${today}
             <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)} aria-label="Close">
               &times;
             </button>
-            <img src={product.imageUrl} alt={product.name} className="lightbox-image" referrerPolicy="no-referrer" />
+            <img src={product.imageUrl} alt={getI18nText(product.name, language)} className="lightbox-image" referrerPolicy="no-referrer" />
           </div>
         </div>
       )}

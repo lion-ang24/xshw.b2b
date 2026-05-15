@@ -2,7 +2,7 @@ import catalogData from '../data/catalog.json';
 
 export const fetchProductDetails = async (productId: string) => {
   const decodedName = decodeURIComponent(productId);
-  const product = catalogData.products.find(p => p.name === decodedName);
+  const product = catalogData.products.find((p: any) => typeof p.name === 'string' ? p.name === decodedName : p.name['zh-TW'] === decodedName);
   if (!product) {
     // [LEGACY DATA] fallback
     return Promise.resolve({
@@ -37,6 +37,6 @@ export const fetchProductDetails = async (productId: string) => {
   return Promise.resolve(product);
 };
 
-export const fetchSubcategoryProducts = async (categoryId: string, subcategoryId: string) => {
+export const fetchSubcategoryProducts = async (_categoryId: string, _subcategoryId: string) => {
   return Promise.resolve([]);
 };

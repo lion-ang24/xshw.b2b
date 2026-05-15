@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
-import { catalogData } from '../../data/catalogData';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();

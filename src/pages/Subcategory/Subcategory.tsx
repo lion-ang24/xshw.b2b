@@ -9,7 +9,13 @@ const getChineseName = (key: string) => (zhTW as Record<string, string>)[key] ||
 
 const Subcategory: React.FC = () => {
   const { categoryId, subcategoryId } = useParams();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+
+  const getI18nText = (field: any, lang: string) => {
+    if (!field) return '';
+    if (typeof field === 'string') return field;
+    return field[lang] || field['zh-TW'] || '';
+  };
 
   // If no categoryId is provided (e.g., /category), default to the first one
   const effectiveCategoryId = categoryId || catalogData[0].id;
@@ -40,17 +46,17 @@ const Subcategory: React.FC = () => {
         return (
           <div key={idx} className="card" style={{ border: '1px solid var(--border-color)', padding: '15px', borderRadius: '8px' }}>
             {hasImage ? (
-              <img src={product.imageUrl} alt={product.name} style={{ width: '100%', height: 'auto', marginBottom: '15px' }} referrerPolicy="no-referrer" />
+              <img src={product.imageUrl} alt={getI18nText(product.name, language)} style={{ width: '100%', height: 'auto', marginBottom: '15px' }} referrerPolicy="no-referrer" />
             ) : (
               <div style={{ width: '100%', height: '200px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px', color: '#888', borderRadius: '4px' }}>
                 圖片待更新
               </div>
             )}
             <div className="card-info" style={{ marginBottom: '15px' }}>
-              <h3 style={{ fontSize: '1rem', marginBottom: '5px' }}>{product.name}</h3>
+              <h3 style={{ fontSize: '1rem', marginBottom: '5px' }}>{getI18nText(product.name, language)}</h3>
               {firstSpecSku && <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>SKU: {firstSpecSku}</p>}
             </div>
-            <Link to={`/product/${encodeURIComponent(product.name)}`} className="card-btn" style={{ 
+            <Link to={`/product/${encodeURIComponent(typeof product.name === 'string' ? product.name : product.name['zh-TW'])}`} className="card-btn" style={{ 
               display: 'block', 
               textAlign: 'center', 
               textDecoration: 'none',
