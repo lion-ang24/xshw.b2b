@@ -453,54 +453,6 @@
             "zh-TW": ""
           },
           "price": ""
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC3000",
-          "specName": {
-            "en-US": "3000mm",
-            "zh-TW": "3000mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": ""
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC0300",
-          "specName": {
-            "en-US": "300mm",
-            "zh-TW": "300mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": ""
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC0400",
-          "specName": {
-            "en-US": "400mm",
-            "zh-TW": "400mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": ""
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC0600",
-          "specName": {
-            "en-US": "600mm",
-            "zh-TW": "600mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": ""
         }
       ]
     },
@@ -801,6 +753,18 @@
             "zh-TW": ""
           },
           "price": ""
+        },
+        {
+          "sku": "AZX-GHSC-ECE4150",
+          "specName": {
+            "en-US": "41mm x 50mm",
+            "zh-TW": "41mm x 50mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
         }
       ]
     },
@@ -1046,8 +1010,68 @@
     },
     {
       "name": {
+        "en-US": "Stainless Steel Low-Profile Back-to-Back Strut Channel",
+        "zh-TW": "白鐵低腳雙併型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SSL-B2B-SC3000",
+          "specName": {
+            "en-US": "3000mm",
+            "zh-TW": "3000mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0300",
+          "specName": {
+            "en-US": "300mm",
+            "zh-TW": "300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0400",
+          "specName": {
+            "en-US": "400mm",
+            "zh-TW": "400mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0600",
+          "specName": {
+            "en-US": "600mm",
+            "zh-TW": "600mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
         "en-US": "Stainless Steel Low-Profile Back-to-Back Strut Channel (2 Slots Ends)",
-        "zh-TW": "低腳雙併型鋼(雙邊沖2孔)"
+        "zh-TW": "白鐵低腳雙併型鋼(雙邊沖2孔)"
       },
       "category": "08 - 金屬材料",
       "subcategory": "",
@@ -1265,7 +1289,7 @@
         "en-US": "PVC Transparent Plastic Film Sheet",
         "zh-TW": "PVC透明桌布"
       },
-      "category": "08 - 金屬材料",
+      "category": "14 - 防護用品&耗材",
       "subcategory": "",
       "brand": "",
       "imageUrl": "",
@@ -1281,6 +1305,18 @@
             "zh-TW": ""
           },
           "price": ""
+        },
+        {
+          "sku": "AZX-PVC-TFM-1504",
+          "specName": {
+            "en-US": "1.5mm x 4ft",
+            "zh-TW": "1.5mm x 4ft"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
         }
       ]
     },
@@ -1289,8 +1325,8 @@
         "en-US": "Heavy-Duty Plastic Platform Cart",
         "zh-TW": "塑鋼四輪車 513輪(附煞)"
       },
-      "category": "08 - 金屬材料",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -1313,8 +1349,8 @@
         "en-US": "Single Gas Cylinder Cart",
         "zh-TW": "單管鋼瓶推車"
       },
-      "category": "08 - 金屬材料",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -1337,8 +1373,8 @@
         "en-US": "Double Gas Cylinder Cart",
         "zh-TW": "雙管鋼瓶推車"
       },
-      "category": "08 - 金屬材料",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -1359,6 +1395,690 @@
           "specName": {
             "en-US": "w/ 10\" pnuematic wheels & shades",
             "zh-TW": "10\"風輪 (附遮陽板)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Foldable Wire Mesh Cage",
+        "zh-TW": "蝴蝶籠"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-FWMC-12001000890",
+          "specName": {
+            "en-US": "1200mm x 1000mm x 890mm",
+            "zh-TW": "1200mm x 1000mm x 890mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Electrical Tape 18Y",
+        "zh-TW": "絕緣膠布 18Y"
+      },
+      "category": "04 - 建材修繕材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-ET-RD-018Y",
+          "specName": {
+            "en-US": "18Y - Red",
+            "zh-TW": "18Y - 紅"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ET-BK-018Y",
+          "specName": {
+            "en-US": "18Y - Black",
+            "zh-TW": "18Y - 黑"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ET-GY-018Y",
+          "specName": {
+            "en-US": "18Y - Grey",
+            "zh-TW": "18Y - 灰"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ET-YW-018Y",
+          "specName": {
+            "en-US": "18Y - Yellow",
+            "zh-TW": "18Y - 黃"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Electrical Tape 2\"",
+        "zh-TW": "絕緣膠布 2\""
+      },
+      "category": "04 - 建材修繕材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-ET-RD-02",
+          "specName": {
+            "en-US": "2\" - Red",
+            "zh-TW": "2\" - 紅"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ET-BK-02",
+          "specName": {
+            "en-US": "2\" - Black",
+            "zh-TW": "2\" - 黑"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ET-GY-02",
+          "specName": {
+            "en-US": "2\" - Grey",
+            "zh-TW": "2\" - 灰"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ET-YW-02",
+          "specName": {
+            "en-US": "2\" - Yellow",
+            "zh-TW": "2\" - 黃"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-ET-BU-02",
+          "specName": {
+            "en-US": "2\" - Blue",
+            "zh-TW": "2\" - 藍"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(AT APEX) OPP Acrylic Packing Tape (Transparent)",
+        "zh-TW": "OPP膠帶"
+      },
+      "category": "04 - 建材修繕材料",
+      "subcategory": "",
+      "brand": "AT APEX",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-AA-OAPT-T48",
+          "specName": {
+            "en-US": "48mm",
+            "zh-TW": "48mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(AT APEX) PVC Tearable Tape",
+        "zh-TW": "PVC膠帶"
+      },
+      "category": "04 - 建材修繕材料",
+      "subcategory": "",
+      "brand": "AT APEX",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-AA-PVCTT-BW-48",
+          "specName": {
+            "en-US": "48mm - Brown",
+            "zh-TW": "48mm - 布紋"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-AA-PVCTT-WT-48",
+          "specName": {
+            "en-US": "48mm - White",
+            "zh-TW": "48mm - 白"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(Stretch Film) Industrial Packing Film",
+        "zh-TW": "PE工業膠膜"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SF-IPF-005",
+          "specName": {
+            "en-US": "5cm",
+            "zh-TW": "5cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SF-IPF-010",
+          "specName": {
+            "en-US": "10cm",
+            "zh-TW": "10cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SF-IPF-015",
+          "specName": {
+            "en-US": "15cm",
+            "zh-TW": "15cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SF-IPF-050",
+          "specName": {
+            "en-US": "50cm",
+            "zh-TW": "50cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(EP) Protection Masking Tape",
+        "zh-TW": "養生膠帶"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-EP-PMT-1100",
+          "specName": {
+            "en-US": "1100mm",
+            "zh-TW": "1100mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-EP-PMT-1500",
+          "specName": {
+            "en-US": "1500mm",
+            "zh-TW": "1500mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-EP-PMT-2700",
+          "specName": {
+            "en-US": "2700mm",
+            "zh-TW": "2700mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-EP-PMT-3200",
+          "specName": {
+            "en-US": "3200mm",
+            "zh-TW": "3200mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Plastic Pallet",
+        "zh-TW": "塑膠棧板"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PP",
+          "specName": {
+            "en-US": "Plastic Pallet",
+            "zh-TW": "塑膠棧板"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Traffic Cone Bar",
+        "zh-TW": "交通錐連桿"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-TCB",
+          "specName": {
+            "en-US": "Traffic Cone Bar",
+            "zh-TW": "交通錐連桿"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Hex Bolt",
+        "zh-TW": "六角螺絲"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GHB-3834",
+          "specName": {
+            "en-US": "3/8\" x 3/4\"",
+            "zh-TW": "3/8\" x 3/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-GHB-3801",
+          "specName": {
+            "en-US": "3/8\" x 1\"",
+            "zh-TW": "3/8\" x 1\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Nut",
+        "zh-TW": "螺帽"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GN-38",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Washer",
+        "zh-TW": "華司"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GW-38",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(THE) Stainless Steel Hex Bolt",
+        "zh-TW": "白鐵六角螺絲"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "Tong Hwei Enterprise",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-THE-SSHB-3803",
+          "specName": {
+            "en-US": "3/8\" x 3\"",
+            "zh-TW": "3/8\" x 3\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-THE-SSHB-3834",
+          "specName": {
+            "en-US": "3/8\" x 3/4\"",
+            "zh-TW": "3/8\" x 3/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(THE) Stainless Steel Flange Nut",
+        "zh-TW": "白鐵法蘭螺帽"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "Tong Hwei Enterprise",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-THE-SSFN-38",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(THE) Stainless Steel Hex Nut",
+        "zh-TW": "白鐵螺帽"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "Tong Hwei Enterprise",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-THE-SSHN-38",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(THE) Stainless Steel Flat Washer",
+        "zh-TW": "白鐵平華司"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "Tong Hwei Enterprise",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-THE-SSFW-38",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "PE Traffic Cone",
+        "zh-TW": "PE交通錐"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PE-TC",
+          "specName": {
+            "en-US": "PE Traffic Cone",
+            "zh-TW": "PE交通錐"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Light-Duty 5-Tier Shelving Unit w/ 4\" Industrial Casters",
+        "zh-TW": "荷重輕型五層架 附4‘’工業輪"
+      },
+      "category": "00 - OA傢俱/辦公傢俱",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-LD-SUIC-5T",
+          "specName": {
+            "en-US": "5T w/ 4\" Industrial Casters",
+            "zh-TW": "荷重輕型五層架 附4‘’工業輪"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Manual Hydraulic Pallet Jack",
+        "zh-TW": "油壓拖板車"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-MHPJ-3T6851220",
+          "specName": {
+            "en-US": "3T x 685 x 1220",
+            "zh-TW": "3T x 685 x 1220"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Light Duty Platform Cart  (w/ caster)",
+        "zh-TW": "塑鋼四輪車 (附輪)"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-LDPC-0203C",
+          "specName": {
+            "en-US": "2ft x 3ft",
+            "zh-TW": "2尺 x 3尺"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-LDPC-0204C",
+          "specName": {
+            "en-US": "2ft x 4ft",
+            "zh-TW": "2尺 x 4尺"
           },
           "specDetail": {
             "en-US": "",
