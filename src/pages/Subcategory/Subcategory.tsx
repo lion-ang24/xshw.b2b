@@ -44,7 +44,18 @@ const Subcategory: React.FC = () => {
         const hasImage = product.imageUrl && product.imageUrl.trim() !== '';
         const firstSpecSku = product.specs[0]?.sku || '';
         return (
-          <div key={idx} className="card" style={{ border: '1px solid var(--border-color)', padding: '15px', borderRadius: '8px' }}>
+          <Link 
+            key={idx} 
+            to={`/product/${encodeURIComponent(typeof product.name === 'string' ? product.name : product.name['zh-TW'])}`} 
+            className="card" 
+            style={{ 
+              color: 'inherit',
+              textDecoration: 'none',
+              border: '1px solid var(--border-color)', 
+              padding: '15px', 
+              borderRadius: '8px' 
+            }}
+          >
             {hasImage ? (
               <img src={product.imageUrl} alt={getI18nText(product.name, language)} style={{ width: '100%', height: 'auto', marginBottom: '15px' }} referrerPolicy="no-referrer" />
             ) : (
@@ -53,10 +64,26 @@ const Subcategory: React.FC = () => {
               </div>
             )}
             <div className="card-info" style={{ marginBottom: '15px' }}>
-              <h3 style={{ fontSize: '1rem', marginBottom: '5px' }}>{getI18nText(product.name, language)}</h3>
-              {firstSpecSku && <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>SKU: {firstSpecSku}</p>}
+              <h3 style={{ 
+                fontSize: '1rem', 
+                marginBottom: '5px',
+                lineHeight: '1.4',
+                minHeight: '2.8em',
+                wordBreak: 'break-all'
+              }}>
+                {getI18nText(product.name, language) || '\u00a0'}
+              </h3>
+              <p style={{ 
+                color: 'var(--text-secondary)', 
+                fontSize: '0.85rem', 
+                lineHeight: '1.4', 
+                minHeight: '2.8em', 
+                wordBreak: 'break-all' 
+              }}>
+                {firstSpecSku ? `SKU: ${firstSpecSku}` : '\u00a0'}
+              </p>
             </div>
-            <Link to={`/product/${encodeURIComponent(typeof product.name === 'string' ? product.name : product.name['zh-TW'])}`} className="card-btn" style={{ 
+            <div className="card-btn" style={{ 
               display: 'block', 
               textAlign: 'center', 
               textDecoration: 'none',
@@ -64,8 +91,10 @@ const Subcategory: React.FC = () => {
               color: 'var(--bg-color)',
               padding: '8px 0',
               borderRadius: '4px'
-            }}>詳細資訊</Link>
-          </div>
+            }}>
+              詳細資訊
+            </div>
+          </Link>
         );
       })}
       {products.length === 0 && (

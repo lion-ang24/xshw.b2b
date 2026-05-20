@@ -2,78 +2,6 @@
   "products": [
     {
       "name": {
-        "en-US": "PVC Floor Mat",
-        "zh-TW": "PVC Floor Mat"
-      },
-      "category": "10 - 勞安用品&無塵室系列",
-      "subcategory": "",
-      "brand": "",
-      "imageUrl": "",
-      "specs": [
-        {
-          "sku": "",
-          "specName": {
-            "en-US": "1.5mm x 4ft",
-            "zh-TW": "1.5mm x 4ft"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": ""
-        }
-      ]
-    },
-    {
-      "name": {
-        "en-US": "RGWS-242 12-IN1 Reversible Ratchent Wrench",
-        "zh-TW": "搖頭棘輪梅開板手"
-      },
-      "category": "01 - 手工具類",
-      "subcategory": "",
-      "brand": "Alstrong",
-      "imageUrl": "https://lh3.googleusercontent.com/d/1Azhq_EiDO1Eog7gPyz6n1vlLANmsQS4y",
-      "specs": [
-        {
-          "sku": "AZX-FRCW-0012",
-          "specName": {
-            "en-US": "12mm",
-            "zh-TW": "12mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。"
-          },
-          "price": ""
-        },
-        {
-          "sku": "AZX-FRCW-0013",
-          "specName": {
-            "en-US": "13mm",
-            "zh-TW": "13mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。"
-          },
-          "price": ""
-        },
-        {
-          "sku": "AZX-FRCW-0014",
-          "specName": {
-            "en-US": "14mm",
-            "zh-TW": "14mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": "▪ 採用鉻釩鋼材質，專業熱處理製造，提昇產品效能。\n▪ 外表四層電鍍，加強本體抗腐蝕，抗鏽能力。\n▪ 符合ANSI/DIN及美國Fedral標準。\n▪ 72齒(5度)棘輪與薄型小頭設計，使用時不易受到空間限制，特別適合狹小空間和汽修方面。"
-          },
-          "price": ""
-        }
-      ]
-    },
-    {
-      "name": {
         "en-US": "Galvanized A-Type Flat Mount Low-Profile Back-to-Back Strut Channel",
         "zh-TW": "A向平貼低腳雙併型鋼"
       },
@@ -1295,7 +1223,7 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-PVC-TPF-150420",
+          "sku": "AZX-PVC-TPF-1504",
           "specName": {
             "en-US": "1.5mm x 4ft x 20Y",
             "zh-TW": "1.5mm x 4ft x 20Y"
@@ -1435,11 +1363,23 @@
       },
       "category": "04 - 建材修繕材料",
       "subcategory": "",
-      "brand": "",
+      "brand": "AT APEX",
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-ET-RD-018Y",
+          "sku": "APEX-ET-W0018",
+          "specName": {
+            "en-US": "18Y - White",
+            "zh-TW": "18Y - 白"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "APEX-ET-R0018",
           "specName": {
             "en-US": "18Y - Red",
             "zh-TW": "18Y - 紅"
@@ -1451,7 +1391,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-ET-BK-018Y",
+          "sku": "APEX-ET-BK0018",
           "specName": {
             "en-US": "18Y - Black",
             "zh-TW": "18Y - 黑"
@@ -1463,10 +1403,10 @@
           "price": ""
         },
         {
-          "sku": "AZX-ET-GY-018Y",
+          "sku": "APEX-ET-GN0018",
           "specName": {
-            "en-US": "18Y - Grey",
-            "zh-TW": "18Y - 灰"
+            "en-US": "18Y - Green",
+            "zh-TW": "18Y - 綠"
           },
           "specDetail": {
             "en-US": "",
@@ -1475,10 +1415,22 @@
           "price": ""
         },
         {
-          "sku": "AZX-ET-YW-018Y",
+          "sku": "APEX-ET-Y0018",
           "specName": {
             "en-US": "18Y - Yellow",
             "zh-TW": "18Y - 黃"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "APEX-ET-BE0018",
+          "specName": {
+            "en-US": "18Y - Blue",
+            "zh-TW": "18Y - 藍"
           },
           "specDetail": {
             "en-US": "",
@@ -1495,11 +1447,23 @@
       },
       "category": "04 - 建材修繕材料",
       "subcategory": "",
-      "brand": "",
+      "brand": "AT APEX",
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-ET-RD-02",
+          "sku": "APEX-ET-W0048",
+          "specName": {
+            "en-US": "2\" - White",
+            "zh-TW": "2\" - 白"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "APEX-ET-R0048",
           "specName": {
             "en-US": "2\" - Red",
             "zh-TW": "2\" - 紅"
@@ -1511,7 +1475,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-ET-BK-02",
+          "sku": "APEX-ET-BK0048",
           "specName": {
             "en-US": "2\" - Black",
             "zh-TW": "2\" - 黑"
@@ -1523,10 +1487,10 @@
           "price": ""
         },
         {
-          "sku": "AZX-ET-GY-02",
+          "sku": "APEX-ET-GN0048",
           "specName": {
-            "en-US": "2\" - Grey",
-            "zh-TW": "2\" - 灰"
+            "en-US": "2\" - Green",
+            "zh-TW": "2\" - 綠"
           },
           "specDetail": {
             "en-US": "",
@@ -1535,7 +1499,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-ET-YW-02",
+          "sku": "APEX-ET-Y0048",
           "specName": {
             "en-US": "2\" - Yellow",
             "zh-TW": "2\" - 黃"
@@ -1547,7 +1511,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-ET-BU-02",
+          "sku": "APEX-ET-BE0048",
           "specName": {
             "en-US": "2\" - Blue",
             "zh-TW": "2\" - 藍"
@@ -1631,7 +1595,7 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-SF-IPF-005",
+          "sku": "SF-IPF-0005",
           "specName": {
             "en-US": "5cm",
             "zh-TW": "5cm"
@@ -1643,7 +1607,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-SF-IPF-010",
+          "sku": "SF-IPF-0010",
           "specName": {
             "en-US": "10cm",
             "zh-TW": "10cm"
@@ -1655,7 +1619,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-SF-IPF-015",
+          "sku": "SF-IPF-0015",
           "specName": {
             "en-US": "15cm",
             "zh-TW": "15cm"
@@ -1667,7 +1631,31 @@
           "price": ""
         },
         {
-          "sku": "AZX-SF-IPF-050",
+          "sku": "SF-IPF-0020",
+          "specName": {
+            "en-US": "20cm",
+            "zh-TW": "20cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "SF-IPF-0030",
+          "specName": {
+            "en-US": "30cm",
+            "zh-TW": "30cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "SF-IPF-0050",
           "specName": {
             "en-US": "50cm",
             "zh-TW": "50cm"
@@ -1687,11 +1675,11 @@
       },
       "category": "14 - 防護用品&耗材",
       "subcategory": "",
-      "brand": "",
+      "brand": "AT APEX",
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-EP-PMT-1100",
+          "sku": "APEX-EP-PMT-1100",
           "specName": {
             "en-US": "1100mm",
             "zh-TW": "1100mm"
@@ -1703,7 +1691,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-EP-PMT-1500",
+          "sku": "APEX-EP-PMT-1500",
           "specName": {
             "en-US": "1500mm",
             "zh-TW": "1500mm"
@@ -1715,7 +1703,19 @@
           "price": ""
         },
         {
-          "sku": "AZX-EP-PMT-2700",
+          "sku": "APEX-EP-PMT-2100",
+          "specName": {
+            "en-US": "2100mm",
+            "zh-TW": "2100mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "APEX-EP-PMT-2700",
           "specName": {
             "en-US": "2700mm",
             "zh-TW": "2700mm"
@@ -1727,7 +1727,7 @@
           "price": ""
         },
         {
-          "sku": "AZX-EP-PMT-3200",
+          "sku": "APEX-EP-PMT-3200",
           "specName": {
             "en-US": "3200mm",
             "zh-TW": "3200mm"
@@ -1766,8 +1766,8 @@
     },
     {
       "name": {
-        "en-US": "Traffic Cone Bar",
-        "zh-TW": "交通錐連桿"
+        "en-US": "Traffic Cone Bar - Extendable",
+        "zh-TW": "交通錐連桿 (延長)"
       },
       "category": "14 - 防護用品&耗材",
       "subcategory": "",
@@ -1775,10 +1775,10 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-TCB",
+          "sku": "AZX-TCB-EX2",
           "specName": {
-            "en-US": "Traffic Cone Bar",
-            "zh-TW": "交通錐連桿"
+            "en-US": "Extendable 2m",
+            "zh-TW": "延長 2米"
           },
           "specDetail": {
             "en-US": "",
@@ -1835,7 +1835,7 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-GN-38",
+          "sku": "AZX-GN-0038",
           "specName": {
             "en-US": "3/8\"",
             "zh-TW": "3/8\""
@@ -1859,7 +1859,7 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-GW-38",
+          "sku": "AZX-GW-0038",
           "specName": {
             "en-US": "3/8\"",
             "zh-TW": "3/8\""
@@ -1919,7 +1919,7 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-THE-SSFN-38",
+          "sku": "AZX-THE-SSFN-0038",
           "specName": {
             "en-US": "3/8\"",
             "zh-TW": "3/8\""
@@ -1943,7 +1943,7 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-THE-SSHN-38",
+          "sku": "AZX-THE-SSHN-0038",
           "specName": {
             "en-US": "3/8\"",
             "zh-TW": "3/8\""
@@ -1967,34 +1967,10 @@
       "imageUrl": "",
       "specs": [
         {
-          "sku": "AZX-THE-SSFW-38",
+          "sku": "AZX-THE-SSFW-0038",
           "specName": {
             "en-US": "3/8\"",
             "zh-TW": "3/8\""
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": ""
-        }
-      ]
-    },
-    {
-      "name": {
-        "en-US": "PE Traffic Cone",
-        "zh-TW": "PE交通錐"
-      },
-      "category": "14 - 防護用品&耗材",
-      "subcategory": "",
-      "brand": "",
-      "imageUrl": "",
-      "specs": [
-        {
-          "sku": "AZX-PE-TC",
-          "specName": {
-            "en-US": "PE Traffic Cone",
-            "zh-TW": "PE交通錐"
           },
           "specDetail": {
             "en-US": "",
@@ -2079,6 +2055,3198 @@
           "specName": {
             "en-US": "2ft x 4ft",
             "zh-TW": "2尺 x 4尺"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(KIKUSUI) Washi Paper Masking Tape",
+        "zh-TW": "紙膠帶"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "KKS-WPT-1518",
+          "specName": {
+            "en-US": "15mm x 18mm",
+            "zh-TW": "15mm x 18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "KKS-WPT-1818",
+          "specName": {
+            "en-US": "18mm x 18mm",
+            "zh-TW": "18mm x 18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "KKS-WPT-2518",
+          "specName": {
+            "en-US": "25mm x 18mm",
+            "zh-TW": "25mm x 18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "PE Transparent Layflat Water Tubing",
+        "zh-TW": "PE 中空導水袋"
+      },
+      "category": "05 - 水料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PE-LFWT-0125",
+          "specName": {
+            "en-US": "12.5cm",
+            "zh-TW": "12.5cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0014",
+          "specName": {
+            "en-US": "14cm",
+            "zh-TW": "14cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0020",
+          "specName": {
+            "en-US": "20cm",
+            "zh-TW": "20cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0025",
+          "specName": {
+            "en-US": "25cm",
+            "zh-TW": "25cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0030",
+          "specName": {
+            "en-US": "30cm",
+            "zh-TW": "30cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0035",
+          "specName": {
+            "en-US": "35cm",
+            "zh-TW": "35cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0042",
+          "specName": {
+            "en-US": "42cm",
+            "zh-TW": "42cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0050",
+          "specName": {
+            "en-US": "50cm",
+            "zh-TW": "50cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PE-LFWT-0055",
+          "specName": {
+            "en-US": "55cm",
+            "zh-TW": "55cm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Water Inlet Pipe",
+        "zh-TW": "進水管"
+      },
+      "category": "05 - 水料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-WIP-0214",
+          "specName": {
+            "en-US": "2-1/4\"",
+            "zh-TW": "2-1/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Vacuum Cleaner Hose",
+        "zh-TW": "吸塵浪管"
+      },
+      "category": "11 - 清潔用品",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-VCH-0112",
+          "specName": {
+            "en-US": "1-1/2\"",
+            "zh-TW": "1-1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Galvanized Storage Cage",
+        "zh-TW": "鐵四格籃"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-GSC-600420315",
+          "specName": {
+            "en-US": "600mm x 420mm x 315mm",
+            "zh-TW": "600mm x 420mm x 315mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(3M) MS-100 Safety Glove",
+        "zh-TW": "(3M) MS-100 耐用型多用途手套"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "3M",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "3M-SGL-MS100R",
+          "specName": {
+            "en-US": "Red - L",
+            "zh-TW": "紅 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-SGL-MS100G",
+          "specName": {
+            "en-US": "Grey - L",
+            "zh-TW": "灰 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-SGL-MS100Y",
+          "specName": {
+            "en-US": "Yellow - L",
+            "zh-TW": "黃 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-SGXL-MS100R",
+          "specName": {
+            "en-US": "Red - XL",
+            "zh-TW": "紅 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-SGXL-MS100G",
+          "specName": {
+            "en-US": "Grey - XL",
+            "zh-TW": "灰 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-SGXL-MS100Y",
+          "specName": {
+            "en-US": "Yellow - XL",
+            "zh-TW": "黃 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "(3M) Comfort Grip Gloves",
+        "zh-TW": "(3M) 舒適型止滑/耐磨手套"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "3M",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "3M-CGG-GYL",
+          "specName": {
+            "en-US": "Grey - L",
+            "zh-TW": "灰 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-YWL",
+          "specName": {
+            "en-US": "Yellow - L",
+            "zh-TW": "黃 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-BEL",
+          "specName": {
+            "en-US": "Blue - L",
+            "zh-TW": "藍 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-OEL",
+          "specName": {
+            "en-US": "Orange - L",
+            "zh-TW": "橘 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-GNL",
+          "specName": {
+            "en-US": "Green - L",
+            "zh-TW": "綠 - L"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-GYXL",
+          "specName": {
+            "en-US": "Grey - XL",
+            "zh-TW": "灰 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-YWXL",
+          "specName": {
+            "en-US": "Yellow - XL",
+            "zh-TW": "黃 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-BEXL",
+          "specName": {
+            "en-US": "Blue - XL",
+            "zh-TW": "藍 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-OEXL",
+          "specName": {
+            "en-US": "Orange - XL",
+            "zh-TW": "橘 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "3M-CGG-GNXL",
+          "specName": {
+            "en-US": "Green - XL",
+            "zh-TW": "綠 - XL"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Foldable Safety Floor Sign",
+        "zh-TW": "三角告示牌"
+      },
+      "category": "14 - 防護用品&耗材",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SFS-FS",
+          "specName": {
+            "en-US": "w/ Folder Sleeve",
+            "zh-TW": "附資料袋"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Cable Ties",
+        "zh-TW": "尼龍紮線帶"
+      },
+      "category": "03 - 緊固材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-CT-W20048",
+          "specName": {
+            "en-US": "200 x 4.8 (White)",
+            "zh-TW": "200 x 4.8 (白)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-CT-B20048",
+          "specName": {
+            "en-US": "200 x 4.8 (Black)",
+            "zh-TW": "200 x 4.8 (黑)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-CT-W25048",
+          "specName": {
+            "en-US": "250 x 4.8 (White)",
+            "zh-TW": "250 x 4.8 (白)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-CT-B25048",
+          "specName": {
+            "en-US": "250 x 4.8 (Black)",
+            "zh-TW": "250 x 4.8 (黑)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-CT-W30048",
+          "specName": {
+            "en-US": "300 x 4.8 (White)",
+            "zh-TW": "300 x 4.8 (白)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-CT-B30048",
+          "specName": {
+            "en-US": "300 x 4.8 (Black)",
+            "zh-TW": "300 x 4.8 (黑)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-CT-W45048",
+          "specName": {
+            "en-US": "450 x 4.8 (White)",
+            "zh-TW": "450 x 4.8 (白)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-CT-B45048",
+          "specName": {
+            "en-US": "450 x 4.8 (Black)",
+            "zh-TW": "450 x 4.8 (黑)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Deep Socket 3/8\"",
+        "zh-TW": "手動長套筒 3/8\""
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-DSOC-3806",
+          "specName": {
+            "en-US": "6mm",
+            "zh-TW": "6mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3807",
+          "specName": {
+            "en-US": "7mm",
+            "zh-TW": "7mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3808",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3809",
+          "specName": {
+            "en-US": "9mm",
+            "zh-TW": "9mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3810",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3811",
+          "specName": {
+            "en-US": "11mm",
+            "zh-TW": "11mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3812",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3813",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3814",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3815",
+          "specName": {
+            "en-US": "15mm",
+            "zh-TW": "15mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3816",
+          "specName": {
+            "en-US": "16mm",
+            "zh-TW": "16mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3817",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3818",
+          "specName": {
+            "en-US": "18mm",
+            "zh-TW": "18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3819",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3820",
+          "specName": {
+            "en-US": "20mm",
+            "zh-TW": "20mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3821",
+          "specName": {
+            "en-US": "21mm",
+            "zh-TW": "21mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-3822",
+          "specName": {
+            "en-US": "22mm",
+            "zh-TW": "22mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Shallow Socket 3/8\"",
+        "zh-TW": "手動短套筒 3/8\""
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SSOC-3806",
+          "specName": {
+            "en-US": "6mm",
+            "zh-TW": "6mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3807",
+          "specName": {
+            "en-US": "7mm",
+            "zh-TW": "7mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3808",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3809",
+          "specName": {
+            "en-US": "9mm",
+            "zh-TW": "9mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3810",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3811",
+          "specName": {
+            "en-US": "11mm",
+            "zh-TW": "11mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3812",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3813",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3814",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3815",
+          "specName": {
+            "en-US": "15mm",
+            "zh-TW": "15mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3816",
+          "specName": {
+            "en-US": "16mm",
+            "zh-TW": "16mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3817",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3818",
+          "specName": {
+            "en-US": "18mm",
+            "zh-TW": "18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3819",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3820",
+          "specName": {
+            "en-US": "20mm",
+            "zh-TW": "20mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3821",
+          "specName": {
+            "en-US": "21mm",
+            "zh-TW": "21mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3822",
+          "specName": {
+            "en-US": "22mm",
+            "zh-TW": "22mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3823",
+          "specName": {
+            "en-US": "23mm",
+            "zh-TW": "23mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-3824",
+          "specName": {
+            "en-US": "24mm",
+            "zh-TW": "24mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Deep Socket 1/2\"",
+        "zh-TW": "手動長套筒 1/2\""
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-DSOC-1208",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1209",
+          "specName": {
+            "en-US": "9mm",
+            "zh-TW": "9mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1210",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1211",
+          "specName": {
+            "en-US": "11mm",
+            "zh-TW": "11mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1212",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1213",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1214",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1215",
+          "specName": {
+            "en-US": "15mm",
+            "zh-TW": "15mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1216",
+          "specName": {
+            "en-US": "16mm",
+            "zh-TW": "16mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1217",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1218",
+          "specName": {
+            "en-US": "18mm",
+            "zh-TW": "18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1219",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1220",
+          "specName": {
+            "en-US": "20mm",
+            "zh-TW": "20mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1221",
+          "specName": {
+            "en-US": "21mm",
+            "zh-TW": "21mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1222",
+          "specName": {
+            "en-US": "22mm",
+            "zh-TW": "22mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1223",
+          "specName": {
+            "en-US": "23mm",
+            "zh-TW": "23mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1224",
+          "specName": {
+            "en-US": "24mm",
+            "zh-TW": "24mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1225",
+          "specName": {
+            "en-US": "25mm",
+            "zh-TW": "25mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1226",
+          "specName": {
+            "en-US": "26mm",
+            "zh-TW": "26mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1227",
+          "specName": {
+            "en-US": "27mm",
+            "zh-TW": "27mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1228",
+          "specName": {
+            "en-US": "28mm",
+            "zh-TW": "28mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1229",
+          "specName": {
+            "en-US": "29mm",
+            "zh-TW": "29mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1230",
+          "specName": {
+            "en-US": "30mm",
+            "zh-TW": "30mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-DSOC-1232",
+          "specName": {
+            "en-US": "32mm",
+            "zh-TW": "32mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Shallow Socket 1/2\"",
+        "zh-TW": "手動短套筒 1/2\""
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SSOC-1208",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1209",
+          "specName": {
+            "en-US": "9mm",
+            "zh-TW": "9mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1210",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1211",
+          "specName": {
+            "en-US": "11mm",
+            "zh-TW": "11mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1212",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1213",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1214",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1215",
+          "specName": {
+            "en-US": "15mm",
+            "zh-TW": "15mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1216",
+          "specName": {
+            "en-US": "16mm",
+            "zh-TW": "16mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1217",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1218",
+          "specName": {
+            "en-US": "18mm",
+            "zh-TW": "18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1219",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1220",
+          "specName": {
+            "en-US": "20mm",
+            "zh-TW": "20mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1221",
+          "specName": {
+            "en-US": "21mm",
+            "zh-TW": "21mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1222",
+          "specName": {
+            "en-US": "22mm",
+            "zh-TW": "22mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1223",
+          "specName": {
+            "en-US": "23mm",
+            "zh-TW": "23mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1224",
+          "specName": {
+            "en-US": "24mm",
+            "zh-TW": "24mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1225",
+          "specName": {
+            "en-US": "25mm",
+            "zh-TW": "25mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1226",
+          "specName": {
+            "en-US": "26mm",
+            "zh-TW": "26mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1227",
+          "specName": {
+            "en-US": "27mm",
+            "zh-TW": "27mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1228",
+          "specName": {
+            "en-US": "28mm",
+            "zh-TW": "28mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1229",
+          "specName": {
+            "en-US": "29mm",
+            "zh-TW": "29mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1230",
+          "specName": {
+            "en-US": "30mm",
+            "zh-TW": "30mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1231",
+          "specName": {
+            "en-US": "31mm",
+            "zh-TW": "31mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1232",
+          "specName": {
+            "en-US": "32mm",
+            "zh-TW": "32mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SSOC-1234",
+          "specName": {
+            "en-US": "34mm",
+            "zh-TW": "34mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "KNIPEX Combination Plier",
+        "zh-TW": "KNIPEX 鋼絲鉗 (浸柄)"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "KNI-CPLI-0009",
+          "specName": {
+            "en-US": "9\"",
+            "zh-TW": "9\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "IPS Water Pump Plier",
+        "zh-TW": "IPS 軟口大口徑水道鉗口保護套"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "IPS-WPLI-0270-SJ",
+          "specName": {
+            "en-US": "0270 Soft Jaw",
+            "zh-TW": "0270 Soft Jaw"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "IPS Water Pump Plier",
+        "zh-TW": "IPS 軟口大口徑水道鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "IPS-WPLI-0270",
+          "specName": {
+            "en-US": "0270",
+            "zh-TW": "0270"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "KEIBA Diagonal Plier",
+        "zh-TW": "KEIBA 斜口鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "KEI-DPLI-0726",
+          "specName": {
+            "en-US": "0726",
+            "zh-TW": "0726"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "KEI-DPLI-0727",
+          "specName": {
+            "en-US": "0727",
+            "zh-TW": "0727"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Bender",
+        "zh-TW": "白鐵彎管器"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-BND-0012",
+          "specName": {
+            "en-US": "1/2\"",
+            "zh-TW": "1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-BND-0014",
+          "specName": {
+            "en-US": "1/4\"",
+            "zh-TW": "1/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-BND-0034",
+          "specName": {
+            "en-US": "3/4\"",
+            "zh-TW": "3/4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-BND-0038",
+          "specName": {
+            "en-US": "3/8\"",
+            "zh-TW": "3/8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Brush - Hex Shank",
+        "zh-TW": "(六角柄)不銹鋼管刷"
+      },
+      "category": "02 - 電動工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SS-BRS-HEX-0010",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-BRS-HEX-0012",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-BRS-HEX-0017",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-BRS-HEX-0019",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SS-BRS-HEX-0025",
+          "specName": {
+            "en-US": "25mm",
+            "zh-TW": "25mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Paint Brush",
+        "zh-TW": "油漆刷"
+      },
+      "category": "04 - 建材修繕材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PNT-BRU-2031S",
+          "specName": {
+            "en-US": "1\" (Short Bristle)",
+            "zh-TW": "(短毛/203) 1\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-203112S",
+          "specName": {
+            "en-US": "1-1/2\" (Short Bristle)",
+            "zh-TW": "(短毛/203) 1-1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-2032S",
+          "specName": {
+            "en-US": "2\" (Short Bristle)",
+            "zh-TW": "(短毛/203) 2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-203212S",
+          "specName": {
+            "en-US": "2-1/2\" (Short Bristle)",
+            "zh-TW": "(短毛/203) 2-1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-2033S",
+          "specName": {
+            "en-US": "3\" (Short Bristle)",
+            "zh-TW": "(短毛/203) 3\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-2034S",
+          "specName": {
+            "en-US": "4\" (Short Bristle)",
+            "zh-TW": "(短毛/203) 4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-2035S",
+          "specName": {
+            "en-US": "5\" (Short Bristle)",
+            "zh-TW": "(短毛/203) 5\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-4001L",
+          "specName": {
+            "en-US": "1\" (Long Bristle)",
+            "zh-TW": "(長毛/400) 1\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-400112L",
+          "specName": {
+            "en-US": "1-1/2\" (Long Bristle)",
+            "zh-TW": "(長毛/400) 1-1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-4002L",
+          "specName": {
+            "en-US": "2\" (Long Brislte)",
+            "zh-TW": "(長毛/400) 2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-400212L",
+          "specName": {
+            "en-US": "2-1/2\" (Long Bristle)",
+            "zh-TW": "(長毛/400) 2-1/2\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-4003L",
+          "specName": {
+            "en-US": "3\" (Long Bristle)",
+            "zh-TW": "(長毛/400) 3\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-4004L",
+          "specName": {
+            "en-US": "4\" (Long Bristle)",
+            "zh-TW": "(長毛/400) 4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-BRU-4005L",
+          "specName": {
+            "en-US": "5\" (Long Bristle)",
+            "zh-TW": "(長毛/400) 5\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Painter Roller w/ Blue Handle",
+        "zh-TW": "好朋友油漆滾輪(藍柄)"
+      },
+      "category": "04 - 建材修繕材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PNT-ROL-0003",
+          "specName": {
+            "en-US": "3\"",
+            "zh-TW": "3\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-ROL-0004",
+          "specName": {
+            "en-US": "4\"",
+            "zh-TW": "4\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-ROL-0005",
+          "specName": {
+            "en-US": "5\"",
+            "zh-TW": "5\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-ROL-0006",
+          "specName": {
+            "en-US": "6\"",
+            "zh-TW": "6\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-ROL-0007",
+          "specName": {
+            "en-US": "7\"",
+            "zh-TW": "7\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-ROL-0008",
+          "specName": {
+            "en-US": "8\"",
+            "zh-TW": "8\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-ROL-0009",
+          "specName": {
+            "en-US": "9\"",
+            "zh-TW": "9\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-ROL-0010",
+          "specName": {
+            "en-US": "10\"",
+            "zh-TW": "10\""
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Aluminum Telescopic Paint Extension Pole",
+        "zh-TW": "鋁伸縮桿"
+      },
+      "category": "04 - 建材修繕材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-PNT-EPOL-03M3",
+          "specName": {
+            "en-US": "3m (3-Section)",
+            "zh-TW": "3米 (3節)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-EPOL-04M3",
+          "specName": {
+            "en-US": "4m (4-Section)",
+            "zh-TW": "4米 (3節)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-EPOL-05M4",
+          "specName": {
+            "en-US": "5m (4-Section)",
+            "zh-TW": "5米 (4節)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-EPOL-06M5",
+          "specName": {
+            "en-US": "6m (5-Section)",
+            "zh-TW": "6米 (5節)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-PNT-EPOL-08M3",
+          "specName": {
+            "en-US": "8m (3-Section)",
+            "zh-TW": "8米 (3節)"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Flexible Ratchet Combination Wrench",
+        "zh-TW": "搖頭棘輪梅開板手"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-FRCW-0008",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0009",
+          "specName": {
+            "en-US": "9mm",
+            "zh-TW": "9mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0010",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0011",
+          "specName": {
+            "en-US": "11mm",
+            "zh-TW": "11mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0012",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0013",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0014",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0015",
+          "specName": {
+            "en-US": "15mm",
+            "zh-TW": "15mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0016",
+          "specName": {
+            "en-US": "16mm",
+            "zh-TW": "16mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0017",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0018",
+          "specName": {
+            "en-US": "18mm",
+            "zh-TW": "18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-FRCW-0019",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Slim Combination Wrench",
+        "zh-TW": "薄型梅開板手"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SCW-0055",
+          "specName": {
+            "en-US": "5.5mm",
+            "zh-TW": "5.5mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0006",
+          "specName": {
+            "en-US": "6mm",
+            "zh-TW": "6mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0007",
+          "specName": {
+            "en-US": "7mm",
+            "zh-TW": "7mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0008",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0009",
+          "specName": {
+            "en-US": "9mm",
+            "zh-TW": "9mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0010",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0011",
+          "specName": {
+            "en-US": "11mm",
+            "zh-TW": "11mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0012",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0013",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0014",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0015",
+          "specName": {
+            "en-US": "15mm",
+            "zh-TW": "15mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0016",
+          "specName": {
+            "en-US": "16mm",
+            "zh-TW": "16mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0017",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0018",
+          "specName": {
+            "en-US": "18mm",
+            "zh-TW": "18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0019",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0020",
+          "specName": {
+            "en-US": "20mm",
+            "zh-TW": "20mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0021",
+          "specName": {
+            "en-US": "21mm",
+            "zh-TW": "21mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0022",
+          "specName": {
+            "en-US": "22mm",
+            "zh-TW": "22mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0023",
+          "specName": {
+            "en-US": "23mm",
+            "zh-TW": "23mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0024",
+          "specName": {
+            "en-US": "24mm",
+            "zh-TW": "24mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0025",
+          "specName": {
+            "en-US": "25mm",
+            "zh-TW": "25mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0026",
+          "specName": {
+            "en-US": "26mm",
+            "zh-TW": "26mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0027",
+          "specName": {
+            "en-US": "27mm",
+            "zh-TW": "27mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0028",
+          "specName": {
+            "en-US": "28mm",
+            "zh-TW": "28mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0029",
+          "specName": {
+            "en-US": "29mm",
+            "zh-TW": "29mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0030",
+          "specName": {
+            "en-US": "30mm",
+            "zh-TW": "30mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-SCW-0032",
+          "specName": {
+            "en-US": "32mm",
+            "zh-TW": "32mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Reversible Ratchet Combination Wrench",
+        "zh-TW": "雙向棘輪梅開板手"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-RRCW-0006",
+          "specName": {
+            "en-US": "6mm",
+            "zh-TW": "6mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0008",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0009",
+          "specName": {
+            "en-US": "9mm",
+            "zh-TW": "9mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0010",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0011",
+          "specName": {
+            "en-US": "11mm",
+            "zh-TW": "11mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0012",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0013",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0014",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0015",
+          "specName": {
+            "en-US": "15mm",
+            "zh-TW": "15mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0016",
+          "specName": {
+            "en-US": "16mm",
+            "zh-TW": "16mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0017",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0018",
+          "specName": {
+            "en-US": "18mm",
+            "zh-TW": "18mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0019",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0022",
+          "specName": {
+            "en-US": "22mm",
+            "zh-TW": "22mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0024",
+          "specName": {
+            "en-US": "24mm",
+            "zh-TW": "24mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0027",
+          "specName": {
+            "en-US": "27mm",
+            "zh-TW": "27mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0030",
+          "specName": {
+            "en-US": "30mm",
+            "zh-TW": "30mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "AZX-RRCW-0032",
+          "specName": {
+            "en-US": "32mm",
+            "zh-TW": "32mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "SWAGELOK M200 Orbital Welding",
+        "zh-TW": "M200管道自動焊接機主機"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "E - 加工機械相關零配件",
+      "brand": "SWAGELOK",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SWA-OWLD-M200",
+          "specName": {
+            "en-US": "SWAGELOK M200 Orbital Welding",
+            "zh-TW": "M200管道自動焊接機主機"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "SWAGELOK M200 Handle",
+        "zh-TW": "M200管道自動焊接機用焊把"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "E - 加工機械相關零配件",
+      "brand": "SWAGELOK",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SWA-M200-5H",
+          "specName": {
+            "en-US": "5H (1/8\"~5/8\")",
+            "zh-TW": "5H (1/8\"~5/8\")"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "SWA-M200-10H",
+          "specName": {
+            "en-US": "10H (1/4\"~1\")",
+            "zh-TW": "10H (1/4\"~1\")"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "SWAGELOK M200 Extension Cord",
+        "zh-TW": "M200管道自動焊接機焊把延長線"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "E - 加工機械相關零配件",
+      "brand": "SWAGELOK",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SWA-M200-EXC-010",
+          "specName": {
+            "en-US": "10m",
+            "zh-TW": "10m"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "SWAGELOK M200 Clamp",
+        "zh-TW": "M200管道自動焊接機用夾具"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "E - 加工機械相關零配件",
+      "brand": "SWAGELOK",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SWA-M200-CLP-5H",
+          "specName": {
+            "en-US": "5H",
+            "zh-TW": "5H"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "SWA-M200-CLP-10H",
+          "specName": {
+            "en-US": "10H",
+            "zh-TW": "10H"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "SWAGELOK M200 Clamp Set",
+        "zh-TW": "M200 5H專用夾片組"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "E - 加工機械相關零配件",
+      "brand": "SWAGELOK",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SWA-M200-CLP-5H-014S",
+          "specName": {
+            "en-US": "5H (1/4\")",
+            "zh-TW": "5H (1/4\")"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "SWA-M200-CLP-5H-038S",
+          "specName": {
+            "en-US": "5H (3/8\")",
+            "zh-TW": "5H (3/8\")"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "SWA-M200-CLP-5H-012S",
+          "specName": {
+            "en-US": "5H (1/2\")",
+            "zh-TW": "5H (1/2\")"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "SWAGELOK M200 Clamp Set",
+        "zh-TW": "M200 10H專用夾片組"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "E - 加工機械相關零配件",
+      "brand": "SWAGELOK",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SWA-M200-CLP-10H-034S",
+          "specName": {
+            "en-US": "10H (3/4\")",
+            "zh-TW": "10H (3/4\")"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": ""
+        },
+        {
+          "sku": "SWA-M200-CLP-10H-01S",
+          "specName": {
+            "en-US": "10H (1\")",
+            "zh-TW": "10H (1\")"
           },
           "specDetail": {
             "en-US": "",
