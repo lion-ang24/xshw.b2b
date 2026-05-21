@@ -55,7 +55,7 @@ for (const row of dataRows) {
       category,
       subcategory: subcategory === '無' ? '' : subcategory,
       brand,
-      imageUrl,
+      imageUrl: '',
       specs: []
     });
   }
@@ -67,7 +67,8 @@ for (const row of dataRows) {
     sku,
     specName: { 'en-US': specNameEn, 'zh-TW': specNameZh },
     specDetail: { 'en-US': specDetailEn, 'zh-TW': specDetailZh },
-    price
+    price,
+    imageUrl
   });
 }
 

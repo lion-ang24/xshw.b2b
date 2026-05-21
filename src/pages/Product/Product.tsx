@@ -53,7 +53,8 @@ const Product: React.FC = () => {
   const specs = product.specs || [];
   const currentSpec = specs[selectedSpecIndex] || {};
   const priceDisplay = currentSpec.price ? `$${currentSpec.price}` : '';
-  const hasImage = product.imageUrl && product.imageUrl.trim() !== '';
+  const currentImageUrl = currentSpec.imageUrl || product.imageUrl;
+  const hasImage = currentImageUrl && currentImageUrl.trim() !== '';
 
   // Reverse mapping for breadcrumb (optional)
   const categoryStr = product.category || '';
@@ -74,7 +75,7 @@ const Product: React.FC = () => {
         <div className="product-image-large">
           {hasImage ? (
             <>
-              <img src={product.imageUrl} alt={getI18nText(product.name, language)} referrerPolicy="no-referrer" />
+              <img src={currentImageUrl} alt={getI18nText(product.name, language)} referrerPolicy="no-referrer" />
               <div className="zoom-icon" onClick={() => setIsLightboxOpen(true)} style={{ cursor: 'pointer' }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"></circle>
@@ -180,19 +181,19 @@ const Product: React.FC = () => {
                   const pName = getI18nText(product?.name, language);
                   const subject = `【Mail 採購】${pName} - ${spec}`;
                   const body =
-`您好，
+                    `您好，
 
-以下為本次 Mail 採購需求，請確認後回覆。
+                    以下為本次 Mail 採購需求，請確認後回覆。
 
-──────────────────────
-Date: ${today}
-商品：${pName}
-規格：${spec}
-數量：
-──────────────────────
-備註：
+                    ──────────────────────
+                    Date: ${today}
+                    商品：${pName}
+                    規格：${spec}
+                    數量：
+                    ──────────────────────
+                    備註：
 
-`;
+                    `;
                   window.location.href = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 }}
               >
@@ -226,7 +227,7 @@ Date: ${today}
             <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)} aria-label="Close">
               &times;
             </button>
-            <img src={product.imageUrl} alt={getI18nText(product.name, language)} className="lightbox-image" referrerPolicy="no-referrer" />
+            <img src={currentImageUrl} alt={getI18nText(product.name, language)} className="lightbox-image" referrerPolicy="no-referrer" />
           </div>
         </div>
       )}

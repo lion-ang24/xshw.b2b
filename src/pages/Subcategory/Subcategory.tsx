@@ -21,7 +21,7 @@ const Subcategory: React.FC = () => {
   const effectiveCategoryId = categoryId || catalogData[0].id;
   const category = catalogData.find(c => c.id === effectiveCategoryId);
   const subcategory = category?.subcategories?.find(s => s.id === subcategoryId);
-  
+
   const categoryName = category ? t(category.nameKey) : effectiveCategoryId;
   const subcategoryName = subcategory ? t(subcategory.nameKey) : subcategoryId;
 
@@ -41,31 +41,32 @@ const Subcategory: React.FC = () => {
   const renderProductGrid = (products: typeof productsData.products) => (
     <div className="product-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
       {products.map((product, idx) => {
-        const hasImage = product.imageUrl && product.imageUrl.trim() !== '';
+        const coverImage = product.specs[0]?.imageUrl || product.imageUrl;
+        const hasImage = coverImage && coverImage.trim() !== '';
         const firstSpecSku = product.specs[0]?.sku || '';
         return (
-          <Link 
-            key={idx} 
-            to={`/product/${encodeURIComponent(typeof product.name === 'string' ? product.name : product.name['zh-TW'])}`} 
-            className="card" 
-            style={{ 
+          <Link
+            key={idx}
+            to={`/product/${encodeURIComponent(typeof product.name === 'string' ? product.name : product.name['zh-TW'])}`}
+            className="card"
+            style={{
               color: 'inherit',
               textDecoration: 'none',
-              border: '1px solid var(--border-color)', 
-              padding: '15px', 
-              borderRadius: '8px' 
+              border: '1px solid var(--border-color)',
+              padding: '15px',
+              borderRadius: '8px'
             }}
           >
             {hasImage ? (
-              <img src={product.imageUrl} alt={getI18nText(product.name, language)} style={{ width: '100%', height: 'auto', marginBottom: '15px' }} referrerPolicy="no-referrer" />
+              <img src={coverImage} alt={getI18nText(product.name, language)} style={{ width: '100%', aspectRatio: '1 / 1', objectFit: 'contain', marginBottom: '15px', borderRadius: '4px' }} referrerPolicy="no-referrer" />
             ) : (
-              <div style={{ width: '100%', height: '200px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px', color: '#888', borderRadius: '4px' }}>
+              <div style={{ width: '100%', aspectRatio: '1 / 1', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px', color: '#888', borderRadius: '4px' }}>
                 圖片待更新
               </div>
             )}
             <div className="card-info" style={{ marginBottom: '15px' }}>
-              <h3 style={{ 
-                fontSize: '1rem', 
+              <h3 style={{
+                fontSize: '1rem',
                 marginBottom: '5px',
                 lineHeight: '1.4',
                 minHeight: '2.8em',
@@ -73,19 +74,19 @@ const Subcategory: React.FC = () => {
               }}>
                 {getI18nText(product.name, language) || '\u00a0'}
               </h3>
-              <p style={{ 
-                color: 'var(--text-secondary)', 
-                fontSize: '0.85rem', 
-                lineHeight: '1.4', 
-                minHeight: '2.8em', 
-                wordBreak: 'break-all' 
+              <p style={{
+                color: 'var(--text-secondary)',
+                fontSize: '0.85rem',
+                lineHeight: '1.4',
+                minHeight: '2.8em',
+                wordBreak: 'break-all'
               }}>
                 {firstSpecSku ? `SKU: ${firstSpecSku}` : '\u00a0'}
               </p>
             </div>
-            <div className="card-btn" style={{ 
-              display: 'block', 
-              textAlign: 'center', 
+            <div className="card-btn" style={{
+              display: 'block',
+              textAlign: 'center',
               textDecoration: 'none',
               background: 'var(--primary-color)',
               color: 'var(--bg-color)',
@@ -98,7 +99,7 @@ const Subcategory: React.FC = () => {
         );
       })}
       {products.length === 0 && (
-         <p style={{ color: 'var(--text-secondary)', gridColumn: '1 / -1' }}>此分類的產品內容尚在整理中。</p>
+        <p style={{ color: 'var(--text-secondary)', gridColumn: '1 / -1' }}>此分類的產品內容尚在整理中。</p>
       )}
     </div>
   );
@@ -106,7 +107,7 @@ const Subcategory: React.FC = () => {
   return (
     <div className="subcategory-page">
       <div className="breadcrumb" style={{ padding: '20px' }}>
-        <Link to="/">{t('nav_home')}</Link> <span>/</span> <Link to="/category">{t('nav_catalog')}</Link> 
+        <Link to="/">{t('nav_home')}</Link> <span>/</span> <Link to="/category">{t('nav_catalog')}</Link>
         {effectiveCategoryId && (
           <>
             <span>/</span>
@@ -144,7 +145,7 @@ const Subcategory: React.FC = () => {
             ))}
           </ul>
         </aside>
-        
+
         <main className="main-content" style={{ flex: 1, paddingLeft: '40px' }}>
           {!subcategoryId ? (
             /* Show Category Overview OR Product Grid if no subcategories */
@@ -156,7 +157,7 @@ const Subcategory: React.FC = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '40px 20px' }}>
                   {category.subcategories.map(sub => (
                     <div key={sub.id} style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '20px' }}>
-                       <Link to={`/category/${effectiveCategoryId}/${sub.id}`} style={{
+                      <Link to={`/category/${effectiveCategoryId}/${sub.id}`} style={{
                         textDecoration: 'none',
                         color: 'var(--text-color)',
                         padding: '15px 0',
