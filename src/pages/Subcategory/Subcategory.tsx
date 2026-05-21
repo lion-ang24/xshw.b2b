@@ -38,71 +38,129 @@ const Subcategory: React.FC = () => {
     return true;
   });
 
-  const renderProductGrid = (products: typeof productsData.products) => (
-    <div className="product-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
-      {products.map((product, idx) => {
-        const coverImage = product.specs[0]?.imageUrl || product.imageUrl;
-        const hasImage = coverImage && coverImage.trim() !== '';
-        const firstSpecSku = product.specs[0]?.sku || '';
-        return (
-          <Link
-            key={idx}
-            to={`/product/${encodeURIComponent(typeof product.name === 'string' ? product.name : product.name['zh-TW'])}`}
-            className="card"
-            style={{
-              color: 'inherit',
-              textDecoration: 'none',
-              border: '1px solid var(--border-color)',
-              padding: '15px',
-              borderRadius: '8px'
-            }}
-          >
-            {hasImage ? (
-              <img src={coverImage} alt={getI18nText(product.name, language)} style={{ width: '100%', aspectRatio: '1 / 1', objectFit: 'contain', marginBottom: '15px', borderRadius: '4px' }} referrerPolicy="no-referrer" />
-            ) : (
-              <div style={{ width: '100%', aspectRatio: '1 / 1', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px', color: '#888', borderRadius: '4px' }}>
-                圖片待更新
-              </div>
-            )}
-            <div className="card-info" style={{ marginBottom: '15px' }}>
-              <h3 style={{
-                fontSize: '1rem',
-                marginBottom: '5px',
-                lineHeight: '1.4',
-                minHeight: '2.8em',
-                wordBreak: 'break-all'
-              }}>
-                {getI18nText(product.name, language) || '\u00a0'}
-              </h3>
-              <p style={{
-                color: 'var(--text-secondary)',
-                fontSize: '0.85rem',
-                lineHeight: '1.4',
-                minHeight: '2.8em',
-                wordBreak: 'break-all'
-              }}>
-                {firstSpecSku ? `SKU: ${firstSpecSku}` : '\u00a0'}
-              </p>
+  const [currentPage, setCurrentPage] = React.useState(1);
+
+  React.useEffect(() => {
+    setCurrentPage(1);
+    window.scrollTo(0, 0);
+  }, [categoryId, subcategoryId]);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  const renderProductGrid = (products: typeof productsData.products) => {
+    const itemsPerPage = 15;
+    const totalPages = Math.ceil(products.length / itemsPerPage);
+    const currentProducts = products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    return (
+      <div>
+        <div className="product-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
+          {currentProducts.map((product, idx) => {
+            const coverImage = product.specs[0]?.imageUrl || product.imageUrl;
+            const hasImage = coverImage && coverImage.trim() !== '';
+            const firstSpecSku = product.specs[0]?.sku || '';
+            return (
+              <Link
+                key={idx}
+                to={`/product/${encodeURIComponent(typeof product.name === 'string' ? product.name : product.name['zh-TW'])}`}
+                className="card"
+                style={{
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  border: '1px solid var(--border-color)',
+                  padding: '15px',
+                  borderRadius: '8px'
+                }}
+              >
+                {hasImage ? (
+                  <img src={coverImage} alt={getI18nText(product.name, language)} style={{ width: '100%', aspectRatio: '1 / 1', objectFit: 'contain', marginBottom: '15px', borderRadius: '4px' }} referrerPolicy="no-referrer" />
+                ) : (
+                  <div style={{ width: '100%', aspectRatio: '1 / 1', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px', color: '#888', borderRadius: '4px' }}>
+                    圖片待更新
+                  </div>
+                )}
+                <div className="card-info" style={{ marginBottom: '15px' }}>
+                  <h3 style={{
+                    fontSize: '1rem',
+                    marginBottom: '5px',
+                    lineHeight: '1.4',
+                    minHeight: '2.8em',
+                    wordBreak: 'break-all'
+                  }}>
+                    {getI18nText(product.name, language) || '\u00a0'}
+                  </h3>
+                  <p style={{
+                    color: 'var(--text-secondary)',
+                    fontSize: '0.85rem',
+                    lineHeight: '1.4',
+                    minHeight: '2.8em',
+                    wordBreak: 'break-all'
+                  }}>
+                    {firstSpecSku ? `SKU: ${firstSpecSku}` : '\u00a0'}
+                  </p>
+                </div>
+                <div className="card-btn" style={{
+                  display: 'block',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  background: 'var(--primary-color)',
+                  color: 'var(--bg-color)',
+                  padding: '8px 0',
+                  borderRadius: '4px'
+                }}>
+                  詳細資訊
+                </div>
+              </Link>
+            );
+          })}
+          {products.length === 0 && (
+            <p style={{ color: 'var(--text-secondary)', gridColumn: '1 / -1' }}>此分類的產品內容尚在整理中。</p>
+          )}
+        </div>
+
+        {totalPages > 1 && (
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '40px' }}>
+            <button 
+              onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              style={{ padding: '8px 16px', border: '1px solid #ccc', borderRadius: '4px', background: currentPage === 1 ? '#f5f5f5' : '#fff', cursor: currentPage === 1 ? 'not-allowed' : 'pointer' }}
+            >
+              上一頁
+            </button>
+            
+            <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap', justifyContent: 'center' }}>
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentPage(i + 1)}
+                  style={{
+                    padding: '8px 16px',
+                    border: '1px solid #ccc',
+                    borderRadius: '4px',
+                    background: currentPage === i + 1 ? 'var(--primary-color)' : '#fff',
+                    color: currentPage === i + 1 ? 'var(--bg-color)' : '#333',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {i + 1}
+                </button>
+              ))}
             </div>
-            <div className="card-btn" style={{
-              display: 'block',
-              textAlign: 'center',
-              textDecoration: 'none',
-              background: 'var(--primary-color)',
-              color: 'var(--bg-color)',
-              padding: '8px 0',
-              borderRadius: '4px'
-            }}>
-              詳細資訊
-            </div>
-          </Link>
-        );
-      })}
-      {products.length === 0 && (
-        <p style={{ color: 'var(--text-secondary)', gridColumn: '1 / -1' }}>此分類的產品內容尚在整理中。</p>
-      )}
-    </div>
-  );
+
+            <button 
+              onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              style={{ padding: '8px 16px', border: '1px solid #ccc', borderRadius: '4px', background: currentPage === totalPages ? '#f5f5f5' : '#fff', cursor: currentPage === totalPages ? 'not-allowed' : 'pointer' }}
+            >
+              下一頁
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <div className="subcategory-page">

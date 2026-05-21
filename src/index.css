@@ -1663,19 +1663,25 @@ body {
 .product-image-large {
     background: #fff;
     border-radius: 12px;
-    padding: 40px;
+    /* padding: 40px; */ /* User requested 滿版 (full bleed) */
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--border-color);
     position: relative;
-    height: 100%;
-    max-height: 600px;
+    /* To make the white box shrink to fit the image dimensions */
+    align-self: start;
+    justify-self: center;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .product-image-large img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    display: block;
     object-fit: contain;
 }
 

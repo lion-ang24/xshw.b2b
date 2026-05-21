@@ -86,7 +86,7 @@ const Product: React.FC = () => {
               </div>
             </>
           ) : (
-            <div style={{ width: '100%', height: '400px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', borderRadius: '8px' }}>
+            <div style={{ width: '600px', height: '400px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', borderRadius: '8px' }}>
               圖片待更新
             </div>
           )}
