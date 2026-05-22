@@ -78,7 +78,7 @@ const Subcategory: React.FC = () => {
                   <img src={coverImage} alt={getI18nText(product.name, language)} style={{ width: '100%', aspectRatio: '1 / 1', objectFit: 'contain', marginBottom: '15px', borderRadius: '4px' }} referrerPolicy="no-referrer" />
                 ) : (
                   <div style={{ width: '100%', aspectRatio: '1 / 1', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px', color: '#888', borderRadius: '4px' }}>
-                    圖片待更新
+                    {t('image_pending')}
                   </div>
                 )}
                 <div className="card-info" style={{ marginBottom: '15px' }}>
@@ -116,7 +116,7 @@ const Subcategory: React.FC = () => {
             );
           })}
           {products.length === 0 && (
-            <p style={{ color: 'var(--text-secondary)', gridColumn: '1 / -1' }}>此分類的產品內容尚在整理中。</p>
+            <p style={{ color: 'var(--text-secondary)', gridColumn: '1 / -1' }}>{t('category_products_preparing')}</p>
           )}
         </div>
 

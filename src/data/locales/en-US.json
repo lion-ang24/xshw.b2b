@@ -20,7 +20,7 @@
   "featured_categories": "Featured Categories",
   "middle_banner": "High Quality Craftsmanship ‧ Reliable",
   "featured_products": "Hot Products",
-  "footer_brand": "XSHW",
+  "footer_brand": "AZX XSHW",
   "footer_brand_sub": "Service Company",
   "footer_catalog": "Products",
   "footer_support": "Support",
@@ -29,11 +29,11 @@
   "footer_terms": "Terms & Conditions",
   "footer_shipping": "Shipping & Returns",
   "footer_careers": "Careers",
-  "footer_company": "XSHW Service Company",
+  "footer_company": "AZX Xiang Sheng Hardware Inc.",
   "footer_company_desc": "We are committed to providing top-notch hardware tools, instruments and consumables to bring efficiency and safety to your engineering projects.",
-  "footer_address_street": "No. 1, Industry Road",
-  "footer_address_city": "Taipei, Taiwan 10491",
-  "footer_phone": "1-855-000-0000",
+  "footer_address_street": "301 W Deer Valley Rd, Suite 5",
+  "footer_address_city": "Phoenix, AZ 85027",
+  "footer_phone": "+1 (480) 498-9698",
   "footer_follow_us": "FOLLOW US",
   "btn_add_to_cart": "ADD TO CART",
   "btn_request_quote": "Add to Quote/Request Bulk Pricing",
@@ -83,5 +83,7 @@
   "direct_order": "Submit Order Request",
   "add_to_queue_success": "Added to list",
   "add_to_queue_duplicate": "This item is already in the list",
-  "mail_order": "Mail Order"
+  "mail_order": "Mail Order",
+  "category_products_preparing": "The product content for this category is currently being organized.",
+  "image_pending": "Image coming soon"
 }

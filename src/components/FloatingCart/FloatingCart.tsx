@@ -22,22 +22,20 @@ const FloatingCart: React.FC = () => {
 
     const subject = `【需求單】採購申請 ${today}`;
     const body =
-`您好，
+      `您好，
 
-以下為本次採購需求，請確認後回覆。
+      以下為本次採購需求，請確認後回覆。
 
-──────────────────────
-訂單日期：${today}
-品項數量：${checkedItems.length} 項
-──────────────────────
+      ──────────────────────
+      訂單日期：${today}
+      品項數量：${checkedItems.length} 項
+      ──────────────────────
 
-${itemLines}
+      ${itemLines}
 
-──────────────────────
-備註：
-
-
-`;
+      ──────────────────────
+      備註：
+    `;
 
     const mailto = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
