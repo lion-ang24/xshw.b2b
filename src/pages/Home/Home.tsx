@@ -12,6 +12,16 @@ const Home: React.FC = () => {
   const [catCanScrollRight, setCatCanScrollRight] = useState(true);
   const totalBrands = 6;
 
+  const cardButtonStyle: React.CSSProperties = {
+    background: 'none',
+    padding: 0,
+    color: 'inherit',
+    font: 'inherit',
+    textAlign: 'inherit',
+    outline: 'none',
+    border: '1px solid var(--border-color)',
+  };
+
   const updateCatScrollState = () => {
     const el = catCarouselRef.current;
     if (!el) return;
@@ -94,7 +104,7 @@ const Home: React.FC = () => {
           <div className="hero-content">
             <h1>{t('hero_title')}</h1>
             <p>{t('hero_desc')}</p>
-            <button className="cta-btn">{t('hero_btn')}</button>
+            {/* <button className="cta-btn">{t('hero_btn')}</button>  --首頁-了解更多button*/}
           </div>
         </div>
         <div className="hero-right">
@@ -149,39 +159,39 @@ const Home: React.FC = () => {
             aria-label="向左滑動"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="22" height="22">
-              <polyline points="15 18 9 12 15 6"/>
+              <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
 
           <div className="carousel-container" ref={catCarouselRef}>
-            <div className="card">
-              <img src="https://lh3.googleusercontent.com/d/1gg6_zL1Objsrw3cbwMVC13w7dDTxeeDC" alt="手工具" referrerPolicy="no-referrer" />
-              <button className="card-btn" onClick={() => handleCategoryClick('handtools')}>手工具</button>
-            </div>
-            <div className="card">
-              <img src="https://loremflickr.com/400/400/electronics/all" alt="電料" />
-              <button className="card-btn" onClick={() => handleCategoryClick('electric')}>電料</button>
-            </div>
-            <div className="card">
-              <img src="https://loremflickr.com/400/400/machinery/all" alt="加工機械零配件" />
-              <button className="card-btn" onClick={() => handleCategoryClick('machine')}>加工機械零配件</button>
-            </div>
-            <div className="card">
-              <img src="https://loremflickr.com/400/400/plumbing/all" alt="水料" />
-              <button className="card-btn" onClick={() => handleCategoryClick('water')}>水料</button>
-            </div>
-            <div className="card">
-              <img src="https://loremflickr.com/400/400/construction/all" alt="防震用品&耗材" />
-              <button className="card-btn" onClick={() => handleCategoryClick('protect')}>防震用品&耗材</button>
-            </div>
-            <div className="card">
-              <img src="https://loremflickr.com/400/400/crane/all" alt="起重/搬運設備" />
-              <button className="card-btn" onClick={() => handleCategoryClick('machine')}>起重/搬運設備</button>
-            </div>
-            <div className="card">
-              <img src="https://loremflickr.com/400/400/instrument/all" alt="儀器與控制元件" />
-              <button className="card-btn" onClick={() => handleCategoryClick('machine')}>儀器與控制元件</button>
-            </div>
+            <button className="card" onClick={() => handleCategoryClick('handtools')} style={cardButtonStyle}>
+              <img src="https://lh3.googleusercontent.com/d/1eFEdnlkeSM0qMskXF2Vej-7tpOhjki7f" alt={t('cat_handtools')} referrerPolicy="no-referrer" />
+              <span className="card-btn" style={{ display: 'block' }}>{t('cat_handtools')}</span>
+            </button>
+            <button className="card" onClick={() => handleCategoryClick('electric')} style={cardButtonStyle}>
+              <img src="https://lh3.googleusercontent.com/d/1UQEEZYYpGd_dg_AVYs60lzmcWaJT5uiy" alt={t('cat_electric')} referrerPolicy="no-referrer" />
+              <span className="card-btn" style={{ display: 'block' }}>{t('cat_electric')}</span>
+            </button>
+            <button className="card" onClick={() => handleCategoryClick('machine/E')} style={cardButtonStyle}>
+              <img src="https://lh3.googleusercontent.com/d/1JBfqkvMOK9ZMs7OIamp2ERZar9kH_VvC" alt={t('subcat_machine_e')} referrerPolicy="no-referrer" />
+              <span className="card-btn" style={{ display: 'block' }}>{t('subcat_machine_e')}</span>
+            </button>
+            <button className="card" onClick={() => handleCategoryClick('water')} style={cardButtonStyle}>
+              <img src="https://lh3.googleusercontent.com/d/1IEqqIlKsMPFzamTDPUWbuebyLeAXYxoy" alt={t('cat_water')} referrerPolicy="no-referrer" />
+              <span className="card-btn" style={{ display: 'block' }}>{t('cat_water')}</span>
+            </button>
+            <button className="card" onClick={() => handleCategoryClick('protect')} style={cardButtonStyle}>
+              <img src="https://lh3.googleusercontent.com/d/1s1m05vkkXbjbx_lp_0JRie9pzw0Bch1o" alt={t('cat_protect')} referrerPolicy="no-referrer" />
+              <span className="card-btn" style={{ display: 'block' }}>{t('cat_protect')}</span>
+            </button>
+            <button className="card" onClick={() => handleCategoryClick('building')} style={cardButtonStyle}>
+              <img src="https://lh3.googleusercontent.com/d/1_LfLEEcjgC9Z9FKDyBTzZYL1UwI-rkLI" alt={t('cat_building')} referrerPolicy="no-referrer" />
+              <span className="card-btn" style={{ display: 'block' }}>{t('cat_building')}</span>
+            </button>
+            <button className="card" onClick={() => handleCategoryClick('metal')} style={cardButtonStyle}>
+              <img src="https://lh3.googleusercontent.com/d/13EpRSJw0CRohrzz9duUbBGCar7Kt4KRo" alt={t('cat_metal')} referrerPolicy="no-referrer" />
+              <span className="card-btn" style={{ display: 'block' }}>{t('cat_metal')}</span>
+            </button>
           </div>
 
           <button
@@ -190,7 +200,7 @@ const Home: React.FC = () => {
             aria-label="向右滑動"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="22" height="22">
-              <polyline points="9 18 15 12 9 6"/>
+              <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
         </div>
@@ -207,9 +217,18 @@ const Home: React.FC = () => {
           <h2>{t('featured_products')}</h2>
         </div>
         <div className="product-grid" id="prod-grid">
-          <div className="card"><img src="https://loremflickr.com/400/400/ruler,tool/all" alt="Product" /><button className="card-btn">有刻度鐵工角尺</button></div>
-          <div className="card"><img src="https://loremflickr.com/400/400/multimeter/all" alt="Product" /><button className="card-btn">三用電錶</button></div>
-          <div className="card"><img src="https://loremflickr.com/400/400/laser,tool/all" alt="Product" /><button className="card-btn">雷射測距儀</button></div>
+          <button className="card" onClick={() => navigate('/product/兩口自動梅花板手')} style={cardButtonStyle}>
+            <img src="https://lh3.googleusercontent.com/d/1BJAybJ4srp5jmUnkjyHfUJjO97K7kpVr" alt="兩口自動梅花棘輪板手" />
+            <span className="card-btn" style={{ display: 'block' }}>{t('prod_wrench')}</span>
+          </button>
+          <button className="card" onClick={() => navigate('/product/油漆刷%20-%20長毛')} style={cardButtonStyle}>
+            <img src="https://lh3.googleusercontent.com/d/1uimJAKRjR_VWoTiWC-eB3q6z3rljZP2F" alt="長毛油漆刷" />
+            <span className="card-btn" style={{ display: 'block' }}>{t('prod_brush')}</span>
+          </button>
+          <button className="card" onClick={() => navigate('/product/絕緣膠布%2048MM')} style={cardButtonStyle}>
+            <img src="https://lh3.googleusercontent.com/d/1ichisoBsKBsyqkFTKIDCQ9DVG3QH0Fc3" alt="絕緣膠帶" />
+            <span className="card-btn" style={{ display: 'block' }}>{t('prod_tape')}</span>
+          </button>
         </div>
       </section>
     </>

@@ -53,7 +53,8 @@ const Product: React.FC = () => {
   const specs = product.specs || [];
   const currentSpec = specs[selectedSpecIndex] || {};
   const priceDisplay = currentSpec.price ? `$${currentSpec.price}` : '';
-  const hasImage = product.imageUrl && product.imageUrl.trim() !== '';
+  const currentImageUrl = currentSpec.imageUrl || product.imageUrl;
+  const hasImage = currentImageUrl && currentImageUrl.trim() !== '';
 
   // Reverse mapping for breadcrumb (optional)
   const categoryStr = product.category || '';
@@ -74,7 +75,7 @@ const Product: React.FC = () => {
         <div className="product-image-large">
           {hasImage ? (
             <>
-              <img src={product.imageUrl} alt={getI18nText(product.name, language)} referrerPolicy="no-referrer" />
+              <img src={currentImageUrl} alt={getI18nText(product.name, language)} referrerPolicy="no-referrer" />
               <div className="zoom-icon" onClick={() => setIsLightboxOpen(true)} style={{ cursor: 'pointer' }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"></circle>
@@ -85,8 +86,8 @@ const Product: React.FC = () => {
               </div>
             </>
           ) : (
-            <div style={{ width: '100%', height: '400px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', borderRadius: '8px' }}>
-              圖片待更新
+            <div style={{ width: '600px', height: '400px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', borderRadius: '8px' }}>
+              {t('image_pending')}
             </div>
           )}
         </div>
@@ -178,21 +179,19 @@ const Product: React.FC = () => {
                   const today = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
                   const spec = getI18nText(currentSpec.specName, language);
                   const pName = getI18nText(product?.name, language);
-                  const subject = `【Mail 採購】${pName} - ${spec}`;
+                  const subject = `${t('mail_purchase_subject_prefix')} ${pName} - ${spec}`;
                   const body =
-`您好，
+                    `${t('mail_purchase_greeting')}
 
-以下為本次 Mail 採購需求，請確認後回覆。
+                    ──────────────────────
+                    ${t('mail_date')}${today}
+                    ${t('mail_product')}${pName}
+                    ${t('mail_spec')}${spec}
+                    ${t('mail_qty')}
+                    ──────────────────────
+                    ${t('mail_notes')}
 
-──────────────────────
-Date: ${today}
-商品：${pName}
-規格：${spec}
-數量：
-──────────────────────
-備註：
-
-`;
+                    `;
                   window.location.href = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 }}
               >
@@ -226,7 +225,7 @@ Date: ${today}
             <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)} aria-label="Close">
               &times;
             </button>
-            <img src={product.imageUrl} alt={getI18nText(product.name, language)} className="lightbox-image" referrerPolicy="no-referrer" />
+            <img src={currentImageUrl} alt={getI18nText(product.name, language)} className="lightbox-image" referrerPolicy="no-referrer" />
           </div>
         </div>
       )}

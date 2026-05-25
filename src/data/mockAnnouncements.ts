@@ -1,9 +1,14 @@
 export type AnnouncementStatus = '新活動' | '公告' | '更新';
 
+export interface LocalizedString {
+  'zh-TW': string;
+  'en-US': string;
+}
+
 export interface Announcement {
   id: string;
-  title: string;
-  content: string;
+  title: string | LocalizedString;
+  content: string | LocalizedString;
   date: string;
   status: AnnouncementStatus;
 }
@@ -11,58 +16,28 @@ export interface Announcement {
 export const mockAnnouncements: Announcement[] = [
   {
     id: '1',
-    title: '2026 年五月份促銷活動正式開跑，多項商品限時特惠',
-    date: '2026/05/01',
-    status: '新活動',
-    content: '親愛的客戶您好，感謝您長久以來對翔盛五金的支持。為回饋廣大客戶，我們將於 2026 年 5 月 1 日起至 5 月 31 日止，舉辦「五月感恩回饋促銷活動」。本次活動涵蓋了多項熱銷五金工具、建築材料及居家修繕配件，全面享有 8 折至 9 折不等的折扣優惠。此外，單筆訂單滿額更可獲得精美實用的小工具組。這是一個採購庫存、更新裝備的絕佳時機，敬請把握機會，立即前往產品型錄專區瀏覽最新的促銷商品列表，並將您需要的商品加入購物車。如有任何疑問，歡迎透過 Line 官方帳號與我們聯繫。',
+    title: {
+      'en-US': '🚀 Exciting Milestone: First Container Shipped & Opening Date Announced!',
+      'zh-TW': '🌟 重大里程碑：首批貨櫃已出貨與開業營運公告'
+    },
+    date: '2026/05/25',
+    status: '公告',
+    content: {
+      'en-US': 'AZX Xiang Sheng Hardware Inc. is thrilled to announce that our very first container was officially shipped out on May 20th and is scheduled to arrive in mid-June!\nTo kickstart our operations, our company officers will be arriving on May 27th to begin setting up on-site. We are incredibly happy to share that we will soon be fully operational and ready to supply everyone with all your hardware needs. Thank you for your support as we launch this exciting journey!',
+      'zh-TW': '翔盛五金股份有限公司 (AZX Xiang Sheng Hardware Inc.) 欣然宣布：我們的首個貨櫃已於 5 月 20 日正式出貨，預計將於 6 月中旬抵達！\n為了開啟全新篇章，公司管理人員將於 5 月 27 日率先抵達並展開現場營運籌備。我們非常高興地宣布，公司很快將全面投入運作，全力滿足大家對各類五金物資的需求。感謝您一直以來的支持，期待盡快為您服務！'
+    }
   },
   {
     id: '2',
-    title: '系統維護公告：4/28（日）凌晨 00:00–04:00 暫停服務',
-    date: '2026/04/25',
+    title: {
+      'en-US': 'AZX Xiang Sheng Hardware Inc. is proud to announce the launch of our UL94 V-0 certified flame-resistant PVC floor mats. Engineered specifically for the demanding semiconductor manufacturing plant environment, these mats meet the highest safety standards to drastically reduce flammability risks.',
+      'zh-TW': '翔盛五金股份有限公司 (AZX Xiang Sheng Hardware Inc.) 隆重宣布推出高規格 UL94 V-0 認證耐燃 PVC 地墊。此產品專為要求極嚴格的半導體製造廠房環境打造，符合頂級安全分級標準，能有效杜絕火源蔓延風險。'
+    },
+    date: '2026/05/25',
     status: '公告',
-    content: '為提升本平台的服務品質與系統穩定性，翔盛五金 B2B 採購平台將於 2026 年 4 月 28 日（星期日）凌晨 00:00 至 04:00 進行例行性的系統維護與伺服器升級作業。在維護期間，本站將全面暫停提供服務，包含網站瀏覽、會員登入、購物車操作及詢價單送出等功能皆會受到影響。我們建議您提早完成所需的採購流程或下載相關資料。若維護作業提早完成，我們將會盡速恢復正常營運，恕不另行通知。對於此次維護造成您的不便，我們深感抱歉，並感謝您的諒解與配合。',
-  },
-  {
-    id: '3',
-    title: '運送政策更新：偏遠地區運費調整說明',
-    date: '2026/04/15',
-    status: '更新',
-    content: '致各位尊貴的合作夥伴：因應近期國內物流運輸成本及燃油附加費的持續上漲，為確保我們能繼續提供優質、準時且安全的配送服務，翔盛五金將針對部分偏遠地區的物流運送政策進行微調。自 2026 年 5 月 1 日起，寄往偏遠地區（包含特定山區及離島地區）的訂單，將調整基礎運費標準。詳細的偏遠地區列表及對應的新運費費率，已更新於我們的「運送與退換貨政策」頁面。非偏遠地區的運送費率則維持不變。我們一直致力於吸收部分成本以減少客戶負擔，感謝您對我們決定的理解與持續支持。',
-  },
-  {
-    id: '4',
-    title: '勞動節連假出貨安排說明（5/1–5/4）',
-    date: '2026/04/01',
-    status: '公告',
-    content: '配合 2026 年勞動節連續假期，翔盛五金的出貨中心及客戶服務團隊將於 5 月 1 日（星期五）至 5 月 4 日（星期一）暫停營運。在連假期間，您仍可透過我們的 B2B 平台正常瀏覽產品並提交詢價單或訂單，但所有於連假期間成立的訂單，將統一於 5 月 5 日（星期二）恢復上班後，依訂單成立的先後順序盡速為您安排處理與出貨。若您有急用的物料需求，懇請務必於 4 月 29 日（星期三）中午前完成下單手續，以確保能在連假前為您順利寄出。祝各位有個愉快的假期！',
-  },
-  {
-    id: '5',
-    title: '【重要】五金建材類別產品價格微調通知',
-    date: '2026/05/05',
-    status: '更新',
-    content: '因國際原物料價格波動，部分金屬與木作建材的進貨成本大幅增加。為維持穩定的供貨與產品品質，我們將於下個月起針對特定品項進行小幅度的價格調整。詳細受影響清單可至「最新型錄下載」區獲取。我們會持續努力優化供應鏈管理，感謝您的諒解與支持。',
-  },
-  {
-    id: '6',
-    title: '新產品上架：高強度耐磨工具組系列',
-    date: '2026/05/03',
-    status: '新活動',
-    content: '全新引進的高強度耐磨工具組已正式上架！此系列專為長時間、高強度的工業環境設計，採用獨家合金材質，耐用度提升 30%。本月購買即贈送專屬工具收納袋，歡迎前往產品專區查看詳細規格。',
-  },
-  {
-    id: '7',
-    title: '合作夥伴年度大會邀請',
-    date: '2026/04/20',
-    status: '公告',
-    content: '誠摯邀請各位經銷夥伴參加 2026 年度的翔盛五金合作夥伴大會。會中將分享下半年的產品發展藍圖、最新市場趨勢分析，以及專屬的經銷商獎勵計畫。請於 4 月底前填寫報名表，期待與您共襄盛舉。',
-  },
-  {
-    id: '8',
-    title: '舊版網站服務將於三月底停止',
-    date: '2026/03/10',
-    status: '更新',
-    content: '親愛的用戶，為提供更優質的服務體驗，我們的全新 B2B 平台已全面上線。舊版系統預計將於 2026 年 3 月 31 日正式關閉，請盡速完成帳號移轉作業，並妥善備份舊站的歷史訂單資料。如有需要協助，請隨時聯絡客服。',
+    content: {
+      'en-US': 'Crucially, this specialized product is designed to significantly elevate safety precautions within TSMC’s fabrication facilities, with a particular focus on the stringent requirements of cleanroom environments. By delivering exceptional flame retardancy without compromising cleanroom contamination controls, our new mats ensure optimal protection for advanced wafer production.',
+      'zh-TW': '誠如所述，此款專用防護透明地墊將全面助力台積電 (TSMC) 生產廠區大幅升級其安全防護措施，特別是針對規範極為嚴苛的無塵室 (Cleanroom)。本產品在提供卓越耐燃性能的同時，亦完美符合晶圓生產對落塵與污染控制的嚴格要求，為頂尖半導體製程環境提供最強有力的安全後盾。'
+    }
   }
 ];

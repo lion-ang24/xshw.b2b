@@ -1,0 +1,30 @@
+.about-page {
+  padding: 60px 20px;
+  background-color: var(--bg-dark);
+  min-height: calc(100vh - 200px);
+}
+
+.about-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+}
+
+.about-content h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
