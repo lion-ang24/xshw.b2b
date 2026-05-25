@@ -179,19 +179,17 @@ const Product: React.FC = () => {
                   const today = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
                   const spec = getI18nText(currentSpec.specName, language);
                   const pName = getI18nText(product?.name, language);
-                  const subject = `【Mail 採購】${pName} - ${spec}`;
+                  const subject = `${t('mail_purchase_subject_prefix')} ${pName} - ${spec}`;
                   const body =
-                    `您好，
-
-                    以下為本次 Mail 採購需求，請確認後回覆。
+                    `${t('mail_purchase_greeting')}
 
                     ──────────────────────
-                    Date: ${today}
-                    商品：${pName}
-                    規格：${spec}
-                    數量：
+                    ${t('mail_date')}${today}
+                    ${t('mail_product')}${pName}
+                    ${t('mail_spec')}${spec}
+                    ${t('mail_qty')}
                     ──────────────────────
-                    備註：
+                    ${t('mail_notes')}
 
                     `;
                   window.location.href = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

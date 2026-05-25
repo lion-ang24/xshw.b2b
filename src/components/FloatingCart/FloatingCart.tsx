@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useCart } from '../../context/CartContext';
+import { useTranslation } from '../../hooks/useTranslation';
 import { ORDER_EMAIL } from '../../config/orderConfig';
 
 const FloatingCart: React.FC = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const { items, updateQty, removeItem, toggleCheck, toggleAll, clearChecked } = useCart();
 
@@ -17,24 +19,22 @@ const FloatingCart: React.FC = () => {
     const today = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' });
 
     const itemLines = checkedItems
-      .map((i, idx) => `  ${idx + 1}. ${i.productName}\n     規格：${i.spec}\n     數量：${i.qty}`)
+      .map((i, idx) => `  ${idx + 1}. ${i.productName}\n     ${t('mail_spec')}${i.spec}\n     ${t('mail_qty')}${i.qty}`)
       .join('\n\n');
 
-    const subject = `【需求單】採購申請 ${today}`;
+    const subject = `${t('mail_subject_prefix')} ${today}`;
     const body =
-      `您好，
-
-      以下為本次採購需求，請確認後回覆。
+      `${t('mail_greeting')}
 
       ──────────────────────
-      訂單日期：${today}
-      品項數量：${checkedItems.length} 項
+      ${t('mail_date')}${today}
+      ${t('mail_items_count')}${checkedItems.length} ${t('cart_items_count')}
       ──────────────────────
 
       ${itemLines}
 
       ──────────────────────
-      備註：
+      ${t('mail_notes')}
     `;
 
     const mailto = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -47,7 +47,7 @@ const FloatingCart: React.FC = () => {
       <button
         className="floating-cart-btn"
         onClick={() => setOpen(o => !o)}
-        aria-label="採購清單"
+        aria-label={t('cart_title')}
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
@@ -69,12 +69,12 @@ const FloatingCart: React.FC = () => {
         {/* Panel Header */}
         <div className="floating-cart-header">
           <span className="floating-cart-title">
-            採購清單
+            {t('cart_title')}
             {totalItems > 0 && (
               <span className="floating-cart-count">{totalItems}</span>
             )}
           </span>
-          <button className="floating-cart-close" onClick={() => setOpen(false)} aria-label="關閉">
+          <button className="floating-cart-close" onClick={() => setOpen(false)} aria-label={t('cart_close')}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
@@ -92,11 +92,11 @@ const FloatingCart: React.FC = () => {
                 ref={el => { if (el) el.indeterminate = someChecked && !allChecked; }}
                 onChange={toggleAll}
               />
-              <span>{allChecked ? '反全選' : '全選'}</span>
+              <span>{allChecked ? t('cart_deselect_all') : t('cart_select_all')}</span>
             </label>
             {someChecked && (
               <button className="floating-cart-clear-btn" onClick={clearChecked}>
-                移除已選
+                {t('cart_remove_selected')}
               </button>
             )}
           </div>
@@ -111,7 +111,7 @@ const FloatingCart: React.FC = () => {
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <path d="M16 10a4 4 0 01-8 0" />
               </svg>
-              <span>尚無加入的項目</span>
+              <span>{t('cart_empty')}</span>
             </div>
           ) : (
             items.map(item => (
@@ -130,7 +130,7 @@ const FloatingCart: React.FC = () => {
                     <button
                       className="floating-cart-qty-btn"
                       onClick={() => updateQty(item.id, item.qty - 1)}
-                      aria-label="減少數量"
+                      aria-label={t('cart_decrease_qty')}
                     >
                       −
                     </button>
@@ -144,7 +144,7 @@ const FloatingCart: React.FC = () => {
                     <button
                       className="floating-cart-qty-btn"
                       onClick={() => updateQty(item.id, item.qty + 1)}
-                      aria-label="增加數量"
+                      aria-label={t('cart_increase_qty')}
                     >
                       ＋
                     </button>
@@ -153,7 +153,7 @@ const FloatingCart: React.FC = () => {
                 <button
                   className="floating-cart-remove-btn"
                   onClick={() => removeItem(item.id)}
-                  aria-label="移除項目"
+                  aria-label={t('cart_remove_item')}
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18" />
@@ -169,7 +169,7 @@ const FloatingCart: React.FC = () => {
         {items.length > 0 && (
           <div className="floating-cart-footer">
             <div className="floating-cart-selected-count">
-              已選 {checkedItems.length} / {totalItems} 項
+              {t('cart_selected')} {checkedItems.length} / {totalItems} {t('cart_items_count')}
             </div>
             <button
               className="floating-cart-submit-btn"
@@ -180,7 +180,7 @@ const FloatingCart: React.FC = () => {
                 <path d="M22 2L11 13" />
                 <path d="M22 2L15 22 11 13 2 9l20-7z" />
               </svg>
-              送出需求
+              {t('cart_submit')}
             </button>
           </div>
         )}
