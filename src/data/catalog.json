@@ -410,6 +410,108 @@
     },
     {
       "name": {
+        "en-US": "Stainless Steel Low-Profile Back-to-Back Strut Channel",
+        "zh-TW": "白鐵低腳雙併型鋼"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SSL-B2B-SC3000",
+          "specName": {
+            "en-US": "3000mm",
+            "zh-TW": "3000mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0300",
+          "specName": {
+            "en-US": "300mm",
+            "zh-TW": "300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0400",
+          "specName": {
+            "en-US": "400mm",
+            "zh-TW": "400mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC0600",
+          "specName": {
+            "en-US": "600mm",
+            "zh-TW": "600mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Stainless Steel Low-Profile Back-to-Back Strut Channel (2 Slots Ends)",
+        "zh-TW": "白鐵低腳雙併型鋼(雙邊沖2孔)"
+      },
+      "category": "08 - 金屬材料",
+      "subcategory": "",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-SSL-B2B-SC1300",
+          "specName": {
+            "en-US": "1300mm",
+            "zh-TW": "1300mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": ""
+        },
+        {
+          "sku": "AZX-SSL-B2B-SC3000",
+          "specName": {
+            "en-US": "3000mm",
+            "zh-TW": "3000mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": ""
+        }
+      ]
+    },
+    {
+      "name": {
         "en-US": "Galvanized Tee Flat Plate Fitting",
         "zh-TW": "T字片 - 型鋼配件"
       },
@@ -952,108 +1054,6 @@
     },
     {
       "name": {
-        "en-US": "Stainless Steel Low-Profile Back-to-Back Strut Channel",
-        "zh-TW": "白鐵低腳雙併型鋼"
-      },
-      "category": "08 - 金屬材料",
-      "subcategory": "",
-      "brand": "",
-      "imageUrl": "",
-      "specs": [
-        {
-          "sku": "AZX-SSL-B2B-SC3000",
-          "specName": {
-            "en-US": "3000mm",
-            "zh-TW": "3000mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": "",
-          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC0300",
-          "specName": {
-            "en-US": "300mm",
-            "zh-TW": "300mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": "",
-          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC0400",
-          "specName": {
-            "en-US": "400mm",
-            "zh-TW": "400mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": "",
-          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC0600",
-          "specName": {
-            "en-US": "600mm",
-            "zh-TW": "600mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": "",
-          "imageUrl": "https://lh3.googleusercontent.com/d/1u7sQgiZEzORtoOMtbyR_4O6_B9hBErRk"
-        }
-      ]
-    },
-    {
-      "name": {
-        "en-US": "Stainless Steel Low-Profile Back-to-Back Strut Channel (2 Slots Ends)",
-        "zh-TW": "白鐵低腳雙併型鋼(雙邊沖2孔)"
-      },
-      "category": "08 - 金屬材料",
-      "subcategory": "",
-      "brand": "",
-      "imageUrl": "",
-      "specs": [
-        {
-          "sku": "AZX-SSL-B2B-SC1300",
-          "specName": {
-            "en-US": "1300mm",
-            "zh-TW": "1300mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": "",
-          "imageUrl": ""
-        },
-        {
-          "sku": "AZX-SSL-B2B-SC3000",
-          "specName": {
-            "en-US": "3000mm",
-            "zh-TW": "3000mm"
-          },
-          "specDetail": {
-            "en-US": "",
-            "zh-TW": ""
-          },
-          "price": "",
-          "imageUrl": ""
-        }
-      ]
-    },
-    {
-      "name": {
         "en-US": "Stainless Steel Diagonal Bracing Plate",
         "zh-TW": "白鐵45度ㄟ字片(斜撐) - 型鋼配件"
       },
@@ -1196,7 +1196,7 @@
         "en-US": "PVC Transparent Floor Mat",
         "zh-TW": "PVC透明桌布"
       },
-      "category": "14 - 防護用品&耗材",
+      "category": "10 - 勞安用品&無塵室系列",
       "subcategory": "",
       "brand": "",
       "imageUrl": "",
@@ -1297,8 +1297,8 @@
         "en-US": "Foldable Wire Mesh Cage",
         "zh-TW": "蝴蝶籠"
       },
-      "category": "08 - 金屬材料",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -1577,7 +1577,7 @@
         "en-US": "(Stretch Film) Industrial Packing Film",
         "zh-TW": "PE工業膠膜"
       },
-      "category": "14 - 防護用品&耗材",
+      "category": "04 - 建材修繕材料",
       "subcategory": "",
       "brand": "",
       "imageUrl": "",
@@ -1667,7 +1667,7 @@
         "en-US": "(EP) Protection Masking Tape",
         "zh-TW": "養生膠帶"
       },
-      "category": "14 - 防護用品&耗材",
+      "category": "04 - 建材修繕材料",
       "subcategory": "",
       "brand": "AT APEX",
       "imageUrl": "",
@@ -1744,8 +1744,8 @@
         "en-US": "Plastic Pallet",
         "zh-TW": "塑膠棧板"
       },
-      "category": "14 - 防護用品&耗材",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -1769,8 +1769,8 @@
         "en-US": "PE Traffic Cone",
         "zh-TW": "PE交通錐"
       },
-      "category": "14 - 防護用品&耗材",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "G - 工業安全與配件",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -1794,8 +1794,8 @@
         "en-US": "Traffic Cone Bar - Extendable",
         "zh-TW": "交通錐連桿 (延長)"
       },
-      "category": "14 - 防護用品&耗材",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "G - 工業安全與配件",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -2108,7 +2108,7 @@
         "en-US": "(KIKUSUI) Washi Paper Masking Tape",
         "zh-TW": "紙膠帶"
       },
-      "category": "14 - 防護用品&耗材",
+      "category": "04 - 建材修繕材料",
       "subcategory": "",
       "brand": "",
       "imageUrl": "",
@@ -2338,8 +2338,8 @@
         "en-US": "Galvanized Storage Cage",
         "zh-TW": "鐵四格籃"
       },
-      "category": "08 - 金屬材料",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "H - 起重/搬運/登高設備",
       "brand": "",
       "imageUrl": "",
       "specs": [
@@ -2595,8 +2595,8 @@
         "en-US": "Foldable Safety Floor Sign",
         "zh-TW": "三角告示牌"
       },
-      "category": "14 - 防護用品&耗材",
-      "subcategory": "",
+      "category": "15 - 機械及零配件",
+      "subcategory": "G - 工業安全與配件",
       "brand": "",
       "imageUrl": "",
       "specs": [
