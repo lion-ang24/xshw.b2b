@@ -68,7 +68,7 @@ const AnnouncementList: React.FC = () => {
               onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
             >
-              上一頁
+              {t('btn_prev_page')}
             </button>
             
             <div style={{ display: 'flex', gap: '5px' }}>
@@ -87,7 +87,7 @@ const AnnouncementList: React.FC = () => {
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
             >
-              下一頁
+              {t('btn_next_page')}
             </button>
           </div>
         )}

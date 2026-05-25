@@ -110,7 +110,7 @@ const Subcategory: React.FC = () => {
                   padding: '8px 0',
                   borderRadius: '4px'
                 }}>
-                  詳細資訊
+                  {t('btn_details')}
                 </div>
               </Link>
             );
@@ -127,7 +127,7 @@ const Subcategory: React.FC = () => {
               disabled={currentPage === 1}
               style={{ padding: '8px 16px', border: '1px solid #ccc', borderRadius: '4px', background: currentPage === 1 ? '#f5f5f5' : '#fff', cursor: currentPage === 1 ? 'not-allowed' : 'pointer' }}
             >
-              上一頁
+              {t('btn_prev_page')}
             </button>
             
             <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -154,7 +154,7 @@ const Subcategory: React.FC = () => {
               disabled={currentPage === totalPages}
               style={{ padding: '8px 16px', border: '1px solid #ccc', borderRadius: '4px', background: currentPage === totalPages ? '#f5f5f5' : '#fff', cursor: currentPage === totalPages ? 'not-allowed' : 'pointer' }}
             >
-              下一頁
+              {t('btn_next_page')}
             </button>
           </div>
         )}
