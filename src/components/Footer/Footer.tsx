@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
         </div>
         <nav className="footer-nav">
           <Link to="/">{t('nav_home')}</Link>
+          <Link to="/about">{t('nav_about')}</Link>
           <Link to="/privacy">{t('footer_privacy')}</Link>
           <Link to="/terms">{t('footer_terms')}</Link>
           <Link to="/shipping">{t('footer_shipping')}</Link>

@@ -10,6 +10,7 @@ import AnnouncementList from './pages/Announcements/AnnouncementList';
 import AnnouncementDetail from './pages/Announcements/AnnouncementDetail';
 import Privacy from './pages/Privacy/Privacy';
 import Terms from './pages/Terms/Terms';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
               <Route path="/solutions" element={<PlaceholderPage titleKey="nav_solutions" />} />
               <Route path="/tech-support" element={<PlaceholderPage titleKey="nav_support" />} />
               <Route path="/contact" element={<PlaceholderPage titleKey="nav_contact" />} />
-              <Route path="/about" element={<PlaceholderPage titleKey="footer_company" />} />
+              <Route path="/about" element={<About />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/news" element={<PlaceholderPage titleKey="最新消息" />} />

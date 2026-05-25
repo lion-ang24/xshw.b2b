@@ -152,6 +152,9 @@ const Header: React.FC = () => {
               </a>
             </div>
           </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-link" style={{ color: 'inherit', textDecoration: 'none' }}>{t('nav_about')}</Link>
+          </li>
         </ul>
       </nav>
     </>
