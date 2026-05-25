@@ -92,5 +92,8 @@
   "image_pending": "Image coming soon",
   "prod_wrench": "Double-Ended Ratcheting Wrench",
   "prod_brush": "Paint Brush",
-  "prod_tape": "Electrical Tape"
+  "prod_tape": "Electrical Tape",
+  "contact_line_account": "LINE Official",
+  "contact_phone": "Phone",
+  "contact_email": "Email"
 }

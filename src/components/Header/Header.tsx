@@ -114,7 +114,7 @@ const Header: React.FC = () => {
                   </svg>
                 </span>
                 <div className="contact-info">
-                  <span className="contact-label">LINE 官方帳號</span>
+                  <span className="contact-label">{t('contact_line_account')}</span>
                   <span className="contact-value">@375pbazq</span>
                 </div>
                 <svg className="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
                   </svg>
                 </span>
                 <div className="contact-info">
-                  <span className="contact-label">聯絡電話</span>
+                  <span className="contact-label">{t('contact_phone')}</span>
                   <span className="contact-value">+1 (480) 498-9698</span>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
                   </svg>
                 </span>
                 <div className="contact-info">
-                  <span className="contact-label">電子郵件</span>
+                  <span className="contact-label">{t('contact_email')}</span>
                   <span className="contact-value">yuhungyin@xshw.com.tw</span>
                 </div>
                 <svg className="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
