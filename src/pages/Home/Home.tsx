@@ -219,15 +219,15 @@ const Home: React.FC = () => {
         <div className="product-grid" id="prod-grid">
           <button className="card" onClick={() => navigate('/product/兩口自動梅花板手')} style={cardButtonStyle}>
             <img src="https://lh3.googleusercontent.com/d/1BJAybJ4srp5jmUnkjyHfUJjO97K7kpVr" alt="兩口自動梅花棘輪板手" />
-            <span className="card-btn" style={{ display: 'block' }}>兩口自動梅花棘輪板手</span>
+            <span className="card-btn" style={{ display: 'block' }}>{t('prod_wrench')}</span>
           </button>
           <button className="card" onClick={() => navigate('/product/油漆刷%20-%20長毛')} style={cardButtonStyle}>
             <img src="https://lh3.googleusercontent.com/d/1uimJAKRjR_VWoTiWC-eB3q6z3rljZP2F" alt="長毛油漆刷" />
-            <span className="card-btn" style={{ display: 'block' }}>長毛油漆刷</span>
+            <span className="card-btn" style={{ display: 'block' }}>{t('prod_brush')}</span>
           </button>
           <button className="card" onClick={() => navigate('/product/絕緣膠布%2048MM')} style={cardButtonStyle}>
             <img src="https://lh3.googleusercontent.com/d/1ichisoBsKBsyqkFTKIDCQ9DVG3QH0Fc3" alt="絕緣膠帶" />
-            <span className="card-btn" style={{ display: 'block' }}>絕緣膠帶</span>
+            <span className="card-btn" style={{ display: 'block' }}>{t('prod_tape')}</span>
           </button>
         </div>
       </section>

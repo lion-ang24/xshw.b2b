@@ -89,5 +89,8 @@
   "add_to_queue_duplicate": "This item is already in the list",
   "mail_order": "Mail Order",
   "category_products_preparing": "The product content for this category is currently being organized.",
-  "image_pending": "Image coming soon"
+  "image_pending": "Image coming soon",
+  "prod_wrench": "Double-Ended Ratcheting Wrench",
+  "prod_brush": "Paint Brush",
+  "prod_tape": "Electrical Tape"
 }

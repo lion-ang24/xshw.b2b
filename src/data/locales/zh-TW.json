@@ -89,5 +89,8 @@
   "add_to_queue_duplicate": "該商品已加入清單",
   "mail_order": "Mail 採購",
   "category_products_preparing": "此分類的產品內容尚在整理中。",
-  "image_pending": "圖片待更新"
+  "image_pending": "圖片待更新",
+  "prod_wrench": "兩口自動梅花棘輪板手",
+  "prod_brush": "長毛油漆刷",
+  "prod_tape": "絕緣膠帶"
 }
