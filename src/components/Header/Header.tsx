@@ -36,7 +36,7 @@ const Header: React.FC = () => {
       <header className="header">
         <div className="logo">
           <Link to="/" style={{ display: 'block' }}>
-            <img src="/assets/hc_logo.png" alt="LOGO" style={{ height: '40px', display: 'block' }} />
+            <img src="/assets/hc_logo.png" alt="LOGO" style={{ height: '70px', width: '110%', display: 'block' }} />
           </Link>
         </div>
         <div className="header-right">

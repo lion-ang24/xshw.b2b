@@ -8,6 +8,8 @@ import Product from './pages/Product/Product';
 import PlaceholderPage from './components/PlaceholderPage';
 import AnnouncementList from './pages/Announcements/AnnouncementList';
 import AnnouncementDetail from './pages/Announcements/AnnouncementDetail';
+import Privacy from './pages/Privacy/Privacy';
+import Terms from './pages/Terms/Terms';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
               <Route path="/tech-support" element={<PlaceholderPage titleKey="nav_support" />} />
               <Route path="/contact" element={<PlaceholderPage titleKey="nav_contact" />} />
               <Route path="/about" element={<PlaceholderPage titleKey="footer_company" />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="/news" element={<PlaceholderPage titleKey="最新消息" />} />
               <Route path="/faq" element={<PlaceholderPage titleKey="常見問題" />} />
               <Route path="/customer-service" element={<PlaceholderPage titleKey="客戶服務" />} />

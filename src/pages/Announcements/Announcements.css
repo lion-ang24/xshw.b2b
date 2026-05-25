@@ -1,0 +1,138 @@
+.announcement-page {
+  padding: 60px 20px;
+  background-color: var(--bg-dark);
+  min-height: calc(100vh - 200px);
+}
+
+.announcement-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.announcement-page .detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.announcement-page .card {
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.announcement-page .detail-card {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+}
+
+.announcement-page h1.page-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.announcement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.announcement-page .card h2 a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.announcement-page .card h2 a:hover {
+  color: var(--accent-yellow);
+}
+
+.announcement-page .card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.announcement-page .meta-date {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.announcement-page .view-more,
+.announcement-page .back-link {
+  color: var(--accent-yellow);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.announcement-page .view-more:hover,
+.announcement-page .back-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.announcement-page .detail-card h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.announcement-page .detail-card .divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin-bottom: 30px;
+}
+
+.announcement-page .detail-card .content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+
+.announcement-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.announcement-pagination button {
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.announcement-pagination button:disabled {
+  background: var(--bg-dark);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.announcement-pagination button:not(:disabled):hover {
+  background: var(--border-color);
+}
+
+.announcement-pagination button.active {
+  background: var(--accent-yellow);
+  color: #000;
+  border-color: var(--accent-yellow);
+}
