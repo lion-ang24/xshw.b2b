@@ -28,3 +28,15 @@
   margin-bottom: 16px;
   font-size: 1rem;
 }
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: 30px 16px;
+  }
+  .about-page .container {
+    padding: 24px;
+  }
+  .about-content h1 {
+    font-size: 1.5rem;
+  }
+}

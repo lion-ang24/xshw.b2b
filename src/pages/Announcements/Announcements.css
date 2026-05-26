@@ -136,3 +136,19 @@
   color: #000;
   border-color: var(--accent-yellow);
 }
+
+@media (max-width: 768px) {
+  .announcement-page {
+    padding: 30px 16px;
+  }
+  .announcement-page .card {
+    flex: auto;
+  }
+  .announcement-page .detail-card {
+    padding: 24px;
+  }
+  .announcement-page h1.page-title,
+  .announcement-page .detail-card h1 {
+    font-size: 1.5rem;
+  }
+}
