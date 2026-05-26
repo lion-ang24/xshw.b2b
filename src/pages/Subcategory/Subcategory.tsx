@@ -56,7 +56,7 @@ const Subcategory: React.FC = () => {
 
     return (
       <div>
-        <div className="product-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px' }}>
+        <div className="product-grid category-product-grid">
           {currentProducts.map((product, idx) => {
             const coverImage = product.specs[0]?.imageUrl || product.imageUrl;
             const hasImage = coverImage && coverImage.trim() !== '';

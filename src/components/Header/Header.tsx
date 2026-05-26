@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
 import { useAnnouncements } from '../../hooks/useAnnouncements';
@@ -7,6 +7,8 @@ const Header: React.FC = () => {
   const { language, setLanguage, t } = useTranslation();
   const { getRecentAnnouncements } = useAnnouncements();
   const recentAnnouncements = getRecentAnnouncements(7);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
 
   const getTagClass = (status: string) => {
     switch (status) {
@@ -58,17 +60,40 @@ const Header: React.FC = () => {
             </div>
           </div>
           {/* <button className="login-btn">{t('login')}</button> */}
+          <button 
+            className="mobile-menu-toggle" 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            )}
+          </button>
         </div>
       </header>
 
-      <nav className="nav">
+      <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className="nav-links">
           <li className="nav-item">
             <Link to="/category" className="nav-link" style={{ color: 'inherit', textDecoration: 'none' }}>{t('nav_catalog')}</Link>
           </li>
           <li className="nav-item has-mega-menu">
-            <span className="nav-link">{t('nav_announcement')}</span>
-            <div className="mega-menu announcement-mega-menu">
+            <span 
+              className="nav-link" 
+              onClick={(e) => { e.preventDefault(); setActiveSubMenu(activeSubMenu === 'announcement' ? null : 'announcement'); }}
+            >
+              {t('nav_announcement')}
+            </span>
+            <div className={`mega-menu announcement-mega-menu ${activeSubMenu === 'announcement' ? 'mobile-active' : ''}`}>
               <div className="mega-container">
                 <div className="announcement-panel">
                   <div className="announcement-panel-header">
@@ -99,8 +124,13 @@ const Header: React.FC = () => {
             </div>
           </li>
           <li className="nav-item has-contact-dropdown">
-            <span className="nav-link nav-contact-trigger">{t('nav_contact')}</span>
-            <div className="contact-dropdown">
+            <span 
+              className="nav-link nav-contact-trigger"
+              onClick={(e) => { e.preventDefault(); setActiveSubMenu(activeSubMenu === 'contact' ? null : 'contact'); }}
+            >
+              {t('nav_contact')}
+            </span>
+            <div className={`contact-dropdown ${activeSubMenu === 'contact' ? 'mobile-active' : ''}`}>
               <div className="contact-dropdown-title">{t('nav_contact')}</div>
               <a
                 href="https://line.me/R/ti/p/@375pbazq"
