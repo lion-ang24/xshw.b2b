@@ -6960,6 +6960,913 @@
           "imageUrl": "https://lh3.googleusercontent.com/d/1BJAybJ4srp5jmUnkjyHfUJjO97K7kpVr"
         }
       ]
+    },
+    {
+      "name": {
+        "en-US": "A-Frame Barricade - Plastic",
+        "zh-TW": "A字架 - 塑膠"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "G - 工業安全與配件",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-AFB-PR",
+          "specName": {
+            "en-US": "Red",
+            "zh-TW": "紅"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1ATqRY967xoLL_41Xq_9O7ZUzv8d1yiD0"
+        },
+        {
+          "sku": "AZX-AFB-PY",
+          "specName": {
+            "en-US": "Yellow",
+            "zh-TW": "黃"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1ATqRY967xoLL_41Xq_9O7ZUzv8d1yiD0"
+        },
+        {
+          "sku": "AZX-AFB-PG",
+          "specName": {
+            "en-US": "Green",
+            "zh-TW": "綠"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1ATqRY967xoLL_41Xq_9O7ZUzv8d1yiD0"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "A-Frame Barricade -Steel",
+        "zh-TW": "A字架 - 鐵"
+      },
+      "category": "15 - 機械及零配件",
+      "subcategory": "G - 工業安全與配件",
+      "brand": "",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "AZX-AFB-S",
+          "specName": {
+            "en-US": "Red",
+            "zh-TW": "紅"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1lVz0F1gYkDe5oNP2FsMeYAkjnKa0CbaD"
+        },
+        {
+          "sku": "AZX-AFB-S",
+          "specName": {
+            "en-US": "Yellow",
+            "zh-TW": "黃"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1lVz0F1gYkDe5oNP2FsMeYAkjnKa0CbaD"
+        },
+        {
+          "sku": "AZX-AFB-S",
+          "specName": {
+            "en-US": "Green",
+            "zh-TW": "綠"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1lVz0F1gYkDe5oNP2FsMeYAkjnKa0CbaD"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Copper Tubing Cutter - TCB Series",
+        "zh-TW": "銅管切刀 - TCB系列"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "SUPER",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SUP-CTC-TCB104",
+          "specName": {
+            "en-US": "TCB104",
+            "zh-TW": "TCB104"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1v21vX4ALwC_bwdnHAbi73bBm5NAIC1bL"
+        },
+        {
+          "sku": "SUP-CTC-TCB105",
+          "specName": {
+            "en-US": "TCB105",
+            "zh-TW": "TCB105"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1NydtimkaXqP4X_SQnAFyOUoyzbBBJ3wF"
+        },
+        {
+          "sku": "SUP-CTC-TCB107",
+          "specName": {
+            "en-US": "TCB107",
+            "zh-TW": "TCB107"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1YgTpwLj828_JWJn4pNXKvGQETVLUJ9Oa"
+        },
+        {
+          "sku": "SUP-CTC-TCB502",
+          "specName": {
+            "en-US": "TCB502",
+            "zh-TW": "TCB502"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1Lwwi-NiNdNpHl7WJIXnxjKOKbTyrg2bq"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Copper Tubing Cutter - TC Series",
+        "zh-TW": "銅管切刀 - TC系列"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "SUPER",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "SUP-CTC-TC105H",
+          "specName": {
+            "en-US": "TC105H",
+            "zh-TW": "TC105H"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1E9pzV2Fup7pHeFG1zENlz35FfaAQtWgY"
+        },
+        {
+          "sku": "SUP-CTC-TC107H",
+          "specName": {
+            "en-US": "TC107H",
+            "zh-TW": "TC107H"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1jHT5VvkamLx4zxg11Fp8vf2XttnPU0b-"
+        },
+        {
+          "sku": "SUP-CTC-TC105",
+          "specName": {
+            "en-US": "TC105",
+            "zh-TW": "TC105"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1oD5BOrVDDaCDKj-aH9mLngk8Rz1p-j2v"
+        },
+        {
+          "sku": "SUP-CTC-TC107H",
+          "specName": {
+            "en-US": "TC107",
+            "zh-TW": "TC107"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1JubbVlmdh6RS7r2GIuVRcjGMRm3KJkXe"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Flexible Anti-Slip Stubby Ratchet Wrench",
+        "zh-TW": "搖頭止滑棘輪梅開板手 - 短"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "KYRIN",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "KYR-FAS-SRW-0008",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/180_0M9SXfQGqh23QvGxjV2TQkiyaFRVV"
+        },
+        {
+          "sku": "KYR-FAS-SRW-0010",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1NDyI-O97s8W3Zuk8sRF0CljMoj4MF0UI"
+        },
+        {
+          "sku": "KYR-FAS-SRW-0012",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/17TGbNEkyOyYFnCB-vtWuqaDk_SWn3R7y"
+        },
+        {
+          "sku": "KYR-FAS-SRW-0013",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1DOzGO_hBeCY3Dso6EE_ejXb68XzjAxI6"
+        },
+        {
+          "sku": "KYR-FAS-SRW-0014",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1NCmV4lygzFR6LrQrMrYCdkpFtjxn5E3R"
+        },
+        {
+          "sku": "KYR-FAS-SRW-0017",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1fON0D5xP8dS19nS4qw6gN4O0ziMl0Swh"
+        },
+        {
+          "sku": "KYR-FAS-SRW-0019",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1HKhbhwxhpCdxxkUwwvsPErh-PxL3cHS4"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Flexible Anti-Slip Ratchet Wrench",
+        "zh-TW": "搖頭止滑棘輪梅開板手"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "KYRIN",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "KYR-FAS-SRW-0008",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1p_QDPFkpsIKKaEuAzoTR1RoDRm1ll5_l"
+        },
+        {
+          "sku": "KYR-FAS-RW-0010",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/19DhfH9VEzSiGtc9V7ecNp65Xng4z906s"
+        },
+        {
+          "sku": "KYR-FAS-RW-0012",
+          "specName": {
+            "en-US": "12mm",
+            "zh-TW": "12mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1H4DzEPNe5mfNKdRiyMTLBi47jS4k9sGn"
+        },
+        {
+          "sku": "KYR-FAS-RW-0013",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1u2TtRRehafibQVCMxLKyHlCcb8FGNqEU"
+        },
+        {
+          "sku": "KYR-FAS-RW-0014",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1ckbvPEdOH5mPI4AENlSZb81y_4pwe9l2"
+        },
+        {
+          "sku": "KYR-FAS-RW-0017",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/16G3H5epONoJa644Bp_TDGGoqqKK3OVxh"
+        },
+        {
+          "sku": "KYR-FAS-RW-0019",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1Y6gy8fxYm-tY3RtPKmSvP2b5vLSx9_OT"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Anti-Slip Ratchet Wrench",
+        "zh-TW": "止滑棘輪梅開板手"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "KYRIN",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "KYR-AS-RW-0008",
+          "specName": {
+            "en-US": "8mm",
+            "zh-TW": "8mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1_w1CrDCiR2h4wHZeqMLxZ-WpOrlLYE0n"
+        },
+        {
+          "sku": "KYR-AS-RW-0010",
+          "specName": {
+            "en-US": "10mm",
+            "zh-TW": "10mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1yRqsKwBi0QSHuzd64BjqzndGSTUDBo9E"
+        },
+        {
+          "sku": "KYR-AS-RW-0013",
+          "specName": {
+            "en-US": "13mm",
+            "zh-TW": "13mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/10s3oY5n_MaDUx9UscEBkEs932zjwYYkB"
+        },
+        {
+          "sku": "KYR-AS-RW-0014",
+          "specName": {
+            "en-US": "14mm",
+            "zh-TW": "14mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1AhKRa02oUe1hyElJ7we7p0ueYYj4jHMQ"
+        },
+        {
+          "sku": "KYR-AS-RW-0017",
+          "specName": {
+            "en-US": "17mm",
+            "zh-TW": "17mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1rcBGWdKgAbIMlP9TfhiCl1XZ47c9WzFj"
+        },
+        {
+          "sku": "KYR-AS-RW-0019",
+          "specName": {
+            "en-US": "19mm",
+            "zh-TW": "19mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1cBfhMJZa4cdI_U_C6NkzZuQBacEaTy9N"
+        },
+        {
+          "sku": "KYR-AS-RW-0021",
+          "specName": {
+            "en-US": "21mm",
+            "zh-TW": "21mm"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/15enOwgXE3QewoRFTJ30cAxsN9c8TkjTq"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "3-IN-1 Electrician Combination Plier",
+        "zh-TW": "三合一鋼絲電纜剪鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-ECP-3N1",
+          "specName": {
+            "en-US": "PW-DP200TG",
+            "zh-TW": "PW-DP200TG"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1FuWb3jnfpt1xdl4TJIQmFMW-StbniLJr"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Crimping Combination Plier",
+        "zh-TW": "強力壓著鋼絲鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-CCP-200",
+          "specName": {
+            "en-US": "PP-200P",
+            "zh-TW": "PP-200P"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1HD4LLTPfRAAvY_MhwK7K-fXrfTcjM_hY"
+        },
+        {
+          "sku": "TSU-CCP-225P",
+          "specName": {
+            "en-US": "PP-225P",
+            "zh-TW": "PP-225P"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1ba86kdZXTJEQ_rcjkLKbNan1qt0UMmkA"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Combination Plier",
+        "zh-TW": "鋼絲鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-CP-125",
+          "specName": {
+            "en-US": "CP-125HG",
+            "zh-TW": "CP-125HG"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1ubUNx-ErKullFgVqeEGRF3RtShZ50WKw"
+        },
+        {
+          "sku": "TSU-CP-150",
+          "specName": {
+            "en-US": "CP-150HG",
+            "zh-TW": "CP-150HG"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1mgiq51ouw9-p8fQ2aETYnpOMtw26u8qf"
+        },
+        {
+          "sku": "TSU-CP-200",
+          "specName": {
+            "en-US": "CP-200HG",
+            "zh-TW": "CP-200HG"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/19DzWwMPk4dI9QQkAGz__AsbxzZDxOdkm"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Electrician Long Nose Plier",
+        "zh-TW": "電工尖嘴鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-ELNP-120",
+          "specName": {
+            "en-US": "MR-120",
+            "zh-TW": "MR-120"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1TjymZC5NjKN4EgT6sumyn_Y2Ul4fBpIl"
+        },
+        {
+          "sku": "TSU-ELNP-125",
+          "specName": {
+            "en-US": "FNP-125N",
+            "zh-TW": "FNP-125N"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/19SYUL9Nhlwb9fHTClUZO1g9KRYSZMJoJ"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Long Nose Plier",
+        "zh-TW": "尖嘴鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-LNP-150",
+          "specName": {
+            "en-US": "PRP-150HG",
+            "zh-TW": "PRP-150HG"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1cNNBSFgfcx--uTLSJAQ8fzjGWuOYJCv7"
+        },
+        {
+          "sku": "TSU-LNP-200",
+          "specName": {
+            "en-US": "RP-200",
+            "zh-TW": "RP-200"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/11OEDyIZzXc-7zARfJj_IeBvqHmyjyKl4"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Diagonal Plier",
+        "zh-TW": "斜口鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-DP-125",
+          "specName": {
+            "en-US": "PN-125",
+            "zh-TW": "PN-125"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1GWl8fe-QNdO7-QSpCmP5Be595fCSg3Yx"
+        },
+        {
+          "sku": "TSU-DP-150",
+          "specName": {
+            "en-US": "PN-150",
+            "zh-TW": "PN-150"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1KEbqna0m9ZRcD_T1NmANnct0TVgDsubS"
+        },
+        {
+          "sku": "TSU-DP-175",
+          "specName": {
+            "en-US": "PN-175",
+            "zh-TW": "PN-175"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1PAL3ACwzcgtMRj3dx4U_CQF1MVBJmhwZ"
+        },
+        {
+          "sku": "TSU-DP-200",
+          "specName": {
+            "en-US": "PN-200",
+            "zh-TW": "PN-200"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1LLj7awz4oBl81fTZxumfDKXtsTO3bqgr"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Electrician Diagonal Plier",
+        "zh-TW": "電工斜口鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-EDP-115",
+          "specName": {
+            "en-US": "MEN-115",
+            "zh-TW": "MEN-115"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1L21qe7RhjgiyCcelC41D_Gervz-zIdek"
+        },
+        {
+          "sku": "TSU-EDP-125",
+          "specName": {
+            "en-US": "MN-125",
+            "zh-TW": "MN-125"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1yU1wPCwa6ACxqYs6XCUWVNCPytZnSKd0"
+        },
+        {
+          "sku": "TSU-EDP120",
+          "specName": {
+            "en-US": "PM-120",
+            "zh-TW": "PM-120"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/17Nx1orMtpz5RWsRlSXX70nTOF61E4y6G"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Japanese Style Diagonal Plier",
+        "zh-TW": "日式斜口鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-JDP-150",
+          "specName": {
+            "en-US": "NP-150HG",
+            "zh-TW": "NP-150HG"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1XDnMFK_n3kmS3oAtEhbjKkDoPHJ2blPW"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en-US": "Heavy Duty Diagonal Plier",
+        "zh-TW": "強力斜口鉗"
+      },
+      "category": "01 - 手工具類",
+      "subcategory": "",
+      "brand": "TSUNODA",
+      "imageUrl": "",
+      "specs": [
+        {
+          "sku": "TSU-HDDP-150",
+          "specName": {
+            "en-US": "CN-150",
+            "zh-TW": "CN-150"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1qdH3qImDjoyusvMoPnaQT4Il5RUBC2gw"
+        },
+        {
+          "sku": "TSU-HDDP-165",
+          "specName": {
+            "en-US": "SNP-165F",
+            "zh-TW": "SNP-165F"
+          },
+          "specDetail": {
+            "en-US": "",
+            "zh-TW": ""
+          },
+          "price": "",
+          "imageUrl": "https://lh3.googleusercontent.com/d/1ZMv0Em1sXR1ROQOk81hV_mBAfifUz-ZI"
+        }
+      ]
     }
   ]
 }
