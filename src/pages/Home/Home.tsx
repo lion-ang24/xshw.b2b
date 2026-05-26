@@ -99,12 +99,12 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <section className="hero" style={{ backgroundImage: "url('/assets/hero_bg.png')" }}>
+      <section className="hero" style={{ backgroundImage: "url('/assets/hero_bg_2.jpg')" }}>
         <div className="hero-left">
           <div className="hero-content">
             <h1>{t('hero_title')}</h1>
             <p>{t('hero_desc')}</p>
-            {/* <button className="cta-btn">{t('hero_btn')}</button>  --首頁-了解更多button*/}
+            <button className="cta-btn" onClick={() => navigate('/about')}>{t('hero_btn')}</button>
           </div>
         </div>
         <div className="hero-right">
@@ -206,7 +206,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="middle-banner" style={{ backgroundImage: "url('/assets/hero_bg.png')" }}>
+      <section className="middle-banner" style={{ backgroundImage: "url('/assets/hero_bg_3.jpg')" }}>
         <div className="value-box">
           <h2>{t('middle_banner')}</h2>
         </div>
