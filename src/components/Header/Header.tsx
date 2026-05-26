@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
 import { useAnnouncements } from '../../hooks/useAnnouncements';
+import { catalogData } from '../../data/catalogData';
 
 const Header: React.FC = () => {
   const { language, setLanguage, t } = useTranslation();
@@ -9,6 +10,7 @@ const Header: React.FC = () => {
   const recentAnnouncements = getRecentAnnouncements(7);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const getTagClass = (status: string) => {
     switch (status) {
@@ -27,6 +29,9 @@ const Header: React.FC = () => {
   };
 
   const closeMegaMenu = () => {
+    setActiveSubMenu(null);
+    setExpandedCategory(null);
+    setIsMobileMenuOpen(false);
     // If it's CSS hover-based, removing focus from the active element can help close it on touch devices
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
@@ -83,8 +88,73 @@ const Header: React.FC = () => {
 
       <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className="nav-links">
-          <li className="nav-item">
+          <li className="nav-item desktop-only">
             <Link to="/category" className="nav-link" style={{ color: 'inherit', textDecoration: 'none' }}>{t('nav_catalog')}</Link>
+          </li>
+          <li className="nav-item mobile-only has-mega-menu">
+            <span 
+              className="nav-link" 
+              onClick={(e) => { e.preventDefault(); setActiveSubMenu(activeSubMenu === 'catalog' ? null : 'catalog'); }}
+            >
+              {t('nav_catalog')}
+            </span>
+            <div className={`mega-menu catalog-mega-menu ${activeSubMenu === 'catalog' ? 'mobile-active' : ''}`}>
+              <div className="mobile-only catalog-mobile-header">
+                <span className="catalog-mobile-title">{t('nav_catalog')}</span>
+                <button className="catalog-mobile-close" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setActiveSubMenu(null); }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+              <div className="mega-container" style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+                {catalogData.map(cat => {
+                  const isExpanded = expandedCategory === cat.id;
+                  const hasSubcats = cat.subcategories && cat.subcategories.length > 0;
+                  return (
+                    <div key={cat.id}>
+                      <div className={`catalog-category-item ${isExpanded ? 'expanded' : ''}`}>
+                        <Link 
+                          to={`/category/${cat.id}`}
+                          onClick={() => { closeMegaMenu(); setExpandedCategory(null); }}
+                          className="catalog-category-link"
+                        >
+                          {t(cat.nameKey)}
+                        </Link>
+                        {hasSubcats && (
+                          <div 
+                            className="catalog-category-arrow"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setExpandedCategory(isExpanded ? null : cat.id);
+                            }}
+                          >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M6 9l6 6 6-6" />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
+                      {hasSubcats && (
+                        <div className={`catalog-subcategory-list ${isExpanded ? 'expanded' : ''}`}>
+                          {cat.subcategories!.map(sub => (
+                            <Link
+                              key={sub.id}
+                              to={`/category/${cat.id}/${sub.id}`}
+                              className="catalog-subcategory-item"
+                              onClick={() => { closeMegaMenu(); setExpandedCategory(null); }}
+                            >
+                              {t(sub.nameKey)}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </li>
           <li className="nav-item has-mega-menu">
             <span 
