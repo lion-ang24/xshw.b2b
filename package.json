@@ -7,7 +7,8 @@
     "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -16,10 +17,12 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.38.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^6.0.2",
     "typescript": "^5.5.3",
-    "vite": "^8.0.13"
+    "vite": "^8.0.13",
+    "wrangler": "^4.94.0"
   }
 }
