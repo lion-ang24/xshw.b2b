@@ -21,7 +21,7 @@ const headers = rows[0];
 // 9: '規格明細(en-US) - spec detail' -> specDetail['en-US']
 // 10: '規格明細(zh-TW) - spec detail' -> specDetail['zh-TW']
 // 11: '價格 - US price' -> price
-// 12: '數量 - ' (Ignore)
+// 12: '數量 - Stock Qty' -> stockQty
 // 13: '圖片連結(google drive)' -> imageUrl
 
 const dataRows = rows.slice(2); // Skip header (row 0) and example row (row 1)
@@ -44,6 +44,7 @@ for (const row of dataRows) {
   const specDetailEn = (row[9] || '').toString().trim();
   const specDetailZh = (row[10] || '').toString().trim();
   const price = row[11] !== undefined ? row[11] : '';
+  const stockQty = row[12] !== undefined ? row[12] : '';
   const imageUrl = (row[13] || '').toString().trim();
 
   // We need a product name to group by
@@ -68,6 +69,7 @@ for (const row of dataRows) {
     specName: { 'en-US': specNameEn, 'zh-TW': specNameZh },
     specDetail: { 'en-US': specDetailEn, 'zh-TW': specDetailZh },
     price,
+    stockQty,
     imageUrl
   });
 }

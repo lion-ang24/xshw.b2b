@@ -57,9 +57,10 @@ const Product: React.FC = () => {
   const hasImage = currentImageUrl && currentImageUrl.trim() !== '';
 
   // Reverse mapping for breadcrumb (optional)
-  const categoryStr = product.category || '';
+  const categoryStr = product.category || product.subcategory?.category?.name || '';
   const matchedCat = catalogData.find(c => categoryStr.includes(getChineseName(c.nameKey)));
   const categoryName = matchedCat ? t(matchedCat.nameKey) : categoryStr;
+  const brandName = typeof product.brand === 'string' ? product.brand : (product.brand?.name || '');
 
   return (
     <div className="product-detail-page">
@@ -94,10 +95,15 @@ const Product: React.FC = () => {
 
         {/* Right Column: Details */}
         <div className="product-info-right">
-          {product.brand && <div className="brand-label">{product.brand}</div>}
+          {brandName && <div className="brand-label">{brandName}</div>}
           <h1 className="product-h1">{getI18nText(product.name, language)}</h1>
           {priceDisplay && <div className="product-price">{priceDisplay}</div>}
           {currentSpec.sku && <div className="sku-label" style={{ marginBottom: '15px', color: 'var(--text-secondary)' }}>SKU: {currentSpec.sku}</div>}
+          {currentSpec.stockQty !== undefined && currentSpec.stockQty !== '' && (
+            <div className="stock-qty-label" style={{ marginBottom: '15px', color: 'var(--text-secondary)' }}>
+              {t('stock_qty')}: {currentSpec.stockQty}
+            </div>
+          )}
 
           {specs.length > 0 && (
             <>

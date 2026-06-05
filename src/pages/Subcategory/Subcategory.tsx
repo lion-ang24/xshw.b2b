@@ -30,10 +30,17 @@ const Subcategory: React.FC = () => {
 
   const matchedProducts = productsData.products.filter(p => {
     if (!categoryChName) return false;
-    const matchCat = p.category.includes(categoryChName);
+    
+    // 大類別相容性讀取
+    const subcatObj = p.subcategory as any;
+    const pCategory = p.category || subcatObj?.category?.name || '';
+    const matchCat = pCategory.includes(categoryChName);
     if (!matchCat) return false;
+    
     if (subcategoryId && subcategoryChName) {
-      return p.subcategory.includes(subcategoryChName);
+      // 子類別相容性讀取
+      const pSubcat = typeof subcatObj === 'string' ? subcatObj : (subcatObj?.name || '');
+      return pSubcat.includes(subcategoryChName);
     }
     return true;
   });
