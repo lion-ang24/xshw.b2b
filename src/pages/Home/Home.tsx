@@ -1,15 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
+import { supabase } from '../../api/supabaseClient';
+
+interface CategoryData {
+  id: string;
+  name_zh: string;
+  name_en: string;
+}
+
+const categoryImages: Record<string, string> = {
+  '01': 'https://lh3.googleusercontent.com/d/1eFEdnlkeSM0qMskXF2Vej-7tpOhjki7f',
+  '06': 'https://lh3.googleusercontent.com/d/1UQEEZYYpGd_dg_AVYs60lzmcWaJT5uiy',
+  '15': 'https://lh3.googleusercontent.com/d/1JBfqkvMOK9ZMs7OIamp2ERZar9kH_VvC',
+  '05': 'https://lh3.googleusercontent.com/d/1IEqqIlKsMPFzamTDPUWbuebyLeAXYxoy',
+  '14': 'https://lh3.googleusercontent.com/d/1s1m05vkkXbjbx_lp_0JRie9pzw0Bch1o',
+  '04': 'https://lh3.googleusercontent.com/d/1_LfLEEcjgC9Z9FKDyBTzZYL1UwI-rkLI',
+  '08': 'https://lh3.googleusercontent.com/d/13EpRSJw0CRohrzz9duUbBGCar7Kt4KRo',
+};
 
 const Home: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const navigate = useNavigate();
   const trackRef = useRef<HTMLDivElement>(null);
   const catCarouselRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [catCanScrollLeft, setCatCanScrollLeft] = useState(false);
   const [catCanScrollRight, setCatCanScrollRight] = useState(true);
+  const [categories, setCategories] = useState<CategoryData[]>([]);
   const totalBrands = 6;
 
   const cardButtonStyle: React.CSSProperties = {
@@ -38,6 +56,20 @@ const Home: React.FC = () => {
   const handleCategoryClick = (id: string) => {
     navigate(`/category/${id}`);
   };
+
+  useEffect(() => {
+    const featuredOrder = ['01', '06', '15', '05', '14', '04', '08'];
+    supabase
+      .from('categories')
+      .select('id, name_zh, name_en')
+      .in('id', featuredOrder)
+      .then(({ data }) => {
+        if (data) {
+          const sorted = data.sort((a, b) => featuredOrder.indexOf(a.id) - featuredOrder.indexOf(b.id));
+          setCategories(sorted);
+        }
+      });
+  }, []);
 
   useEffect(() => {
     const el = catCarouselRef.current;
@@ -164,34 +196,16 @@ const Home: React.FC = () => {
           </button>
 
           <div className="carousel-container" ref={catCarouselRef}>
-            <button className="card" onClick={() => handleCategoryClick('handtools')} style={cardButtonStyle}>
-              <img src="https://lh3.googleusercontent.com/d/1eFEdnlkeSM0qMskXF2Vej-7tpOhjki7f" alt={t('cat_handtools')} referrerPolicy="no-referrer" />
-              <span className="card-btn" style={{ display: 'block' }}>{t('cat_handtools')}</span>
-            </button>
-            <button className="card" onClick={() => handleCategoryClick('electric')} style={cardButtonStyle}>
-              <img src="https://lh3.googleusercontent.com/d/1UQEEZYYpGd_dg_AVYs60lzmcWaJT5uiy" alt={t('cat_electric')} referrerPolicy="no-referrer" />
-              <span className="card-btn" style={{ display: 'block' }}>{t('cat_electric')}</span>
-            </button>
-            <button className="card" onClick={() => handleCategoryClick('machine/E')} style={cardButtonStyle}>
-              <img src="https://lh3.googleusercontent.com/d/1JBfqkvMOK9ZMs7OIamp2ERZar9kH_VvC" alt={t('subcat_machine_e')} referrerPolicy="no-referrer" />
-              <span className="card-btn" style={{ display: 'block' }}>{t('subcat_machine_e')}</span>
-            </button>
-            <button className="card" onClick={() => handleCategoryClick('water')} style={cardButtonStyle}>
-              <img src="https://lh3.googleusercontent.com/d/1IEqqIlKsMPFzamTDPUWbuebyLeAXYxoy" alt={t('cat_water')} referrerPolicy="no-referrer" />
-              <span className="card-btn" style={{ display: 'block' }}>{t('cat_water')}</span>
-            </button>
-            <button className="card" onClick={() => handleCategoryClick('protect')} style={cardButtonStyle}>
-              <img src="https://lh3.googleusercontent.com/d/1s1m05vkkXbjbx_lp_0JRie9pzw0Bch1o" alt={t('cat_protect')} referrerPolicy="no-referrer" />
-              <span className="card-btn" style={{ display: 'block' }}>{t('cat_protect')}</span>
-            </button>
-            <button className="card" onClick={() => handleCategoryClick('building')} style={cardButtonStyle}>
-              <img src="https://lh3.googleusercontent.com/d/1_LfLEEcjgC9Z9FKDyBTzZYL1UwI-rkLI" alt={t('cat_building')} referrerPolicy="no-referrer" />
-              <span className="card-btn" style={{ display: 'block' }}>{t('cat_building')}</span>
-            </button>
-            <button className="card" onClick={() => handleCategoryClick('metal')} style={cardButtonStyle}>
-              <img src="https://lh3.googleusercontent.com/d/13EpRSJw0CRohrzz9duUbBGCar7Kt4KRo" alt={t('cat_metal')} referrerPolicy="no-referrer" />
-              <span className="card-btn" style={{ display: 'block' }}>{t('cat_metal')}</span>
-            </button>
+            {categories.map(cat => {
+              const catDisplayName = language === 'zh-TW' ? cat.name_zh : cat.name_en;
+              const imgUrl = categoryImages[cat.id] || '';
+              return (
+                <button key={cat.id} className="card" onClick={() => handleCategoryClick(cat.id === '15' ? '15/15_E' : cat.id)} style={cardButtonStyle}>
+                  <img src={imgUrl} alt={catDisplayName} referrerPolicy="no-referrer" />
+                  <span className="card-btn" style={{ display: 'block' }}>{catDisplayName}</span>
+                </button>
+              );
+            })}
           </div>
 
           <button

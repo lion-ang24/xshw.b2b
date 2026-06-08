@@ -11,6 +11,7 @@ import AnnouncementDetail from './pages/Announcements/AnnouncementDetail';
 import Privacy from './pages/Privacy/Privacy';
 import Terms from './pages/Terms/Terms';
 import About from './pages/About/About';
+import Shipping from './pages/Shipping/Shipping';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/shipping" element={<Shipping />} />
               <Route path="/news" element={<PlaceholderPage titleKey="最新消息" />} />
               <Route path="/faq" element={<PlaceholderPage titleKey="常見問題" />} />
               <Route path="/customer-service" element={<PlaceholderPage titleKey="客戶服務" />} />

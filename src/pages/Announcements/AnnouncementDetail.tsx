@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { useAnnouncements } from '../../hooks/useAnnouncements';
+import { getAnnouncementById } from '../../api/announcement';
+import { Announcement } from '../../types/supabase';
 import { useTranslation } from '../../hooks/useTranslation';
 import './Announcements.css';
 
 const AnnouncementDetail: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { getAnnouncementById } = useAnnouncements();
+  const [announcement, setAnnouncement] = useState<Announcement | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   
   const getTagLabel = (status: string) => {
     switch (status) {
@@ -28,11 +31,45 @@ const AnnouncementDetail: React.FC = () => {
   
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (id) {
+      setLoading(true);
+      setError(null);
+      getAnnouncementById(id)
+        .then(data => {
+          setAnnouncement(data);
+          setLoading(false);
+        })
+        .catch(err => {
+          setError(err.message || '撈取公告明細失敗，請檢查您的網路連線。');
+          setLoading(false);
+        });
+    }
   }, [id]);
 
   if (!id) return <div className="announcement-page">Invalid ID</div>;
   
-  const announcement = getAnnouncementById(id);
+  if (loading) {
+    return (
+      <div className="announcement-page">
+        <div className="detail-container" style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>
+          Loading...
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="announcement-page">
+        <div className="detail-container" style={{ textAlign: 'center' }}>
+          <h2 style={{ color: '#ef4444' }}>{error}</h2>
+          <button onClick={() => navigate('/announcements')} style={{ marginTop: '20px', padding: '10px 20px', background: 'var(--accent-yellow)', color: '#000', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>
+            {t('announcement_back')}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (!announcement) {
     return (
@@ -46,6 +83,9 @@ const AnnouncementDetail: React.FC = () => {
       </div>
     );
   }
+
+  const title = language === 'en-US' ? announcement.title_en : announcement.title_zh;
+  const content = language === 'en-US' ? announcement.content_en : announcement.content_zh;
 
   return (
     <div className="announcement-page">
@@ -63,14 +103,12 @@ const AnnouncementDetail: React.FC = () => {
           </div>
           
           <h1>
-            {announcement.title}
+            {title}
           </h1>
           
           <div className="divider"></div>
           
-          <div className="content">
-            {announcement.content}
-          </div>
+          <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </div>
     </div>
