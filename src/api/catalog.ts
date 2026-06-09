@@ -68,7 +68,8 @@ export async function getProductsByCategory(
         )
       `)
       .eq('category_id', categoryId)
-      .eq('status', 'active');
+      .eq('status', 'active')
+      .order('update_by', { ascending: false });
 
     if (subcategoryId) {
       query = query.eq('subcategory_id', subcategoryId);

@@ -197,7 +197,9 @@ const Home: React.FC = () => {
 
           <div className="carousel-container" ref={catCarouselRef}>
             {categories.map(cat => {
-              const catDisplayName = language === 'zh-TW' ? cat.name_zh : cat.name_en;
+              const catDisplayName = cat.id === '15'
+                ? (language === 'zh-TW' ? '加工機械相關零配件' : 'Machining Tool Accessories')
+                : (language === 'zh-TW' ? cat.name_zh : cat.name_en);
               const imgUrl = categoryImages[cat.id] || '';
               return (
                 <button key={cat.id} className="card" onClick={() => handleCategoryClick(cat.id === '15' ? '15/15_E' : cat.id)} style={cardButtonStyle}>

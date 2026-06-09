@@ -193,16 +193,21 @@ const Subcategory: React.FC = () => {
             {categoriesTree.map(cat => {
               const catDisplayName = language === 'zh-TW' ? cat.name_zh : cat.name_en;
               return (
+                // 渲染主分類項目，若為目前選取的大類，則套用 active 樣式
                 <li key={cat.id} className={effectiveCategoryId === cat.id ? 'active' : ''} style={{ marginBottom: '15px' }}>
+                  {/* 主分類連結，點擊後導向該大類的路由 */}
                   <Link to={`/category/${cat.id}`} style={{ textDecoration: 'none', color: effectiveCategoryId === cat.id ? 'var(--primary-color)' : 'var(--text-color)', fontWeight: effectiveCategoryId === cat.id ? 'bold' : 'normal' }}>
                     {catDisplayName}
                   </Link>
+                  {/* 若此分類為當前選取的大類，且該大類下含有子分類，則展開渲染子分類列表 */}
                   {effectiveCategoryId === cat.id && cat.subcategories && cat.subcategories.length > 0 && (
                     <ul className="sidebar-subcat-list" style={{ listStyle: 'none', paddingLeft: '15px', marginTop: '10px' }}>
                       {cat.subcategories.map(sub => {
                         const subDisplayName = language === 'zh-TW' ? sub.name_zh : sub.name_en;
                         return (
+                          // 子分類項目，若符合目前選取的子分類 ID 則套用 active 樣式
                           <li key={sub.id} className={subcategoryId === sub.id ? 'active' : ''} style={{ marginBottom: '8px' }}>
+                            {/* 子分類連結，點擊後切換大類與子類別路由 */}
                             <Link to={`/category/${cat.id}/${sub.id}`} style={{ textDecoration: 'none', color: subcategoryId === sub.id ? 'var(--primary-color)' : 'var(--text-secondary)' }}>
                               {subDisplayName}
                             </Link>
