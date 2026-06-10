@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           <Link to="/terms">{t('footer_terms')}</Link>
           <Link to="/shipping">{t('footer_shipping')}</Link>
           {/* <Link to="/careers">{t('footer_careers')}</Link> */}
-          <Link to="/category">{t('nav_catalog')}</Link>
+          <Link to="/category/00">{t('nav_catalog')}</Link>
         </nav>
       </div>
 

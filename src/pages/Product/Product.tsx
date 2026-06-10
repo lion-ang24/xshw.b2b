@@ -4,14 +4,12 @@ import { useTranslation } from '../../hooks/useTranslation';
 import { fetchProductDetails } from '../../api/productApi';
 import { useCart } from '../../context/CartContext';
 import { ORDER_EMAIL } from '../../config/orderConfig';
-import zhTW from '../../data/locales/zh-TW.json';
-import { catalogData } from '../../data/catalogData';
-
-const getChineseName = (key: string) => (zhTW as Record<string, string>)[key] || key;
+import { supabase } from '../../api/supabaseClient';
 
 const Product: React.FC = () => {
   const { productId } = useParams();
   const { t, language } = useTranslation();
+  const [matchedCat, setMatchedCat] = useState<{ id: string; name_zh: string; name_en: string } | null>(null);
 
   const getI18nText = (field: any, lang: string) => {
     if (!field) return '';
@@ -39,6 +37,21 @@ const Product: React.FC = () => {
     }
   }, [productId]);
 
+  useEffect(() => {
+    if (product && product.categoryId) {
+      supabase
+        .from('categories')
+        .select('id, name_zh, name_en')
+        .eq('id', product.categoryId)
+        .single()
+        .then(({ data }) => {
+          if (data) {
+            setMatchedCat(data);
+          }
+        });
+    }
+  }, [product]);
+
   // Handle escape key to close lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -57,15 +70,14 @@ const Product: React.FC = () => {
   const hasImage = currentImageUrl && currentImageUrl.trim() !== '';
 
   // Reverse mapping for breadcrumb (optional)
-  const categoryStr = product.category || '';
-  const matchedCat = catalogData.find(c => categoryStr.includes(getChineseName(c.nameKey)));
-  const categoryName = matchedCat ? t(matchedCat.nameKey) : categoryStr;
+  const categoryName = matchedCat ? (language === 'zh-TW' ? matchedCat.name_zh : matchedCat.name_en) : '';
+  const brandName = typeof product.brand === 'string' ? product.brand : (product.brand?.name || '');
 
   return (
     <div className="product-detail-page">
       <div className="breadcrumb" style={{ padding: '20px' }}>
         <Link to="/">{t('nav_home')}</Link> <span>/</span>
-        <Link to="/category">{t('nav_catalog')}</Link> <span>/</span>
+        <Link to="/category/00">{t('nav_catalog')}</Link> <span>/</span>
         {matchedCat && <><Link to={`/category/${matchedCat.id}`}>{categoryName}</Link> <span>/</span></>}
         <span style={{ color: 'var(--text-primary)' }}>{getI18nText(product.name, language)}</span>
       </div>
@@ -94,10 +106,15 @@ const Product: React.FC = () => {
 
         {/* Right Column: Details */}
         <div className="product-info-right">
-          {product.brand && <div className="brand-label">{product.brand}</div>}
+          {brandName && <div className="brand-label">{brandName}</div>}
           <h1 className="product-h1">{getI18nText(product.name, language)}</h1>
           {priceDisplay && <div className="product-price">{priceDisplay}</div>}
           {currentSpec.sku && <div className="sku-label" style={{ marginBottom: '15px', color: 'var(--text-secondary)' }}>SKU: {currentSpec.sku}</div>}
+          {currentSpec.stockQty !== undefined && currentSpec.stockQty !== '' && (
+            <div className="stock-qty-label" style={{ marginBottom: '15px', color: 'var(--text-secondary)' }}>
+              {t('stock_qty')}: {currentSpec.stockQty}
+            </div>
+          )}
 
           {specs.length > 0 && (
             <>

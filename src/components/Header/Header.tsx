@@ -1,16 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../../hooks/useTranslation';
-import { useAnnouncements } from '../../hooks/useAnnouncements';
-import { catalogData } from '../../data/catalogData';
+import { getCategoriesTree } from '../../api/catalog';
+import { getAnnouncements } from '../../api/announcement';
+import { CategoryTree, Announcement } from '../../types/supabase';
 
 const Header: React.FC = () => {
   const { language, setLanguage, t } = useTranslation();
-  const { getRecentAnnouncements } = useAnnouncements();
-  const recentAnnouncements = getRecentAnnouncements(7);
+  const [categories, setCategories] = useState<CategoryTree[]>([]);
+  const [recentAnnouncements, setRecentAnnouncements] = useState<Announcement[]>([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    getCategoriesTree().then(data => {
+      setCategories(data);
+    });
+    getAnnouncements()
+      .then(data => {
+        setRecentAnnouncements(data.slice(0, 7));
+      })
+      .catch(err => {
+        console.error('Header 撈取公告失敗:', err);
+        setRecentAnnouncements([]);
+      });
+
+  }, []);
 
   const getTagClass = (status: string) => {
     switch (status) {
@@ -89,7 +105,7 @@ const Header: React.FC = () => {
       <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className="nav-links">
           <li className="nav-item desktop-only">
-            <Link to="/category" className="nav-link" style={{ color: 'inherit', textDecoration: 'none' }}>{t('nav_catalog')}</Link>
+            <Link to="/category/00" className="nav-link" style={{ color: 'inherit', textDecoration: 'none' }}>{t('nav_catalog')}</Link>
           </li>
           <li className="nav-item mobile-only has-mega-menu">
             <span 
@@ -109,9 +125,10 @@ const Header: React.FC = () => {
                 </button>
               </div>
               <div className="mega-container" style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-                {catalogData.map(cat => {
+                {categories.map(cat => {
                   const isExpanded = expandedCategory === cat.id;
                   const hasSubcats = cat.subcategories && cat.subcategories.length > 0;
+                  const catDisplayName = language === 'zh-TW' ? cat.name_zh : cat.name_en;
                   return (
                     <div key={cat.id}>
                       <div className={`catalog-category-item ${isExpanded ? 'expanded' : ''}`}>
@@ -120,7 +137,7 @@ const Header: React.FC = () => {
                           onClick={() => { closeMegaMenu(); setExpandedCategory(null); }}
                           className="catalog-category-link"
                         >
-                          {t(cat.nameKey)}
+                          {catDisplayName}
                         </Link>
                         {hasSubcats && (
                           <div 
@@ -138,16 +155,19 @@ const Header: React.FC = () => {
                       </div>
                       {hasSubcats && (
                         <div className={`catalog-subcategory-list ${isExpanded ? 'expanded' : ''}`}>
-                          {cat.subcategories!.map(sub => (
-                            <Link
-                              key={sub.id}
-                              to={`/category/${cat.id}/${sub.id}`}
-                              className="catalog-subcategory-item"
-                              onClick={() => { closeMegaMenu(); setExpandedCategory(null); }}
-                            >
-                              {t(sub.nameKey)}
-                            </Link>
-                          ))}
+                          {cat.subcategories.map(sub => {
+                            const subDisplayName = language === 'zh-TW' ? sub.name_zh : sub.name_en;
+                            return (
+                              <Link
+                                key={sub.id}
+                                to={`/category/${cat.id}/${sub.id}`}
+                                className="catalog-subcategory-item"
+                                onClick={() => { closeMegaMenu(); setExpandedCategory(null); }}
+                              >
+                                {subDisplayName}
+                              </Link>
+                            );
+                          })}
                         </div>
                       )}
                     </div>
@@ -173,21 +193,24 @@ const Header: React.FC = () => {
                     </Link>
                   </div>
                   <ul className="announcement-list">
-                    {recentAnnouncements.map((announcement) => (
-                      <li key={announcement.id} className="announcement-item">
-                        <span className={`announcement-tag ${getTagClass(announcement.status)}`}>
-                          {getTagLabel(announcement.status)}
-                        </span>
-                        <span className="announcement-date">{announcement.date}</span>
-                        <Link
-                          to={`/announcements/${announcement.id}`}
-                          className="announcement-title"
-                          onClick={closeMegaMenu}
-                        >
-                          {announcement.title}
-                        </Link>
-                      </li>
-                    ))}
+                    {recentAnnouncements.map((announcement) => {
+                      const announcementTitle = language === 'zh-TW' ? announcement.title_zh : announcement.title_en;
+                      return (
+                        <li key={announcement.id} className="announcement-item">
+                          <span className={`announcement-tag ${getTagClass(announcement.status)}`}>
+                            {getTagLabel(announcement.status)}
+                          </span>
+                          <span className="announcement-date">{announcement.date}</span>
+                          <Link
+                            to={`/announcements/${announcement.id}`}
+                            className="announcement-title"
+                            onClick={closeMegaMenu}
+                          >
+                            {announcementTitle}
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
