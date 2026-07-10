@@ -22,6 +22,7 @@ const Product: React.FC = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const [selectedSpecIndex, setSelectedSpecIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [hasSelectedSpec, setHasSelectedSpec] = useState(false);
   const [queueToast, setQueueToast] = useState<'added' | 'duplicate' | null>(null);
 
@@ -52,6 +53,11 @@ const Product: React.FC = () => {
     }
   }, [product]);
 
+  // 當選定規格改變時，重置圖片索引為 0
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [selectedSpecIndex]);
+
   // Handle escape key to close lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -66,7 +72,12 @@ const Product: React.FC = () => {
   const specs = product.specs || [];
   const currentSpec = specs[selectedSpecIndex] || {};
   const priceDisplay = currentSpec.price ? `$${currentSpec.price}` : '';
-  const currentImageUrl = currentSpec.imageUrl || product.imageUrl;
+
+  // 獲取目前規格的多圖 URL 列表，若無多圖，降級為單圖或產品主圖
+  const currentSpecImageUrls: string[] = (currentSpec.imageUrls && currentSpec.imageUrls.length > 0)
+    ? currentSpec.imageUrls
+    : (currentSpec.imageUrl ? [currentSpec.imageUrl] : (product.imageUrl ? [product.imageUrl] : []));
+  const currentImageUrl = currentSpecImageUrls[currentImageIndex] || '';
   const hasImage = currentImageUrl && currentImageUrl.trim() !== '';
 
   // Reverse mapping for breadcrumb (optional)
@@ -88,6 +99,49 @@ const Product: React.FC = () => {
           {hasImage ? (
             <>
               <img src={currentImageUrl} alt={getI18nText(product.name, language)} referrerPolicy="no-referrer" />
+              
+              {currentSpecImageUrls.length > 1 && (
+                <>
+                  <button
+                    className="image-nav-arrow arrow-left"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImageIndex((prev) => (prev === 0 ? currentSpecImageUrls.length - 1 : prev - 1));
+                    }}
+                    aria-label="Previous image"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                  </button>
+                  <button
+                    className="image-nav-arrow arrow-right"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImageIndex((prev) => (prev === currentSpecImageUrls.length - 1 ? 0 : prev + 1));
+                    }}
+                    aria-label="Next image"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </button>
+                  
+                  <div className="product-image-dots">
+                    {currentSpecImageUrls.map((_, idx) => (
+                      <span
+                        key={idx}
+                        className={`dot ${currentImageIndex === idx ? 'active' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCurrentImageIndex(idx);
+                        }}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+
               <div className="zoom-icon" onClick={() => setIsLightboxOpen(true)} style={{ cursor: 'pointer' }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"></circle>
@@ -242,6 +296,36 @@ const Product: React.FC = () => {
             <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)} aria-label="Close">
               &times;
             </button>
+            
+            {currentSpecImageUrls.length > 1 && (
+              <>
+                <button
+                  className="lightbox-arrow arrow-left"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrentImageIndex((prev) => (prev === 0 ? currentSpecImageUrls.length - 1 : prev - 1));
+                  }}
+                  aria-label="Previous image"
+                >
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+                <button
+                  className="lightbox-arrow arrow-right"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrentImageIndex((prev) => (prev === currentSpecImageUrls.length - 1 ? 0 : prev + 1));
+                  }}
+                  aria-label="Next image"
+                >
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </>
+            )}
+
             <img src={currentImageUrl} alt={getI18nText(product.name, language)} className="lightbox-image" referrerPolicy="no-referrer" />
           </div>
         </div>

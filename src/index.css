@@ -2914,3 +2914,116 @@ img {
         padding: 0 15px !important;
     }
 }
+
+/* Product Spec Carousel Styling */
+.image-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 2;
+}
+
+.image-nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.image-nav-arrow.arrow-left {
+    left: 16px;
+}
+
+.image-nav-arrow.arrow-right {
+    right: 16px;
+}
+
+.image-nav-arrow svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+}
+
+/* Dots indicator */
+.product-image-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 6px 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.product-image-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.product-image-dots .dot:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+.product-image-dots .dot.active {
+    background: #ff6b00; /* 亮橘色作為主色調 */
+    transform: scale(1.25);
+}
+
+/* Lightbox Arrows */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 1010;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(0, 0, 0, 0.85);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-arrow.arrow-left {
+    left: -70px;
+}
+
+.lightbox-arrow.arrow-right {
+    right: -70px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-arrow.arrow-left {
+        left: 10px;
+    }
+    .lightbox-arrow.arrow-right {
+        right: 10px;
+    }
+}

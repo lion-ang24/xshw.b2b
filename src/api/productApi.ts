@@ -13,6 +13,10 @@ export const fetchProductDetails = async (productId: string) => {
     const primaryImage = attr.product_images?.find(img => img.is_primary);
     const imageUrl = primaryImage?.image_url || attr.product_images?.[0]?.image_url || '';
 
+    // 撈取此規格的所有圖片網址，並以 is_primary 優先排序
+    const sortedImages = [...(attr.product_images || [])].sort((a, b) => (b.is_primary ? 1 : 0) - (a.is_primary ? 1 : 0));
+    const imageUrls = sortedImages.map(img => img.image_url).filter(Boolean);
+
     return {
       sku: attr.sku,
       specName: {
@@ -25,7 +29,8 @@ export const fetchProductDetails = async (productId: string) => {
       },
       price: Number(attr.price),
       stockQty: attr.stock_qty,
-      imageUrl: imageUrl
+      imageUrl: imageUrl,
+      imageUrls: imageUrls
     };
   });
 
