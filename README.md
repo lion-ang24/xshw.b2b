@@ -1,20 +1,65 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# AZX 翔盛五金 B2B 採購平台（xshw.b2b）
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+本專案為 **AZX 翔盛五金**的 B2B 電子商務與產品型錄平台，旨在提供企業客戶直觀、高效的工具與五金採購體驗。
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## 專案說明
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+此專案是基於 React 的 Web 應用程式，具備響應式設計（RWD）、多語系支援以及產品瀏覽功能。專案採用深色調的優質美學設計，專為專業工具展示而打造。
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## 技術棧
+
+*   **前端框架**：React 18
+*   **建構工具**：Vite
+*   **語言**：TypeScript
+*   **路由**：React Router DOM v6
+*   **樣式**：Vanilla CSS
+*   **語系支援**：自定義 i18n 系統（支援繁體中文、英文）
+
+## 核心功能
+
+*   **動態產品目錄**：分層級瀏覽 OA 家具、手工具、電動工具等類別。
+*   **多語系切換**：即時切換全站語系（中英切換），包含麵包屑與產品詳情。
+*   **產品詳情展示**：
+    *   規格選擇（選擇電池容量、配置）。
+    *   規格明細表(詳細規格表)。
+    *   圖片燈箱（Lightbox）放大功能。
+    *   產品需求單與採購清單功能。
+*   **響應式介面**：完美適配桌機與行動裝置。
+
+## 環境設定與執行
+
+### 本地開發
+
+1.  **安裝相依套件**：
+    ```bash
+    npm install
+    ```
+2.  **啟動開發伺服器**：
+    ```bash
+    npm run dev
+    ```
+    伺服器預設執行於 `http://localhost:5173`。
+
+## 部署與發布
+
+### 生產環境建構
+
+執行以下指令產生靜態部署檔案：
+```bash
+npm run build
+```
+產出檔案將位於 `dist/` 目錄下。
+
+### 發布流程
+
+1.  確保 `dist/` 內容已正確產生。
+2.  將 `dist/` 目錄內容部署至靜態網站託管平台（Cloudflare Pages）。
+
+## 常見錯誤排除
+
+*   **Status**：執行 `vite` 指令時，系統回報「'vite' 不是內部或外部命令」錯誤。
+*   **Root Cause**：Vite 未安裝於全域環境中，或者本地相依套件尚未完整安裝。
+*   **Suggested Fix**：請確保已執行 `npm install`，並一律使用 `npm run dev` 來啟動專案，系統會自動存取本地的 Vite 執行檔。
+
+---
+*最後更新日期：2026-05-27*
