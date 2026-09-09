@@ -25,7 +25,6 @@ steps:
     targetType: 'inline'
     script: |
       [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-      $ErrorActionPreference = "Stop"
 
       if (-not $env:GH_TOKEN) {
         Write-Error "找不到 GITHUB_PAT 環境變數，請確認已於 Pipeline Variables 中設定 GITHUB_PAT。"
@@ -34,18 +33,17 @@ steps:
 
       $remoteUrl = "https://x-access-token:$($env:GH_TOKEN)@github.com/$($env:GITHUB_OWNER)/$($env:GITHUB_REPO).git"
 
-      try {
-        Write-Host "設定 GitHub 遠端儲存庫..."
-        git remote remove github 2>$null
-        git remote add github $remoteUrl
+      Write-Host "推送代碼至 GitHub 中繼分支: $($env:SYNC_BRANCH)..."
+      
+      # 直接以 URL 推送，避免在本機產生 remote 殘留；使用 2>&1 轉為字串防止 Windows PowerShell 判定為 NativeCommandError
+      git push $remoteUrl HEAD:$($env:SYNC_BRANCH) --force 2>&1 | ForEach-Object { "$_" }
 
-        Write-Host "推送代碼至 GitHub 中繼分支: $($env:SYNC_BRANCH)..."
-        git push github HEAD:$($env:SYNC_BRANCH) --force
+      if ($LASTEXITCODE -ne 0) {
+        Write-Error "Git push 失敗，結束碼為: $LASTEXITCODE"
+        exit $LASTEXITCODE
       }
-      finally {
-        # 無論成功或失敗，強制移除含憑證之遠端設定
-        git remote remove github 2>$null
-      }
+
+      Write-Host "代碼已成功推送至 GitHub。"
 
 - task: PowerShell@2
   displayName: 'Create or Update GitHub Pull Request'
@@ -70,41 +68,51 @@ steps:
 
       $apiUrl = "https://api.github.com/repos/$($env:GITHUB_OWNER)/$($env:GITHUB_REPO)/pulls"
 
-      Write-Host "檢查是否已有未結的 Pull Request..."
-      $checkUrl = "$($apiUrl)?state=open&head=$($env:GITHUB_OWNER):$($env:SYNC_BRANCH)&base=main"
-      $existingPRs = Invoke-RestMethod -Uri $checkUrl -Method Get -Headers $headers
+      try {
+        Write-Host "檢查是否已有未結的 Pull Request..."
+        $checkUrl = "$($apiUrl)?state=open&head=$($env:GITHUB_OWNER):$($env:SYNC_BRANCH)&base=main"
+        $existingPRs = Invoke-RestMethod -Uri $checkUrl -Method Get -Headers $headers
 
-      if ($existingPRs.Count -gt 0) {
-        $prNumber = $existingPRs[0].number
-        $prUrl = $existingPRs[0].html_url
-        Write-Host "已存在開啟中的 PR #$prNumber ($prUrl)。"
-        Write-Host "中繼分支已成功更新，GitHub 將自動更新該 PR 之比對內容。"
-      } else {
-        Write-Host "未發現現存 PR，正在發起新 PR..."
-        $commitSubject = git log -1 --pretty=%s
-        $commitBody = git log -1 --pretty=%B
-        $commitHash = git rev-parse --short HEAD
+        if ($existingPRs.Count -gt 0) {
+          $prNumber = $existingPRs[0].number
+          $prUrl = $existingPRs[0].html_url
+          Write-Host "已存在開啟中的 PR #$prNumber ($prUrl)。"
+          Write-Host "中繼分支已成功更新，GitHub 將自動更新該 PR 之比對內容。"
+        } else {
+          Write-Host "未發現現存 PR，正在發起新 PR..."
+          $commitSubject = git log -1 --pretty=%s
+          $commitBody = git log -1 --pretty=%B
+          $commitHash = git rev-parse --short HEAD
 
-        $bodyLines = @(
-          "### 內網自動同步請求 (Azure DevOps Server)",
-          "",
-          "- 來源伺服器: 192.168.0.238",
-          "- Commit ID: $commitHash",
-          "- 提交訊息:",
-          $commitBody,
-          "",
-          "---",
-          "*此 PR 由 Azure DevOps Pipeline 自動建立，請人工審核確認後合併至 main。*"
-        )
-        $bodyText = $bodyLines -join "`n"
+          $bodyLines = @(
+            "### 內網自動同步請求 (Azure DevOps Server)",
+            "",
+            "- 來源伺服器: 192.168.0.238",
+            "- Commit ID: $commitHash",
+            "- 提交訊息:",
+            $commitBody,
+            "",
+            "---",
+            "*此 PR 由 Azure DevOps Pipeline 自動建立，請人工審核確認後合併至 main。*"
+          )
+          $bodyText = $bodyLines -join "`n"
 
-        $bodyPayload = @{
-          title = "Sync: $commitSubject ($commitHash)"
-          head  = $env:SYNC_BRANCH
-          base  = "main"
-          body  = $bodyText
-        } | ConvertTo-Json -Depth 3
+          $bodyPayload = @{
+            title = "Sync: $commitSubject ($commitHash)"
+            head  = $env:SYNC_BRANCH
+            base  = "main"
+            body  = $bodyText
+          } | ConvertTo-Json -Depth 3
 
-        $newPR = Invoke-RestMethod -Uri $apiUrl -Method Post -Headers $headers -Body $bodyPayload -ContentType "application/json; charset=utf-8"
-        Write-Host "PR 建立成功: $($newPR.html_url)"
+          $newPR = Invoke-RestMethod -Uri $apiUrl -Method Post -Headers $headers -Body $bodyPayload -ContentType "application/json; charset=utf-8"
+          Write-Host "PR 建立成功: $($newPR.html_url)"
+        }
+      } catch {
+        Write-Error "呼叫 GitHub API 失敗: $_"
+        if ($_.Exception.Response) {
+          $reader = New-Object System.IO.StreamReader($_.Exception.Response.GetResponseStream())
+          $responseBody = $reader.ReadToEnd()
+          Write-Host "GitHub API 詳細錯誤內容: $responseBody"
+        }
+        exit 1
       }
