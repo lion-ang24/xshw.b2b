@@ -31,7 +31,8 @@ steps:
         exit 1
       }
 
-      $remoteUrl = "https://x-access-token:$($env:GH_TOKEN)@github.com/$($env:GITHUB_OWNER)/$($env:GITHUB_REPO).git"
+      $token = $env:GH_TOKEN.Trim()
+      $remoteUrl = "https://$token@github.com/$($env:GITHUB_OWNER)/$($env:GITHUB_REPO).git"
 
       Write-Host "推送代碼至 GitHub 中繼分支: $($env:SYNC_BRANCH)..."
       
@@ -61,8 +62,9 @@ steps:
         exit 1
       }
 
+      $token = $env:GH_TOKEN.Trim()
       $headers = @{
-        "Authorization" = "Bearer $($env:GH_TOKEN)"
+        "Authorization" = "Bearer $token"
         "Accept"        = "application/vnd.github.v3+json"
         "User-Agent"    = "AzureDevOps-Pipeline"
       }
