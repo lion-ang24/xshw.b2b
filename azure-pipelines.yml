@@ -111,11 +111,24 @@ steps:
           Write-Host "PR 建立成功: $($newPR.html_url)"
         }
       } catch {
-        Write-Error "呼叫 GitHub API 失敗: $_"
+        $responseBody = $null
+        $isNoCommits = $false
         if ($_.Exception.Response) {
           $reader = New-Object System.IO.StreamReader($_.Exception.Response.GetResponseStream())
           $responseBody = $reader.ReadToEnd()
-          Write-Host "GitHub API 詳細錯誤內容: $responseBody"
+          if ($responseBody -like "*No commits between*") {
+            $isNoCommits = $true
+          }
         }
-        exit 1
+
+        if ($isNoCommits) {
+          Write-Host "GitHub 上的 main 與 sync 分支內容完全一致（No commits between main and sync）。"
+          Write-Host "代碼已處於最新狀態，無需重複發起 Pull Request。"
+        } else {
+          Write-Error "呼叫 GitHub API 失敗: $_"
+          if ($responseBody) {
+            Write-Host "GitHub API 詳細錯誤內容: $responseBody"
+          }
+          exit 1
+        }
       }
