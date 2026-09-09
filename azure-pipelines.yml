@@ -85,21 +85,24 @@ steps:
         $commitBody = git log -1 --pretty=%B
         $commitHash = git rev-parse --short HEAD
 
+        $bodyLines = @(
+          "### 內網自動同步請求 (Azure DevOps Server)",
+          "",
+          "- 來源伺服器: 192.168.0.238",
+          "- Commit ID: $commitHash",
+          "- 提交訊息:",
+          $commitBody,
+          "",
+          "---",
+          "*此 PR 由 Azure DevOps Pipeline 自動建立，請人工審核確認後合併至 main。*"
+        )
+        $bodyText = $bodyLines -join "`n"
+
         $bodyPayload = @{
           title = "Sync: $commitSubject ($commitHash)"
           head  = $env:SYNC_BRANCH
           base  = "main"
-          body  = @"
-### 內網自動同步請求 (Azure DevOps Server)
-
-- **來源伺服器**: 192.168.0.238
-- **Commit ID**: $commitHash
-- **提交訊息**:
-$commitBody
-
----
-*此 PR 由 Azure DevOps Pipeline 自動建立，請人工審核確認後合併至 main。*
-"@
+          body  = $bodyText
         } | ConvertTo-Json -Depth 3
 
         $newPR = Invoke-RestMethod -Uri $apiUrl -Method Post -Headers $headers -Body $bodyPayload -ContentType "application/json; charset=utf-8"
