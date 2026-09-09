@@ -1,0 +1,107 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  # 請確認為內網註冊之 Agent Pool 名稱（預設通常為 Default）
+  name: Default
+
+variables:
+  GITHUB_OWNER: 'XSHWIT'
+  GITHUB_REPO: 'xshw.b2b'
+  SYNC_BRANCH: 'sync'
+
+steps:
+- checkout: self
+  fetchDepth: 0
+  persistCredentials: true
+
+- task: PowerShell@2
+  displayName: 'Push to GitHub Sync Branch'
+  env:
+    GH_TOKEN: $(GITHUB_PAT)
+  inputs:
+    targetType: 'inline'
+    script: |
+      [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+      $ErrorActionPreference = "Stop"
+
+      if (-not $env:GH_TOKEN) {
+        Write-Error "找不到 GITHUB_PAT 環境變數，請確認已於 Pipeline Variables 中設定 GITHUB_PAT。"
+        exit 1
+      }
+
+      $remoteUrl = "https://x-access-token:$($env:GH_TOKEN)@github.com/$($env:GITHUB_OWNER)/$($env:GITHUB_REPO).git"
+
+      try {
+        Write-Host "設定 GitHub 遠端儲存庫..."
+        git remote remove github 2>$null
+        git remote add github $remoteUrl
+
+        Write-Host "推送代碼至 GitHub 中繼分支: $($env:SYNC_BRANCH)..."
+        git push github HEAD:$($env:SYNC_BRANCH) --force
+      }
+      finally {
+        # 無論成功或失敗，強制移除含憑證之遠端設定
+        git remote remove github 2>$null
+      }
+
+- task: PowerShell@2
+  displayName: 'Create or Update GitHub Pull Request'
+  env:
+    GH_TOKEN: $(GITHUB_PAT)
+  inputs:
+    targetType: 'inline'
+    script: |
+      [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+      $ErrorActionPreference = "Stop"
+
+      if (-not $env:GH_TOKEN) {
+        Write-Error "找不到 GITHUB_PAT 環境變數，請確認已於 Pipeline Variables 中設定 GITHUB_PAT。"
+        exit 1
+      }
+
+      $headers = @{
+        "Authorization" = "Bearer $($env:GH_TOKEN)"
+        "Accept"        = "application/vnd.github.v3+json"
+        "User-Agent"    = "AzureDevOps-Pipeline"
+      }
+
+      $apiUrl = "https://api.github.com/repos/$($env:GITHUB_OWNER)/$($env:GITHUB_REPO)/pulls"
+
+      Write-Host "檢查是否已有未結的 Pull Request..."
+      $checkUrl = "$($apiUrl)?state=open&head=$($env:GITHUB_OWNER):$($env:SYNC_BRANCH)&base=main"
+      $existingPRs = Invoke-RestMethod -Uri $checkUrl -Method Get -Headers $headers
+
+      if ($existingPRs.Count -gt 0) {
+        $prNumber = $existingPRs[0].number
+        $prUrl = $existingPRs[0].html_url
+        Write-Host "已存在開啟中的 PR #$prNumber ($prUrl)。"
+        Write-Host "中繼分支已成功更新，GitHub 將自動更新該 PR 之比對內容。"
+      } else {
+        Write-Host "未發現現存 PR，正在發起新 PR..."
+        $commitSubject = git log -1 --pretty=%s
+        $commitBody = git log -1 --pretty=%B
+        $commitHash = git rev-parse --short HEAD
+
+        $bodyPayload = @{
+          title = "Sync: $commitSubject ($commitHash)"
+          head  = $env:SYNC_BRANCH
+          base  = "main"
+          body  = @"
+### 內網自動同步請求 (Azure DevOps Server)
+
+- **來源伺服器**: 192.168.0.238
+- **Commit ID**: $commitHash
+- **提交訊息**:
+$commitBody
+
+---
+*此 PR 由 Azure DevOps Pipeline 自動建立，請人工審核確認後合併至 main。*
+"@
+        } | ConvertTo-Json -Depth 3
+
+        $newPR = Invoke-RestMethod -Uri $apiUrl -Method Post -Headers $headers -Body $bodyPayload -ContentType "application/json; charset=utf-8"
+        Write-Host "PR 建立成功: $($newPR.html_url)"
+      }
