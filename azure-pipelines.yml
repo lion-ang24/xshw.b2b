@@ -35,8 +35,9 @@ steps:
 
       Write-Host "推送代碼至 GitHub 中繼分支: $($env:SYNC_BRANCH)..."
       
-      # 直接以 URL 推送，避免在本機產生 remote 殘留；使用 2>&1 轉為字串防止 Windows PowerShell 判定為 NativeCommandError
-      git push $remoteUrl HEAD:$($env:SYNC_BRANCH) --force 2>&1 | ForEach-Object { "$_" }
+      # 透過 URL 直接推送時，Git 要求目標必須為完整 refname (即 refs/heads/xxx)
+      # 加入 --quiet 參數防止 Git 正常傳輸進度輸出至 stderr 被 Windows PowerShell 攔截誤判
+      git push $remoteUrl "HEAD:refs/heads/$($env:SYNC_BRANCH)" --force --quiet
 
       if ($LASTEXITCODE -ne 0) {
         Write-Error "Git push 失敗，結束碼為: $LASTEXITCODE"
